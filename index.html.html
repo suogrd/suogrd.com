@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SUOG RD crea aplicaciones móviles, páginas web y soluciones digitales funcionales, modernas e interactivas." />
+  <meta name="keywords" content="desarrollo de aplicaciones, páginas web, Flutter, Firebase, Android, iOS, República Dominicana" />
+  <meta name="author" content="SUOG RD" />
+  <meta name="theme-color" content="#061426" />
+
+  <meta property="og:title" content="SUOG RD | Desarrollo de aplicaciones" />
+  <meta property="og:description" content="Convertimos tus ideas en aplicaciones funcionales, modernas e interactivas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://suogrd.com" />
+
+  <title>SUOG RD | Desarrollo de aplicaciones</title>
+
+  <style>
+    :root {
+      --primary: #138cff;
+      --primary-2: #00c2ff;
+      --dark: #061426;
+      --dark-2: #091b32;
+      --card: rgba(13, 35, 62, 0.72);
+      --text: #f6f9ff;
+      --muted: #aac0da;
+      --border: rgba(92, 169, 255, 0.24);
+      --success: #25d366;
+      --shadow: 0 18px 60px rgba(0, 112, 255, 0.16);
+      --radius: 22px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(19, 140, 255, 0.18), transparent 32%),
+        radial-gradient(circle at 88% 18%, rgba(0, 194, 255, 0.12), transparent 28%),
+        linear-gradient(180deg, #04101e 0%, #07172a 48%, #04101e 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section-title {
+      max-width: 720px;
+      margin-bottom: 44px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(19, 140, 255, 0.08);
+      color: #8fd4ff;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, #67c6ff 55%, #00c2ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.28;
+      background-image:
+        linear-gradient(rgba(70, 155, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(70, 155, 255, 0.055) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 85%);
+      z-index: -2;
+    }
+
+    .glow {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.16;
+      background: var(--primary);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .glow.one {
+      top: 4%;
+      left: -140px;
+    }
+
+    .glow.two {
+      top: 33%;
+      right: -160px;
+      background: var(--primary-2);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    header.scrolled {
+      background: rgba(4, 16, 30, 0.84);
+      backdrop-filter: blur(18px);
+      border-bottom-color: var(--border);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      font-size: 1.08rem;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #23a0ff, #005bd7);
+      box-shadow: 0 10px 28px rgba(0, 127, 255, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: -40% 45% 35% -30%;
+      background: rgba(255, 255, 255, 0.35);
+      transform: rotate(25deg);
+    }
+
+    .brand-mark svg {
+      width: 26px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand strong {
+      color: var(--primary-2);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    nav a {
+      color: #d8e9fb;
+      font-size: 0.94rem;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 21px;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, #1594ff, #0066df);
+      box-shadow: 0 12px 30px rgba(0, 114, 255, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 16px 38px rgba(0, 132, 255, 0.38);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.045);
+      color: white;
+    }
+
+    .btn-small {
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: grid;
+      align-items: center;
+      padding: 72px 0 100px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.8rem, 7vw, 5.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 2vw, 1.22rem);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #bdd2e8;
+      font-size: 0.92rem;
+    }
+
+    .trust-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary-2);
+      border-radius: 50%;
+      box-shadow: 0 0 14px rgba(0, 194, 255, 0.8);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 530px;
+      display: grid;
+      place-items: center;
+    }
+
+    .dashboard {
+      width: min(100%, 560px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 18px;
+      background: linear-gradient(145deg, rgba(12, 35, 63, 0.92), rgba(5, 18, 34, 0.95));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transform: perspective(1200px) rotateY(-7deg) rotateX(3deg);
+    }
+
+    .dashboard::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(67, 174, 255, 0.1), transparent 42%);
+      pointer-events: none;
+    }
+
+    .dash-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .window-dots i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.24);
+    }
+
+    .status {
+      font-size: 0.76rem;
+      color: #95e9ff;
+      border: 1px solid rgba(0,194,255,0.22);
+      background: rgba(0,194,255,0.08);
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+
+    .dash-main {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 14px;
+    }
+
+    .sidebar,
+    .workspace {
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .sidebar {
+      padding: 14px;
+    }
+
+    .side-line {
+      height: 9px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.09);
+      margin: 13px 0;
+    }
+
+    .side-line.active {
+      background: linear-gradient(90deg, rgba(19,140,255,0.9), rgba(0,194,255,0.4));
+    }
+
+    .workspace {
+      padding: 15px;
+    }
+
+    .code-line {
+      height: 8px;
+      border-radius: 10px;
+      margin: 12px 0;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .code-line:nth-child(2n) {
+      width: 78%;
+      background: rgba(19,140,255,0.34);
+    }
+
+    .code-line:nth-child(3n) {
+      width: 58%;
+      background: rgba(0,194,255,0.28);
+    }
+
+    .phone {
+      position: absolute;
+      width: 192px;
+      right: -16px;
+      bottom: -30px;
+      padding: 10px;
+      border-radius: 34px;
+      background: #030912;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+      transform: rotate(7deg);
+    }
+
+    .phone-screen {
+      min-height: 360px;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(0,194,255,0.24), transparent 34%),
+        linear-gradient(180deg, #0b2341, #071321);
+      padding: 20px 16px;
+      overflow: hidden;
+    }
+
+    .notch {
+      width: 70px;
+      height: 17px;
+      border-radius: 99px;
+      background: #02060b;
+      margin: -13px auto 22px;
+    }
+
+    .phone-logo {
+      font-size: 0.84rem;
+      font-weight: 900;
+      margin-bottom: 30px;
+    }
+
+    .phone-logo strong {
+      color: var(--primary-2);
+    }
+
+    .phone-title {
+      font-size: 1.35rem;
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    .phone-card {
+      margin-top: 15px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.045);
+    }
+
+    .phone-card span {
+      display: block;
+      height: 7px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      margin: 8px 0;
+    }
+
+    .phone-card span:nth-child(2) {
+      width: 68%;
+      background: rgba(19,140,255,0.38);
+    }
+
+    .floating-chip {
+      position: absolute;
+      border: 1px solid var(--border);
+      background: rgba(8, 26, 48, 0.88);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      border-radius: 15px;
+      padding: 12px 15px;
+      font-size: 0.86rem;
+      color: #d6eaff;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .chip-one {
+      left: -15px;
+      top: 80px;
+    }
+
+    .chip-two {
+      right: 10px;
+      top: 20px;
+      animation-delay: -1.5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      background: linear-gradient(145deg, rgba(13,35,62,0.7), rgba(7,22,40,0.75));
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(73, 179, 255, 0.58);
+    }
+
+    .icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, rgba(19,140,255,0.24), rgba(0,194,255,0.08));
+      border: 1px solid rgba(77,177,255,0.22);
+      margin-bottom: 22px;
+      font-size: 1.5rem;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .process-wrap {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 52px;
+      align-items: start;
+    }
+
+    .process-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: #bfe9ff;
+      background: rgba(19,140,255,0.14);
+      border: 1px solid rgba(19,140,255,0.26);
+    }
+
+    .process-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .process-item p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 50px;
+    }
+
+    .stat {
+      padding: 22px;
+      text-align: center;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      color: #6dccff;
+      margin-bottom: 3px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .portfolio {
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 34px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(0,194,255,0.16), transparent 30%),
+        linear-gradient(145deg, rgba(14,39,69,0.76), rgba(5,18,34,0.86));
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .portfolio-copy h3 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-copy p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 26px;
+    }
+
+    .tag {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: #bfe5ff;
+      background: rgba(19,140,255,0.07);
+      font-size: 0.83rem;
+    }
+
+    .app-mockup {
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 28px;
+      padding: 18px;
+      background: #081527;
+      box-shadow: 0 28px 70px rgba(0,0,0,0.35);
+    }
+
+    .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #1797ff, #004fa8);
+    }
+
+    .app-banner {
+      padding: 24px;
+      border-radius: 19px;
+      background: linear-gradient(135deg, #0f7fe3, #0db8df);
+      margin-bottom: 15px;
+    }
+
+    .app-banner h4 {
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
+
+    .app-banner p {
+      opacity: 0.86;
+      font-size: 0.9rem;
+    }
+
+    .app-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .app-card {
+      min-height: 92px;
+      border-radius: 16px;
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .app-card i {
+      display: block;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      margin-bottom: 10px;
+      background: rgba(19,140,255,0.32);
+    }
+
+    .cta {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 64px 30px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0,194,255,0.18), transparent 42%),
+        linear-gradient(145deg, rgba(11,34,61,0.84), rgba(6,20,38,0.9));
+    }
+
+    .cta h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-card {
+      padding: 19px;
+      border-radius: 17px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .contact-card small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-card strong {
+      font-size: 1rem;
+    }
+
+    form {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(109,181,255,0.22);
+      border-radius: 13px;
+      background: rgba(4,16,30,0.74);
+      color: white;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(0,194,255,0.74);
+      box-shadow: 0 0 0 3px rgba(0,194,255,0.08);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .socials a {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 80;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 16px 38px rgba(37,211,102,0.34);
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    .whatsapp svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      nav {
+        position: absolute;
+        top: 76px;
+        left: 4%;
+        right: 4%;
+        display: none;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(4,16,30,0.96);
+        backdrop-filter: blur(18px);
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav a {
+        display: block;
+        padding: 11px 8px;
+      }
+
+      .menu-btn {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-actions .btn-small {
+        display: none;
+      }
+
+      .hero-grid,
+      .process-wrap,
+      .portfolio,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy p {
+        margin-inline: auto;
+      }
+
+      .hero-actions,
+      .trust-row {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .navbar {
+        min-height: 68px;
+      }
+
+      nav {
+        top: 68px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 52px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(2.6rem, 15vw, 4rem);
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 410px;
+      }
+
+      .dashboard {
+        transform: none;
+      }
+
+      .phone {
+        width: 150px;
+        right: -8px;
+        bottom: -20px;
+      }
+
+      .phone-screen {
+        min-height: 285px;
+        padding: 17px 12px;
+      }
+
+      .phone-title {
+        font-size: 1rem;
+      }
+
+      .floating-chip {
+        display: none;
+      }
+
+      .services-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio,
+      .cta {
+        padding: 25px;
+      }
+
+      .app-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .whatsapp {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  
+    /* Secciones nuevas */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .about-card,
+    .value-card,
+    .tech-card,
+    .faq-item {
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, rgba(13,35,62,0.68), rgba(7,22,40,0.76));
+      border-radius: var(--radius);
+    }
+
+    .about-card {
+      padding: 32px;
+    }
+
+    .about-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .value-card {
+      padding: 24px;
+    }
+
+    .value-card strong {
+      display: block;
+      font-size: 1.08rem;
+      margin: 10px 0 7px;
+    }
+
+    .value-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .technologies-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .tech-card {
+      min-height: 132px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 22px 14px;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(73,179,255,.58);
+    }
+
+    .tech-card span {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .tech-card strong {
+      font-size: .96rem;
+    }
+
+    .quote-panel {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 28px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 36px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(0,194,255,.15), transparent 30%),
+        linear-gradient(145deg, rgba(13,35,62,.74), rgba(5,18,34,.9));
+    }
+
+    .quote-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .quote-list li {
+      list-style: none;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .quote-list li::before {
+      content: "✓";
+      color: var(--primary-2);
+      font-weight: 900;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      max-width: 920px;
+    }
+
+    .faq-item {
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      color: var(--text);
+      background: transparent;
+      text-align: left;
+      padding: 20px 22px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .faq-question span:last-child {
+      color: var(--primary-2);
+      font-size: 1.3rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
+
+    .faq-answer p {
+      color: var(--muted);
+      padding: 0 22px 20px;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 240px;
+    }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(37,211,102,.10);
+      border: 1px solid rgba(37,211,102,.28);
+      color: #a8f3c4;
+      font-size: .82rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 980px) {
+      .about-grid,
+      .quote-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .technologies-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .technologies-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quote-panel {
+        padding: 24px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="grid-bg"></div>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+
+  <header id="header">
+    <div class="container navbar">
+      <a href="#inicio" class="brand" aria-label="SUOG RD, página principal">
+        <span class="brand-mark">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path fill="#fff" d="M46.5 10H25.8c-7.1 0-12.8 5.7-12.8 12.8 0 6.2 4.5 11.5 10.6 12.6l15.6 2.8c2.4.4 4.1 2.5 4.1 4.9 0 2.7-2.2 4.9-4.9 4.9H16v6h22.4c6 0 10.9-4.9 10.9-10.9 0-5.3-3.8-9.8-9-10.7l-15.6-2.8c-3.3-.6-5.7-3.4-5.7-6.8 0-3.8 3.1-6.8 6.8-6.8h20.7z"/>
+          </svg>
+        </span>
+        <span>SUOG <strong>RD</strong></span>
+      </a>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#portafolio">Proyectos</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-small" href="#cotizacion" target="_blank" rel="noopener">
+          Cotizar proyecto
+        </a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Desarrollo digital a tu medida</span>
+          <h1>
+            Tu idea puede convertirse en una
+            <span class="gradient-text">aplicación real.</span>
+          </h1>
+          <p>
+            Creamos aplicaciones funcionales, modernas e interactivas. Cada diseño y cada línea de código es un paso para hacer realidad tu proyecto.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20tengo%20una%20idea%20para%20una%20aplicación." target="_blank" rel="noopener">
+              Cuéntanos tu idea
+            </a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="trust-row">
+            <span><i class="trust-dot"></i>Código personalizado</span>
+            <span><i class="trust-dot"></i>Diseño moderno</span>
+            <span><i class="trust-dot"></i>Soporte continuo</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Representación visual de una aplicación en desarrollo">
+          <span class="floating-chip chip-one">⚡ Desarrollo ágil</span>
+          <span class="floating-chip chip-two">☁️ Tecnología en la nube</span>
+
+          <div class="dashboard">
+            <div class="dash-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span class="status">Proyecto en desarrollo</span>
+            </div>
+
+            <div class="dash-main">
+              <div class="sidebar">
+                <div class="side-line active"></div>
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+                <div class="side-line"></div>
+              </div>
+
+              <div class="workspace">
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="notch"></div>
+              <div class="phone-logo">SUOG <strong>RD</strong></div>
+              <div class="phone-title">Soluciones digitales que impulsan tu negocio.</div>
+              <div class="phone-card">
+                <b>Desarrollo de apps</b>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="phone-card">
+                <b>Diseño UI/UX</b>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Quiénes somos</span>
+          <h2>Diseñamos tecnología para convertir ideas en negocios reales.</h2>
+          <p>
+            SUOG RD es una empresa dominicana de desarrollo digital enfocada en aplicaciones móviles,
+            páginas web, sistemas empresariales y soluciones tecnológicas personalizadas.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <div class="icon-box">🏢</div>
+            <h3>Nuestra historia</h3>
+            <p>
+              Nacimos desarrollando nuestra propia plataforma digital y transformamos esa experiencia
+              en un servicio para emprendedores, empresas y organizaciones que necesitan crear productos
+              tecnológicos funcionales, modernos y preparados para crecer.
+            </p>
+          </article>
+
+          <article class="about-card reveal">
+            <div class="icon-box">🎯</div>
+            <h3>Nuestro compromiso</h3>
+            <p>
+              Escuchamos cada idea, organizamos sus funciones, diseñamos la experiencia y desarrollamos
+              una solución a la medida. Cada proyecto recibe atención, seguimiento y una base tecnológica
+              pensada para su evolución.
+            </p>
+          </article>
+        </div>
+
+        <div class="mission-grid">
+          <article class="value-card reveal">
+            <div class="icon-box">🚀</div>
+            <strong>Misión</strong>
+            <p>Crear soluciones digitales accesibles y de alta calidad que impulsen negocios y nuevas ideas.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="icon-box">🌍</div>
+            <strong>Visión</strong>
+            <p>Convertirnos en una empresa tecnológica reconocida en República Dominicana y mercados internacionales.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="icon-box">💙</div>
+            <strong>Valores</strong>
+            <p>Innovación, responsabilidad, transparencia, seguridad, aprendizaje continuo y compromiso con el cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Nuestros servicios</span>
+          <h2>Todo lo necesario para lanzar tu proyecto digital.</h2>
+          <p>
+            Diseñamos y desarrollamos soluciones enfocadas en funcionamiento, seguridad, crecimiento y una experiencia de usuario profesional.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="icon-box">📱</div>
+            <h3>Aplicaciones móviles</h3>
+            <p>Apps para Android y iPhone con diseños modernos, navegación intuitiva y funciones adaptadas a tu negocio.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-box">🌐</div>
+            <h3>Páginas web</h3>
+            <p>Sitios rápidos, responsivos y preparados para mostrar tus servicios, recibir clientes y fortalecer tu marca.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-box">🎨</div>
+            <h3>Diseño UI/UX</h3>
+            <p>Interfaces atractivas y fáciles de usar, pensadas para generar confianza y mejorar la experiencia del usuario.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-box">☁️</div>
+            <h3>Firebase y nube</h3>
+            <p>Autenticación, bases de datos, notificaciones, almacenamiento y servicios conectados en tiempo real.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-box">🚀</div>
+            <h3>Publicación</h3>
+            <p>Preparamos tu proyecto para publicarlo en Google Play, App Store y plataformas web profesionales.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-box">🛠️</div>
+            <h3>Soporte y mejoras</h3>
+            <p>Mantenimiento, correcciones, nuevas funciones y acompañamiento para que tu solución continúe creciendo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="container process-wrap">
+        <div class="section-title reveal">
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2>De una idea a un producto funcional.</h2>
+          <p>
+            Te acompañamos desde la planificación hasta la publicación y el soporte posterior.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Diseño adaptable</span>
+            </div>
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>Proyecto visible</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Código único</span>
+            </div>
+            <div class="stat">
+              <strong>∞</strong>
+              <span>Posibilidades</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-list">
+          <article class="process-item reveal">
+            <div class="step-number">01</div>
+            <div>
+              <h3>Escuchamos tu idea</h3>
+              <p>Conocemos tu objetivo, público, funciones necesarias y presupuesto disponible.</p>
+            </div>
+          </article>
+
+          <article class="process-item reveal">
+            <div class="step-number">02</div>
+            <div>
+              <h3>Diseñamos la experiencia</h3>
+              <p>Organizamos pantallas, colores, botones y recorridos para lograr una solución clara y atractiva.</p>
+            </div>
+          </article>
+
+          <article class="process-item reveal">
+            <div class="step-number">03</div>
+            <div>
+              <h3>Desarrollamos el proyecto</h3>
+              <p>Programamos cada función y conectamos los servicios necesarios para que todo trabaje correctamente.</p>
+            </div>
+          </article>
+
+          <article class="process-item reveal">
+            <div class="step-number">04</div>
+            <div>
+              <h3>Probamos y publicamos</h3>
+              <p>Corregimos detalles, verificamos el funcionamiento y preparamos la publicación oficial.</p>
+            </div>
+          </article>
+
+          <article class="process-item reveal">
+            <div class="step-number">05</div>
+            <div>
+              <h3>Soporte y crecimiento</h3>
+              <p>Seguimos contigo para implementar mejoras, actualizaciones y nuevas oportunidades.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portafolio">
+      <div class="container">
+        <div class="portfolio reveal">
+          <div class="portfolio-copy">
+            <span class="eyebrow">Nuestro primer proyecto</span>
+            <div class="project-status">● Aplicación en preparación para lanzamiento</div>
+            <h3>SUOG RD</h3>
+            <p>
+              Plataforma digital para conectar clientes con profesionales de confianza en servicios del hogar, desarrollada con tecnología moderna y una experiencia enfocada en facilidad y seguridad.
+            </p>
+
+            <div class="tag-row">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Android</span>
+              <span class="tag">iOS</span>
+              <span class="tag">Google Maps</span>
+              <span class="tag">Notificaciones</span>
+            </div>
+
+            <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20crear%20un%20proyecto%20parecido." target="_blank" rel="noopener">
+              Crear un proyecto
+            </a>
+          </div>
+
+          <div class="app-mockup" aria-label="Vista simulada de la aplicación SUOG RD">
+            <div class="app-header">
+              <b>SUOG <span style="color:#00c2ff">RD</span></b>
+              <div class="avatar"></div>
+            </div>
+            <div class="app-banner">
+              <h4>¿Qué servicio necesitas?</h4>
+              <p>Profesionales de confianza cerca de ti.</p>
+            </div>
+            <div class="app-cards">
+              <div class="app-card"><i></i><b>Limpieza</b></div>
+              <div class="app-card"><i></i><b>Plomería</b></div>
+              <div class="app-card"><i></i><b>Electricidad</b></div>
+              <div class="app-card"><i></i><b>Cerrajería</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="eyebrow">Comienza hoy</span>
+          <h2>Tu proyecto puede ser el próximo.</h2>
+          <p>
+            No dejes tu idea solamente en la imaginación. Hablemos, organicemos el proyecto y construyamos una solución digital preparada para crecer.
+          </p>
+          <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20hacer%20realidad%20mi%20idea." target="_blank" rel="noopener">
+            Convertir mi idea en realidad
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="tecnologias">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Tecnologías</span>
+          <h2>Herramientas modernas para proyectos sólidos y escalables.</h2>
+          <p>
+            Elegimos la tecnología según las necesidades del proyecto, su presupuesto, seguridad,
+            rendimiento y crecimiento futuro.
+          </p>
+        </div>
+
+        <div class="technologies-grid">
+          <article class="tech-card reveal"><div><span>💙</span><strong>Flutter</strong></div></article>
+          <article class="tech-card reveal"><div><span>🔥</span><strong>Firebase</strong></div></article>
+          <article class="tech-card reveal"><div><span>🤖</span><strong>Android</strong></div></article>
+          <article class="tech-card reveal"><div><span>🍎</span><strong>iOS</strong></div></article>
+          <article class="tech-card reveal"><div><span>🌐</span><strong>HTML5</strong></div></article>
+          <article class="tech-card reveal"><div><span>🎨</span><strong>CSS3</strong></div></article>
+          <article class="tech-card reveal"><div><span>⚙️</span><strong>JavaScript</strong></div></article>
+          <article class="tech-card reveal"><div><span>☁️</span><strong>Servicios en la nube</strong></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cotizacion">
+      <div class="container">
+        <div class="quote-panel reveal">
+          <div>
+            <span class="eyebrow">Cotización personalizada</span>
+            <h2>Cuéntanos tu proyecto y organizamos el camino para desarrollarlo.</h2>
+            <p style="color:var(--muted); margin-top:14px;">
+              No necesitas conocer términos técnicos. Explícanos tu idea con tus propias palabras
+              y te ayudaremos a definir las pantallas, funciones, etapas y alcance.
+            </p>
+
+            <ul class="quote-list">
+              <li>Aplicaciones móviles para Android y iPhone.</li>
+              <li>Páginas web corporativas, catálogos y tiendas virtuales.</li>
+              <li>Sistemas administrativos, automatizaciones e integraciones.</li>
+              <li>Mantenimiento, mejoras y soporte de proyectos existentes.</li>
+            </ul>
+          </div>
+
+          <div class="cta" style="padding:34px 24px;">
+            <h3 style="font-size:1.7rem; margin-bottom:10px;">Da el primer paso</h3>
+            <p style="margin-bottom:22px;">Escríbenos por WhatsApp y recibe orientación inicial para tu proyecto.</p>
+            <a class="btn btn-primary"
+               href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto."
+               target="_blank" rel="noopener">
+              Solicitar cotización
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Respuestas claras antes de comenzar.</h2>
+          <p>Estas son algunas de las preguntas más comunes sobre nuestros servicios de desarrollo.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button">
+              <span>¿Cuánto cuesta desarrollar una aplicación?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><p>El precio depende de las funciones, cantidad de pantallas, integraciones y complejidad. Primero revisamos la idea y preparamos una cotización según el alcance real.</p></div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button">
+              <span>¿Puedo comenzar con una versión sencilla?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><p>Sí. Podemos desarrollar una primera versión con las funciones principales y agregar mejoras en futuras actualizaciones.</p></div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button">
+              <span>¿Publican las aplicaciones en Google Play y App Store?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><p>Sí. Podemos preparar los archivos, configuraciones, fichas y acompañar el proceso de publicación en ambas plataformas.</p></div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button">
+              <span>¿También desarrollan páginas web y sistemas empresariales?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><p>Sí. Creamos páginas corporativas, tiendas virtuales, sistemas internos, paneles administrativos, automatizaciones e integraciones con servicios externos.</p></div>
+          </article>
+
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button">
+              <span>¿Ofrecen mantenimiento después de entregar el proyecto?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><p>Sí. Ofrecemos soporte, correcciones, actualizaciones y desarrollo de nuevas funciones según las necesidades del proyecto.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-title reveal">
+            <span class="eyebrow">Contacto</span>
+            <h2>Cuéntanos qué deseas crear.</h2>
+            <p>Escríbenos y te ayudaremos a organizar la idea, las funciones y el próximo paso.</p>
+          </div>
+
+          <div class="contact-info">
+            <a class="contact-card reveal" href="https://wa.me/18094191166" target="_blank" rel="noopener">
+              <small>WhatsApp</small>
+              <strong>809-419-1166</strong>
+            </a>
+
+            <a class="contact-card reveal" href="mailto:contacto@suogrd.com">
+              <small>Correo</small>
+              <strong>contacto@suogrd.com</strong>
+            </a>
+
+            <a class="contact-card reveal" href="mailto:soporte@suogrd.com">
+              <small>Soporte técnico</small>
+              <strong>soporte@suogrd.com</strong>
+            </a>
+
+            <div class="contact-card reveal">
+              <small>Ubicación</small>
+              <strong>Santo Domingo Este, República Dominicana</strong>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="reveal">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="Tu número de contacto" required />
+          </div>
+
+          <div class="field">
+            <label for="idea">Describe tu idea</label>
+            <textarea id="idea" name="idea" placeholder="Ejemplo: necesito una aplicación para..." required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>
+        <b>SUOG RD</b><br />
+        <small>© <span id="year"></span> Todos los derechos reservados.</small>
+      </div>
+
+      <div class="socials" aria-label="Redes sociales">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información."
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.62-1.52-1.89-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.6-.66 1.83-1.29.23-.64.23-1.19.16-1.3-.07-.12-.25-.18-.52-.32z"/>
+      <path d="M16.03 3.2c-7.03 0-12.75 5.72-12.75 12.75 0 2.25.59 4.45 1.7 6.38L3.17 28.8l6.62-1.74a12.7 12.7 0 0 0 6.24 1.59h.01c7.03 0 12.75-5.72 12.75-12.75S23.06 3.2 16.03 3.2zm0 23.3h-.01a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.03 1.05-3.83-.25-.39a10.54 10.54 0 1 1 8.91 4.89z"/>
+    </svg>
+  </a>
+
+  <script>
+    const header = document.getElementById("header");
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
+    const contactForm = document.getElementById("contactForm");
+
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    });
+
+    menuBtn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const idea = document.getElementById("idea").value.trim();
+
+      const mensaje =
+        `Hola SUOG RD, mi nombre es ${nombre}.%0A` +
+        `Mi teléfono es: ${telefono}.%0A%0A` +
+        `Mi idea de proyecto:%0A${idea}`;
+
+      window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
+    });
+
+
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const symbol = button.querySelector("span:last-child");
+        const wasOpen = item.classList.contains("open");
+
+        document.querySelectorAll(".faq-item").forEach((faq) => {
+          faq.classList.remove("open");
+          const faqSymbol = faq.querySelector(".faq-question span:last-child");
+          if (faqSymbol) faqSymbol.textContent = "+";
+        });
+
+        if (!wasOpen) {
+          item.classList.add("open");
+          symbol.textContent = "−";
+        }
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
