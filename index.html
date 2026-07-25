@@ -1257,6 +1257,126 @@
       }
     }
 
+    /* SUOG Labs renovado */
+    .labs-section {
+      background: linear-gradient(180deg, rgba(19,140,255,.035), rgba(0,194,255,.015));
+      border-block: 1px solid rgba(92,169,255,.08);
+    }
+
+    .labs-heading {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 42px;
+    }
+
+    .labs-heading .section-title { margin-bottom: 0; }
+
+    .labs-badge {
+      width: 170px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      border: 1px solid rgba(0,194,255,.3);
+      background: radial-gradient(circle, rgba(19,140,255,.18), rgba(4,16,30,.75));
+      box-shadow: 0 0 60px rgba(0,194,255,.12);
+    }
+
+    .labs-badge span { font-size: 2.2rem; font-weight: 950; color: #67c6ff; line-height: 1; }
+    .labs-badge strong { margin-top: 8px; font-size: .86rem; }
+    .labs-badge small { color: var(--muted); }
+
+    .labs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .lab-card {
+      position: relative;
+      min-height: 245px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(13,35,62,.72), rgba(7,22,40,.82));
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .lab-card::after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      right: -55px;
+      bottom: -65px;
+      background: rgba(0,194,255,.08);
+      filter: blur(4px);
+    }
+
+    .lab-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(73,179,255,.58);
+      box-shadow: 0 22px 55px rgba(0,112,255,.12);
+    }
+
+    .lab-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      font-size: 1.55rem;
+      margin-bottom: 25px;
+      background: rgba(19,140,255,.12);
+      border: 1px solid rgba(77,177,255,.22);
+    }
+
+    .lab-number {
+      position: absolute;
+      right: 22px;
+      top: 22px;
+      font-size: .78rem;
+      color: #70cbff;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+
+    .lab-card h3 { margin-bottom: 10px; font-size: 1.25rem; }
+    .lab-card p { color: var(--muted); font-size: .94rem; }
+
+    .stats-section { padding-top: 44px; }
+    .stats-modern { margin-top: 0; }
+    .stats-modern .stat {
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, rgba(13,35,62,.68), rgba(7,22,40,.78));
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .stats-modern .stat:hover { transform: translateY(-6px); border-color: rgba(73,179,255,.58); }
+    .stat-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .stats-modern .stat strong { font-size: clamp(2.2rem, 5vw, 3.25rem); line-height: 1; }
+    .stats-modern .infinity { font-size: 3.5rem; }
+
+    @media (max-width: 980px) {
+      .labs-heading { grid-template-columns: 1fr; align-items: start; }
+      .labs-badge { width: 145px; }
+      .labs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .labs-grid { grid-template-columns: 1fr; }
+      .lab-card { min-height: auto; }
+      .labs-badge { width: 132px; }
+    }
+
   </style>
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N1Q0LHGSK"></script>
@@ -1289,9 +1409,10 @@
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#labs">SUOG Labs</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proceso">Proceso</a></li>
-          <li><a href="#portafolio">Proyectos</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
           <li><a href="#tecnologias">Tecnologías</a></li>
           <li><a href="#faq">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -1299,7 +1420,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-primary btn-small" href="#cotizacion" target="_blank" rel="noopener">
+        <a class="btn btn-primary btn-small" href="#cotizacion">
           Cotizar proyecto
         </a>
         <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -1479,77 +1600,69 @@
 
   </div>
 </section>
-<section class="section" id="labs">
-
-  <div class="container">
-
-    <div class="section-title reveal">
-      <span class="eyebrow">🧪 SUOG Labs</span>
-
-      <h2>Innovación, investigación y desarrollo tecnológico.</h2>
-
-      <p>
-        En SUOG Labs investigamos, desarrollamos y probamos nuevas tecnologías
-        para crear aplicaciones, plataformas y soluciones digitales preparadas
-        para el futuro.
-      </p>
-    </div>
-
-    <div class="technologies-grid">
-
-      <article class="tech-card reveal">
-        <div>
-          <span>🤖</span>
-          <strong>Inteligencia Artificial</strong>
-          <p>Automatización y asistentes inteligentes.</p>
+<section class="section labs-section" id="labs">
+      <div class="container">
+        <div class="labs-heading reveal">
+          <div class="section-title">
+            <span class="eyebrow">🧪 SUOG Labs</span>
+            <h2>El espacio donde convertimos tecnología emergente en soluciones útiles.</h2>
+            <p>
+              Investigamos, creamos prototipos y validamos nuevas ideas antes de convertirlas
+              en productos digitales seguros, modernos y preparados para crecer.
+            </p>
+          </div>
+          <div class="labs-badge" aria-label="Innovación desarrollada en República Dominicana">
+            <span>RD</span>
+            <strong>Innovación local</strong>
+            <small>Visión global</small>
+          </div>
         </div>
-      </article>
 
-      <article class="tech-card reveal">
-        <div>
-          <span>📱</span>
-          <strong>Apps móviles</strong>
-          <p>Flutter para Android e iPhone.</p>
+        <div class="labs-grid">
+          <article class="lab-card reveal">
+            <div class="lab-icon">🤖</div>
+            <span class="lab-number">01</span>
+            <h3>Inteligencia Artificial</h3>
+            <p>Asistentes inteligentes, automatización de tareas y herramientas que mejoran la productividad.</p>
+          </article>
+
+          <article class="lab-card reveal">
+            <div class="lab-icon">📱</div>
+            <span class="lab-number">02</span>
+            <h3>Experiencias móviles</h3>
+            <p>Aplicaciones para Android y iPhone creadas con Flutter y experiencias pensadas para el usuario.</p>
+          </article>
+
+          <article class="lab-card reveal">
+            <div class="lab-icon">🌐</div>
+            <span class="lab-number">03</span>
+            <h3>Plataformas web</h3>
+            <p>Sitios, sistemas administrativos y plataformas digitales rápidas, adaptables y profesionales.</p>
+          </article>
+
+          <article class="lab-card reveal">
+            <div class="lab-icon">☁️</div>
+            <span class="lab-number">04</span>
+            <h3>Nube y datos</h3>
+            <p>Firebase, bases de datos en tiempo real, almacenamiento y servicios conectados de forma segura.</p>
+          </article>
+
+          <article class="lab-card reveal">
+            <div class="lab-icon">🔐</div>
+            <span class="lab-number">05</span>
+            <h3>Seguridad digital</h3>
+            <p>Autenticación, protección de información y buenas prácticas integradas desde el inicio del proyecto.</p>
+          </article>
+
+          <article class="lab-card reveal">
+            <div class="lab-icon">🚀</div>
+            <span class="lab-number">06</span>
+            <h3>Productos propios</h3>
+            <p>Investigación, prototipos y soluciones creadas por SUOG RD para resolver necesidades reales.</p>
+          </article>
         </div>
-      </article>
-
-      <article class="tech-card reveal">
-        <div>
-          <span>🌐</span>
-          <strong>Desarrollo Web</strong>
-          <p>Páginas y plataformas modernas.</p>
-        </div>
-      </article>
-
-      <article class="tech-card reveal">
-        <div>
-          <span>☁️</span>
-          <strong>Cloud</strong>
-          <p>Firebase y servicios en la nube.</p>
-        </div>
-      </article>
-
-      <article class="tech-card reveal">
-        <div>
-          <span>🔐</span>
-          <strong>Seguridad</strong>
-          <p>Protección de datos y autenticación.</p>
-        </div>
-      </article>
-
-      <article class="tech-card reveal">
-        <div>
-          <span>🚀</span>
-          <strong>Investigación</strong>
-          <p>Desarrollo de nuevas tecnologías y productos propios.</p>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
+      </div>
+    </section>
     <section class="section" id="servicios">
       <div class="container">
         <div class="section-title reveal">
@@ -1608,25 +1721,6 @@
           <p>
             Te acompañamos desde la planificación hasta la publicación y el soporte posterior.
           </p>
-
-          <div class="stats">
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Diseño adaptable</span>
-            </div>
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Proyecto visible</span>
-            </div>
-            <div class="stat">
-              <strong>1</strong>
-              <span>Código único</span>
-            </div>
-            <div class="stat">
-              <strong>∞</strong>
-              <span>Posibilidades</span>
-            </div>
-          </div>
         </div>
 
         <div class="process-list">
@@ -1673,15 +1767,49 @@
       </div>
     </section>
 
+    <section class="section stats-section" id="estadisticas">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Nuestro avance</span>
+          <h2>Resultados que representan cómo construimos.</h2>
+          <p>No inventamos cifras de clientes. Mostramos datos reales de nuestra forma de trabajar y los actualizaremos a medida que crezcamos.</p>
+        </div>
+
+        <div class="stats stats-modern">
+          <article class="stat reveal">
+            <span class="stat-icon">🚀</span>
+            <strong class="counter" data-target="1">0</strong>
+            <span>Producto propio desarrollado</span>
+          </article>
+          <article class="stat reveal">
+            <span class="stat-icon">💻</span>
+            <strong><span class="counter" data-target="100">0</span>%</strong>
+            <span>Código personalizado</span>
+          </article>
+          <article class="stat reveal">
+            <span class="stat-icon">🤝</span>
+            <strong><span class="counter" data-target="24">0</span>/7</strong>
+            <span>Canal digital disponible</span>
+          </article>
+          <article class="stat reveal">
+            <span class="stat-icon">🌍</span>
+            <strong class="infinity">∞</strong>
+            <span>Posibilidades de crecimiento</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="portafolio">
       <div class="container">
         <div class="portfolio reveal">
           <div class="portfolio-copy">
-            <span class="eyebrow">Nuestro primer proyecto</span>
+            <span class="eyebrow">Portafolio • Primer producto propio</span>
             <div class="project-status">● Aplicación en preparación para lanzamiento</div>
-            <h3>SUOG RD</h3>
+            <h3>SUOG RD: servicios de confianza a un toque.</h3>
             <p>
-              Plataforma digital para conectar clientes con profesionales de confianza en servicios del hogar, desarrollada con tecnología moderna y una experiencia enfocada en facilidad y seguridad.
+              Nuestro primer producto digital conecta clientes con profesionales de limpieza, plomería, electricidad y cerrajería.
+              La plataforma integra registro de usuarios, solicitudes en tiempo real, ubicación, mapas, notificaciones y gestión de servicios.
             </p>
 
             <div class="tag-row">
@@ -1698,7 +1826,7 @@
             </a>
           </div>
 
-          <div class="app-mockup" aria-label="Vista simulada de la aplicación SUOG RD">
+          <div class="app-mockup" aria-label="Vista visual del producto SUOG RD">
             <div class="app-header">
               <b>SUOG <span style="color:#00c2ff">RD</span></b>
               <div class="avatar"></div>
@@ -1990,6 +2118,31 @@
         }
       });
     });
+
+
+    const counters = document.querySelectorAll(".counter");
+    const counterObserver = new IntersectionObserver((entries, observerInstance) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const target = Number(counter.dataset.target || 0);
+        const duration = 1200;
+        const startTime = performance.now();
+
+        const updateCounter = (currentTime) => {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = Math.round(target * eased);
+          if (progress < 1) requestAnimationFrame(updateCounter);
+        };
+
+        requestAnimationFrame(updateCounter);
+        observerInstance.unobserve(counter);
+      });
+    }, { threshold: 0.55 });
+
+    counters.forEach((counter) => counterObserver.observe(counter));
 
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
