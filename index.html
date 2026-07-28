@@ -1377,6 +1377,392 @@
       .labs-badge { width: 132px; }
     }
 
+
+    /* Promoción de agosto */
+    .promo-august {
+      padding: 28px 0;
+    }
+
+    .promo-box {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 34px;
+      border: 1px solid rgba(255, 205, 64, .34);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(255, 193, 7, .19), transparent 34%),
+        linear-gradient(135deg, rgba(15, 43, 77, .96), rgba(5, 18, 34, .96));
+      box-shadow: 0 22px 70px rgba(0, 0, 0, .24);
+    }
+
+    .promo-box::after {
+      content: "50%";
+      position: absolute;
+      right: 24px;
+      bottom: -42px;
+      font-size: clamp(6rem, 16vw, 12rem);
+      line-height: 1;
+      font-weight: 950;
+      color: rgba(255, 209, 71, .06);
+      pointer-events: none;
+    }
+
+    .promo-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo-label {
+      display: inline-flex;
+      padding: 7px 12px;
+      margin-bottom: 13px;
+      border-radius: 999px;
+      color: #ffeaa0;
+      background: rgba(255, 193, 7, .1);
+      border: 1px solid rgba(255, 205, 64, .26);
+      font-weight: 850;
+      font-size: .84rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .promo-box h2 {
+      max-width: 760px;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      line-height: 1.02;
+      margin-bottom: 12px;
+    }
+
+    .promo-box h2 strong {
+      color: #ffd54a;
+    }
+
+    .promo-box p {
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .promo-services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .promo-services span {
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      background: rgba(255,255,255,.035);
+      color: #e9f4ff;
+      font-size: .85rem;
+    }
+
+    .promo-action {
+      position: relative;
+      z-index: 2;
+      min-width: 220px;
+      text-align: center;
+    }
+
+    .promo-action small {
+      display: block;
+      margin-top: 10px;
+      color: #d6e6f7;
+    }
+
+    /* Portafolio visual de SUOG RD */
+    .project-hero-image {
+      width: 100%;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 28px 75px rgba(0,0,0,.36);
+      margin-bottom: 32px;
+    }
+
+    .project-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 30px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 11px;
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
+    .feature-list li {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--primary-2);
+      font-weight: 900;
+    }
+
+    .store-status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .store-status span {
+      padding: 9px 13px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.035);
+      color: #dcecff;
+      font-size: .86rem;
+    }
+
+    .gallery-title {
+      margin: 50px 0 20px;
+      font-size: 1.55rem;
+    }
+
+    .app-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(255,255,255,.025);
+      cursor: zoom-in;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(73,179,255,.62);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 9 / 19;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .gallery-caption {
+      padding: 12px 13px;
+      color: #d9eaff;
+      font-size: .86rem;
+    }
+
+    .demo-video-wrap {
+      margin-top: 48px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      background: #020812;
+      box-shadow: var(--shadow);
+    }
+
+    .demo-video-wrap video {
+      width: 100%;
+      max-height: 650px;
+      display: block;
+      background: #000;
+    }
+
+    .demo-video-caption {
+      padding: 17px 20px;
+      color: var(--muted);
+    }
+
+    /* Reseñas */
+    .reviews-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .review-intro {
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 30px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(0,194,255,.12), transparent 32%),
+        rgba(255,255,255,.025);
+    }
+
+    .review-intro h3 {
+      font-size: 1.65rem;
+      margin-bottom: 10px;
+    }
+
+    .review-intro p {
+      color: var(--muted);
+    }
+
+    .review-note {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 205, 64, .22);
+      background: rgba(255, 193, 7, .06);
+      color: #f3e7bb;
+      font-size: .9rem;
+    }
+
+    .review-form select {
+      width: 100%;
+      border: 1px solid rgba(109,181,255,.22);
+      border-radius: 13px;
+      background: rgba(4,16,30,.74);
+      color: white;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    .rating-picker {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+
+    .rating-picker input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .rating-picker label {
+      font-size: 2rem;
+      line-height: 1;
+      color: rgba(255,255,255,.22);
+      cursor: pointer;
+      transition: color .15s ease, transform .15s ease;
+    }
+
+    .rating-picker label:hover,
+    .rating-picker label:hover ~ label,
+    .rating-picker input:checked ~ label {
+      color: #ffd54a;
+    }
+
+    .rating-picker label:hover {
+      transform: scale(1.08);
+    }
+
+    .sample-reviews {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .sample-review {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .sample-review strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .sample-review .stars {
+      color: #ffd54a;
+      letter-spacing: .08em;
+    }
+
+    .sample-review p {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: .92rem;
+    }
+
+    /* Visor de imágenes */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      background: rgba(0, 5, 12, .93);
+      backdrop-filter: blur(10px);
+    }
+
+    .lightbox.open {
+      display: grid;
+    }
+
+    .lightbox img {
+      max-width: min(94vw, 620px);
+      max-height: 88vh;
+      border-radius: 20px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.7);
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 22px;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      color: white;
+      font-size: 1.35rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .promo-box,
+      .project-details,
+      .reviews-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .promo-action {
+        text-align: left;
+      }
+
+      .app-gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .promo-box {
+        padding: 25px;
+      }
+
+      .promo-action .btn {
+        width: 100%;
+      }
+
+      .app-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-caption {
+        font-size: .78rem;
+      }
+    }
+
   </style>
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N1Q0LHGSK"></script>
@@ -1412,7 +1798,9 @@
           <li><a href="#labs">SUOG Labs</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#promocion">Oferta agosto</a></li>
           <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
           <li><a href="#tecnologias">Tecnologías</a></li>
           <li><a href="#faq">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -1511,6 +1899,37 @@
       </div>
     </section>
 
+
+
+    <section class="promo-august" id="promocion">
+      <div class="container">
+        <div class="promo-box reveal">
+          <div class="promo-copy">
+            <span class="promo-label">Promoción especial de agosto</span>
+            <h2><strong>50% de descuento</strong> durante todo el mes.</h2>
+            <p>
+              Aprovecha esta promoción en creación de páginas web, desarrollo de aplicaciones,
+              mantenimiento, actualización y mejora de apps. Oferta válida durante agosto de 2026.
+            </p>
+            <div class="promo-services">
+              <span>Páginas web</span>
+              <span>Aplicaciones móviles</span>
+              <span>Mantenimiento</span>
+              <span>Actualizaciones</span>
+              <span>Mejoras de aplicaciones</span>
+            </div>
+          </div>
+          <div class="promo-action">
+            <a class="btn btn-primary"
+               href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20aprovechar%20el%2050%25%20de%20descuento%20de%20agosto."
+               target="_blank" rel="noopener">
+              Obtener mi 50% de descuento
+            </a>
+            <small>Cupos limitados durante agosto.</small>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="nosotros">
   <div class="container">
@@ -1800,51 +2219,191 @@
       </div>
     </section>
 
+
     <section class="section" id="portafolio">
       <div class="container">
-        <div class="portfolio reveal">
-          <div class="portfolio-copy">
-            <span class="eyebrow">Portafolio • Primer producto propio</span>
-            <div class="project-status">● Aplicación en preparación para lanzamiento</div>
-            <h3>SUOG RD: servicios de confianza a un toque.</h3>
-            <p>
-              Nuestro primer producto digital conecta clientes con profesionales de limpieza, plomería, electricidad y cerrajería.
-              La plataforma integra registro de usuarios, solicitudes en tiempo real, ubicación, mapas, notificaciones y gestión de servicios.
-            </p>
+        <div class="section-title reveal">
+          <span class="eyebrow">Portafolio • Proyecto destacado</span>
+          <h2>SUOG RD: una aplicación creada para resolver necesidades reales.</h2>
+          <p>
+            Nuestro primer producto propio conecta clientes con profesionales de limpieza,
+            plomería, electricidad y cerrajería en República Dominicana.
+          </p>
+        </div>
 
-            <div class="tag-row">
+        <img
+          class="project-hero-image reveal"
+          src="assets/suog-app/portada-suog-rd.png"
+          alt="Presentación de la aplicación SUOG RD y sus servicios"
+          loading="lazy"
+        />
+
+        <div class="project-details">
+          <article class="about-card reveal">
+            <span class="project-status">● Aplicación en preparación para lanzamiento</span>
+            <h3>Una plataforma completa para clientes y socios.</h3>
+            <p>
+              SUOG RD integra registro e inicio de sesión, solicitudes de servicios,
+              selección de ubicación mediante Google Maps, panel del socio, finanzas,
+              chat y seguimiento del estado de cada servicio.
+            </p>
+            <ul class="feature-list">
+              <li>Servicios de limpieza, plomería, electricidad y cerrajería.</li>
+              <li>Ubicación del cliente y selección del punto en el mapa.</li>
+              <li>Panel independiente para clientes y profesionales.</li>
+              <li>Control de pagos, balance, ganancias y deuda.</li>
+              <li>Solicitudes en tiempo real y chat entre las partes.</li>
+              <li>Desarrollada con Flutter, Firebase y Google Maps.</li>
+            </ul>
+          </article>
+
+          <article class="about-card reveal">
+            <div class="icon-box">📲</div>
+            <h3>Próximo lanzamiento</h3>
+            <p>
+              La aplicación se encuentra en el proceso de preparación y revisión para su
+              publicación oficial. Los enlaces de descarga se activarán cuando las tiendas
+              confirmen su disponibilidad.
+            </p>
+            <div class="store-status">
+              <span>Google Play • Próximamente</span>
+              <span>App Store • Próximamente</span>
+            </div>
+            <div class="tag-row" style="margin-top:22px;">
               <span class="tag">Flutter</span>
               <span class="tag">Firebase</span>
               <span class="tag">Android</span>
               <span class="tag">iOS</span>
               <span class="tag">Google Maps</span>
-              <span class="tag">Notificaciones</span>
+              <span class="tag">Chat</span>
             </div>
-
-            <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20crear%20un%20proyecto%20parecido." target="_blank" rel="noopener">
-              Crear un proyecto
+            <a class="btn btn-primary"
+               href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20crear%20una%20aplicación%20para%20mi%20negocio."
+               target="_blank" rel="noopener">
+              Quiero una aplicación
             </a>
-          </div>
+          </article>
+        </div>
 
-          <div class="app-mockup" aria-label="Vista visual del producto SUOG RD">
-            <div class="app-header">
-              <b>SUOG <span style="color:#00c2ff">RD</span></b>
-              <div class="avatar"></div>
-            </div>
-            <div class="app-banner">
-              <h4>¿Qué servicio necesitas?</h4>
-              <p>Profesionales de confianza cerca de ti.</p>
-            </div>
-            <div class="app-cards">
-              <div class="app-card"><i></i><b>Limpieza</b></div>
-              <div class="app-card"><i></i><b>Plomería</b></div>
-              <div class="app-card"><i></i><b>Electricidad</b></div>
-              <div class="app-card"><i></i><b>Cerrajería</b></div>
-            </div>
+        <h3 class="gallery-title reveal">Pantallas reales de la aplicación</h3>
+        <div class="app-gallery">
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/01-ubicacion.jpg" alt="Selección de ubicación en Google Maps" loading="lazy" />
+            <figcaption class="gallery-caption">Ubicación del servicio</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/02-limpieza.jpg" alt="Opciones y precios de limpieza" loading="lazy" />
+            <figcaption class="gallery-caption">Opciones de limpieza</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/03-servicios.jpg" alt="Servicios disponibles en SUOG RD" loading="lazy" />
+            <figcaption class="gallery-caption">Servicios disponibles</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/04-finanzas.jpg" alt="Panel de finanzas del socio" loading="lazy" />
+            <figcaption class="gallery-caption">Control de finanzas</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/05-panel-socio.jpg" alt="Panel principal del socio" loading="lazy" />
+            <figcaption class="gallery-caption">Panel del socio</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/06-servicio-activo.jpg" alt="Seguimiento de un servicio activo" loading="lazy" />
+            <figcaption class="gallery-caption">Seguimiento del servicio</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="assets/suog-app/07-inicio-sesion.jpg" alt="Pantalla de inicio de sesión de SUOG RD" loading="lazy" />
+            <figcaption class="gallery-caption">Inicio de sesión</figcaption>
+          </figure>
+        </div>
+
+        <div class="demo-video-wrap reveal">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/videos/presentacion-suog-rd.mp4" type="video/mp4" />
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="demo-video-caption">
+            Video de presentación del trabajo y las soluciones digitales desarrolladas por SUOG RD.
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section" id="resenas">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Reseñas</span>
+          <h2>Tu experiencia nos ayuda a seguir mejorando.</h2>
+          <p>
+            Clientes y colaboradores pueden enviar su opinión. Revisamos cada comentario antes
+            de publicarlo para evitar contenido falso, ofensivo o información privada.
+          </p>
+        </div>
+
+        <div class="reviews-layout">
+          <div class="review-intro reveal">
+            <div class="icon-box">⭐</div>
+            <h3>Comparte tu experiencia con SUOG RD</h3>
+            <p>
+              Completa el formulario. Al enviarlo, se abrirá WhatsApp con tu reseña preparada
+              para que nuestro equipo la reciba y la apruebe.
+            </p>
+            <div class="review-note">
+              Esta primera versión envía las reseñas a WhatsApp. Para mostrarlas automáticamente
+              a todos los visitantes, conectaremos después el formulario con Firebase.
+            </div>
+
+            <div class="sample-reviews">
+              <article class="sample-review">
+                <strong>Reseñas verificadas</strong>
+                <div class="stars">★★★★★</div>
+                <p>Las opiniones aprobadas aparecerán aquí cuando comiencen a llegar.</p>
+              </article>
+            </div>
+          </div>
+
+          <form id="reviewForm" class="review-form reveal">
+            <div class="field">
+              <label for="reviewName">Nombre</label>
+              <input id="reviewName" name="reviewName" type="text" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="field">
+              <label for="reviewService">Servicio o relación con SUOG RD</label>
+              <select id="reviewService" name="reviewService" required>
+                <option value="">Selecciona una opción</option>
+                <option>Desarrollo de aplicación</option>
+                <option>Creación de página web</option>
+                <option>Mantenimiento o mejora</option>
+                <option>Cliente de SUOG RD</option>
+                <option>Socio profesional</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Calificación</label>
+              <div class="rating-picker" aria-label="Selecciona una calificación de una a cinco estrellas">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 estrellas">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 estrellas">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 estrellas">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 estrellas">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 estrella">★</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="reviewText">Escribe tu reseña</label>
+              <textarea id="reviewText" name="reviewText" maxlength="700"
+                        placeholder="Cuéntanos cómo fue tu experiencia..." required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar reseña por WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section">
       <div class="container">
@@ -2034,6 +2593,12 @@
     </div>
   </footer>
 
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Vista ampliada">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar">✕</button>
+    <img id="lightboxImage" src="" alt="" />
+  </div>
+
   <a
     class="whatsapp"
     href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información."
@@ -2052,6 +2617,10 @@
     const menuBtn = document.getElementById("menuBtn");
     const nav = document.getElementById("nav");
     const contactForm = document.getElementById("contactForm");
+    const reviewForm = document.getElementById("reviewForm");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
 
     window.addEventListener("scroll", () => {
       header.classList.toggle("scrolled", window.scrollY > 20);
@@ -2099,6 +2668,68 @@
       window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
     });
 
+
+
+    reviewForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const nombre = document.getElementById("reviewName").value.trim();
+      const servicio = document.getElementById("reviewService").value;
+      const comentario = document.getElementById("reviewText").value.trim();
+      const rating = reviewForm.querySelector('input[name="rating"]:checked')?.value;
+
+      if (!rating) {
+        alert("Selecciona una calificación.");
+        return;
+      }
+
+      const estrellas = "★".repeat(Number(rating)) + "☆".repeat(5 - Number(rating));
+      const mensaje = encodeURIComponent(
+        `Hola SUOG RD, quiero enviar una reseña para aprobación.\n\n` +
+        `Nombre: ${nombre}\n` +
+        `Servicio: ${servicio}\n` +
+        `Calificación: ${estrellas} (${rating}/5)\n\n` +
+        `Reseña:\n${comentario}`
+      );
+
+      window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
+    });
+
+    const openLightbox = (image) => {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    };
+
+    document.querySelectorAll(".gallery-item img").forEach((image) => {
+      image.addEventListener("click", () => openLightbox(image));
+      image.closest(".gallery-item").addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(image);
+        }
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
+    });
 
     document.querySelectorAll(".faq-question").forEach((button) => {
       button.addEventListener("click", () => {
