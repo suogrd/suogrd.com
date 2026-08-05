@@ -1763,6 +1763,246 @@
       }
     }
 
+
+    /* Trabaja con nosotros */
+    .careers-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .career-card,
+    .career-form {
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(0,194,255,.10), transparent 34%),
+        linear-gradient(145deg, rgba(13,35,62,.72), rgba(7,22,40,.82));
+    }
+
+    .career-card {
+      padding: 30px;
+    }
+
+    .career-card h3 {
+      font-size: 1.65rem;
+      margin-bottom: 10px;
+    }
+
+    .career-card p,
+    .career-note {
+      color: var(--muted);
+    }
+
+    .career-areas {
+      display: grid;
+      gap: 11px;
+      margin: 22px 0;
+    }
+
+    .career-areas li {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      color: #dcecff;
+    }
+
+    .career-areas li::before {
+      content: "✓";
+      color: var(--primary-2);
+      font-weight: 900;
+    }
+
+    .career-note {
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,205,64,.22);
+      background: rgba(255,193,7,.06);
+      font-size: .9rem;
+    }
+
+    .career-form select {
+      width: 100%;
+      border: 1px solid rgba(109,181,255,.22);
+      border-radius: 13px;
+      background: rgba(4,16,30,.74);
+      color: white;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    /* Asistente virtual */
+    .assistant-launcher {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 95;
+      width: 62px;
+      height: 62px;
+      border: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      color: white;
+      font-size: 1.55rem;
+      background: linear-gradient(145deg, #1594ff, #0057c8);
+      box-shadow: 0 18px 44px rgba(0,112,255,.38);
+    }
+
+    .assistant-panel {
+      position: fixed;
+      right: 22px;
+      bottom: 96px;
+      z-index: 94;
+      width: min(390px, calc(100vw - 32px));
+      max-height: min(620px, calc(100vh - 125px));
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(4,16,30,.98);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 26px 80px rgba(0,0,0,.48);
+    }
+
+    .assistant-panel.open {
+      display: flex;
+    }
+
+    .assistant-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 17px 18px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(19,140,255,.18), rgba(0,194,255,.06));
+    }
+
+    .assistant-header strong {
+      display: block;
+    }
+
+    .assistant-header small {
+      color: var(--muted);
+    }
+
+    .assistant-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: white;
+      cursor: pointer;
+    }
+
+    .assistant-messages {
+      display: grid;
+      gap: 11px;
+      padding: 18px;
+      overflow-y: auto;
+      min-height: 240px;
+    }
+
+    .assistant-message {
+      max-width: 88%;
+      padding: 11px 13px;
+      border-radius: 15px;
+      font-size: .92rem;
+      white-space: pre-line;
+    }
+
+    .assistant-message.bot {
+      justify-self: start;
+      color: #e8f4ff;
+      background: rgba(19,140,255,.13);
+      border: 1px solid rgba(77,177,255,.18);
+      border-bottom-left-radius: 5px;
+    }
+
+    .assistant-message.user {
+      justify-self: end;
+      color: white;
+      background: linear-gradient(135deg, #1594ff, #0066df);
+      border-bottom-right-radius: 5px;
+    }
+
+    .assistant-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 18px 14px;
+    }
+
+    .assistant-option {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 11px;
+      background: rgba(255,255,255,.035);
+      color: #dcecff;
+      cursor: pointer;
+      font-size: .82rem;
+    }
+
+    .assistant-input-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 9px;
+      padding: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .assistant-input-row input {
+      min-width: 0;
+      border: 1px solid rgba(109,181,255,.22);
+      border-radius: 13px;
+      background: rgba(255,255,255,.04);
+      color: white;
+      padding: 11px 12px;
+      outline: none;
+    }
+
+    .assistant-send {
+      border: 0;
+      border-radius: 12px;
+      padding: 0 15px;
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+      background: linear-gradient(135deg, #1594ff, #0066df);
+    }
+
+    .whatsapp {
+      right: 94px;
+    }
+
+    @media (max-width: 980px) {
+      .careers-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .assistant-launcher {
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .assistant-panel {
+        right: 16px;
+        bottom: 88px;
+      }
+
+      .whatsapp {
+        right: 86px;
+        bottom: 16px;
+      }
+    }
+
   </style>
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N1Q0LHGSK"></script>
@@ -1802,6 +2042,7 @@
           <li><a href="#portafolio">Portafolio</a></li>
           <li><a href="#resenas">Reseñas</a></li>
           <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#empleos">Empleos</a></li>
           <li><a href="#faq">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -2477,6 +2718,86 @@
       </div>
     </section>
 
+
+    <section class="section" id="empleos">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Trabaja con nosotros</span>
+          <h2>Crece profesionalmente junto a SUOG RD.</h2>
+          <p>
+            Esta sección corresponde a oportunidades de empleo dentro de la empresa SUOG RD.
+            Buscamos personas responsables, con deseos de aprender y aportar al crecimiento de nuestro equipo.
+          </p>
+        </div>
+
+        <div class="careers-layout">
+          <article class="career-card reveal">
+            <div class="icon-box">💼</div>
+            <h3>Áreas de oportunidad</h3>
+            <p>Recibimos solicitudes para posiciones actuales y futuras en áreas como:</p>
+
+            <ul class="career-areas">
+              <li>Atención al cliente y soporte.</li>
+              <li>Ventas, promoción y relaciones comerciales.</li>
+              <li>Desarrollo web y aplicaciones.</li>
+              <li>Diseño gráfico y contenido digital.</li>
+              <li>Administración y operaciones.</li>
+              <li>Prácticas y formación interna.</li>
+            </ul>
+
+            <div class="career-note">
+              ¿Buscas ofrecer limpieza, plomería, electricidad o cerrajería?
+              Eso corresponde al registro de socios de la plataforma de servicios SUOG RD,
+              no a las vacantes internas de la empresa.
+            </div>
+          </article>
+
+          <form id="careerForm" class="career-form reveal">
+            <div class="field">
+              <label for="careerName">Nombre completo</label>
+              <input id="careerName" type="text" placeholder="Tu nombre y apellido" required />
+            </div>
+
+            <div class="field">
+              <label for="careerPhone">Teléfono o WhatsApp</label>
+              <input id="careerPhone" type="tel" placeholder="Ejemplo: 809-000-0000" required />
+            </div>
+
+            <div class="field">
+              <label for="careerLocation">Provincia o municipio</label>
+              <input id="careerLocation" type="text" placeholder="Dónde resides" required />
+            </div>
+
+            <div class="field">
+              <label for="careerArea">Área de interés</label>
+              <select id="careerArea" required>
+                <option value="">Selecciona una opción</option>
+                <option>Atención al cliente</option>
+                <option>Ventas y promoción</option>
+                <option>Desarrollo web o aplicaciones</option>
+                <option>Diseño y contenido digital</option>
+                <option>Administración y operaciones</option>
+                <option>Formación o práctica</option>
+                <option>Otra área</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="careerAvailability">Disponibilidad</label>
+              <input id="careerAvailability" type="text" placeholder="Tiempo completo, medio tiempo, horarios..." required />
+            </div>
+
+            <div class="field">
+              <label for="careerMessage">Cuéntanos sobre ti</label>
+              <textarea id="careerMessage" placeholder="Experiencia, habilidades o por qué deseas trabajar con nosotros" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar solicitud por WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="faq">
       <div class="container">
         <div class="section-title reveal">
@@ -2599,6 +2920,35 @@
     <img id="lightboxImage" src="" alt="" />
   </div>
 
+
+  <section class="assistant-panel" id="assistantPanel" aria-hidden="true" aria-label="Asistente virtual de SUOG RD">
+    <div class="assistant-header">
+      <div>
+        <strong>Asistente virtual SUOG RD</strong>
+        <small>Orientación automática disponible 24/7</small>
+      </div>
+      <button class="assistant-close" id="assistantClose" type="button" aria-label="Cerrar asistente">✕</button>
+    </div>
+
+    <div class="assistant-messages" id="assistantMessages" aria-live="polite">
+      <div class="assistant-message bot">Hola 👋 Soy el asistente virtual de SUOG RD. Puedo orientarte sobre servicios tecnológicos, empleos, cotizaciones y la plataforma de servicios.</div>
+    </div>
+
+    <div class="assistant-options">
+      <button class="assistant-option" type="button" data-question="Quiero cotizar un proyecto">Cotizar proyecto</button>
+      <button class="assistant-option" type="button" data-question="Quiero trabajar en la empresa">Trabajar con nosotros</button>
+      <button class="assistant-option" type="button" data-question="Información sobre la plataforma">Plataforma SUOG RD</button>
+      <button class="assistant-option" type="button" data-question="Hablar con una persona">Hablar con una persona</button>
+    </div>
+
+    <form class="assistant-input-row" id="assistantForm">
+      <input id="assistantInput" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" aria-label="Escribe tu pregunta" />
+      <button class="assistant-send" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <button class="assistant-launcher" id="assistantLauncher" type="button" aria-label="Abrir asistente virtual" aria-expanded="false">💬</button>
+
   <a
     class="whatsapp"
     href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información."
@@ -2621,6 +2971,13 @@
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
     const lightboxClose = document.getElementById("lightboxClose");
+    const careerForm = document.getElementById("careerForm");
+    const assistantPanel = document.getElementById("assistantPanel");
+    const assistantLauncher = document.getElementById("assistantLauncher");
+    const assistantClose = document.getElementById("assistantClose");
+    const assistantMessages = document.getElementById("assistantMessages");
+    const assistantForm = document.getElementById("assistantForm");
+    const assistantInput = document.getElementById("assistantInput");
 
     window.addEventListener("scroll", () => {
       header.classList.toggle("scrolled", window.scrollY > 20);
@@ -2693,6 +3050,113 @@
       );
 
       window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
+    });
+
+
+    careerForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const nombre = document.getElementById("careerName").value.trim();
+      const telefono = document.getElementById("careerPhone").value.trim();
+      const ubicacion = document.getElementById("careerLocation").value.trim();
+      const area = document.getElementById("careerArea").value;
+      const disponibilidad = document.getElementById("careerAvailability").value.trim();
+      const descripcion = document.getElementById("careerMessage").value.trim();
+
+      const mensaje = encodeURIComponent(
+        `Hola SUOG RD, deseo enviar una solicitud de empleo.\n\n` +
+        `Nombre: ${nombre}\n` +
+        `Teléfono: ${telefono}\n` +
+        `Ubicación: ${ubicacion}\n` +
+        `Área de interés: ${area}\n` +
+        `Disponibilidad: ${disponibilidad}\n\n` +
+        `Información adicional:\n${descripcion}`
+      );
+
+      window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
+    });
+
+    const assistantAnswers = [
+      {
+        keywords: ["cotizar", "cotizacion", "precio", "costo", "proyecto", "aplicacion", "pagina web", "sistema"],
+        answer: "Para cotizar un proyecto necesitamos conocer tu idea, las funciones principales y el plazo aproximado. Puedes completar el formulario de cotización o hablar directamente con nuestro equipo por WhatsApp."
+      },
+      {
+        keywords: ["empleo", "trabajo", "vacante", "trabajar", "curriculum", "currículum"],
+        answer: "Las oportunidades de empleo de la empresa SUOG RD están en la sección “Trabaja con nosotros”. Completa el formulario y tu solicitud se enviará por WhatsApp para evaluación."
+      },
+      {
+        keywords: ["limpieza", "plomeria", "plomería", "electricidad", "cerrajeria", "cerrajería", "socio", "plataforma"],
+        answer: "La plataforma de servicios SUOG RD es un proyecto de la empresa y conecta clientes con profesionales de limpieza, plomería, electricidad y cerrajería. El registro como socio de la plataforma es distinto a solicitar un empleo interno."
+      },
+      {
+        keywords: ["contacto", "persona", "humano", "asesor", "whatsapp", "llamar"],
+        answer: "Puedes hablar con una persona de nuestro equipo por WhatsApp al 809-419-1166. Al pulsar el botón verde se abrirá la conversación."
+      },
+      {
+        keywords: ["servicios", "ofrecen", "empresa"],
+        answer: "La empresa SUOG RD desarrolla aplicaciones móviles, páginas web, sistemas empresariales, automatizaciones, diseño digital, soporte y mantenimiento."
+      }
+    ];
+
+    const addAssistantMessage = (text, type) => {
+      const message = document.createElement("div");
+      message.className = `assistant-message ${type}`;
+      message.textContent = text;
+      assistantMessages.appendChild(message);
+      assistantMessages.scrollTop = assistantMessages.scrollHeight;
+    };
+
+    const getAssistantAnswer = (question) => {
+      const normalized = question.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const match = assistantAnswers.find((item) =>
+        item.keywords.some((keyword) =>
+          normalized.includes(keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
+        )
+      );
+
+      return match?.answer ||
+        "Puedo ayudarte con cotizaciones, servicios tecnológicos, empleos, contacto y la plataforma SUOG RD. Para una consulta específica, habla con nuestro equipo por WhatsApp.";
+    };
+
+    const openAssistant = () => {
+      assistantPanel.classList.add("open");
+      assistantPanel.setAttribute("aria-hidden", "false");
+      assistantLauncher.setAttribute("aria-expanded", "true");
+      assistantInput.focus();
+    };
+
+    const closeAssistant = () => {
+      assistantPanel.classList.remove("open");
+      assistantPanel.setAttribute("aria-hidden", "true");
+      assistantLauncher.setAttribute("aria-expanded", "false");
+    };
+
+    assistantLauncher.addEventListener("click", () => {
+      assistantPanel.classList.contains("open") ? closeAssistant() : openAssistant();
+    });
+
+    assistantClose.addEventListener("click", closeAssistant);
+
+    assistantForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const question = assistantInput.value.trim();
+      if (!question) return;
+
+      addAssistantMessage(question, "user");
+      assistantInput.value = "";
+
+      window.setTimeout(() => {
+        addAssistantMessage(getAssistantAnswer(question), "bot");
+      }, 350);
+    });
+
+    document.querySelectorAll(".assistant-option").forEach((button) => {
+      button.addEventListener("click", () => {
+        const question = button.dataset.question || button.textContent.trim();
+        addAssistantMessage(question, "user");
+        window.setTimeout(() => addAssistantMessage(getAssistantAnswer(question), "bot"), 300);
+      });
     });
 
     const openLightbox = (image) => {
