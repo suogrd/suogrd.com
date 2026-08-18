@@ -221,6 +221,11 @@
     .status-pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(37,211,102,.28);background:rgba(37,211,102,.08);color:#a8f3c4;font-size:.78rem;font-weight:850}
     .product-card h3{font-size:clamp(1.7rem,3vw,2.5rem);margin:22px 0 10px}
     .product-card p{color:var(--muted);max-width:770px}
+    .product-link{
+      display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:900;color:#8ed8ff;
+      transition:.2s ease
+    }
+    .product-link:hover{color:#fff;transform:translateX(3px)}
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
     .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#bfe5ff;background:rgba(19,140,255,.07);font-size:.8rem}
 
@@ -346,7 +351,7 @@
 <body>
   <header id="header">
     <div class="container navbar">
-      <a href="#inicio" class="brand" aria-label="SUOG RD">
+      <a href="index.html" class="brand" aria-label="SUOG RD">
         <span class="brand-mark"><b>S</b></span>
         <span>SUOG <strong>RD</strong></span>
       </a>
@@ -354,13 +359,13 @@
       <nav id="nav">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#ecosistema">Ecosistema</a></li>
+          <li><a href="productos.html">Productos</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#soluciones">Soluciones</a></li>
-          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="inversionistas.html">Inversionistas</a></li>
+          <li><a href="ubicaciones.html">Ubicaciones</a></li>
           <li><a href="#ventas">Ventas</a></li>
           <li><a href="#resenas">Reseñas</a></li>
-          <li><a href="#faq">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -384,7 +389,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20desarrollar%20un%20proyecto." target="_blank" rel="noopener">Quiero desarrollar mi proyecto</a>
-            <a class="btn btn-secondary" href="#ecosistema">Ver nuestro ecosistema</a>
+            <a class="btn btn-secondary" href="productos.html">Ver nuestro ecosistema</a>
           </div>
           <div class="trust-row">
             <span><i class="dot"></i>Desarrollo personalizado</span>
@@ -455,6 +460,7 @@
               <h3>SUOG RD</h3>
               <p>Marketplace de servicios que conecta clientes con profesionales y gestiona solicitudes, ubicación, comunicación y seguimiento del servicio.</p>
               <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Google Maps</span><span class="tag">Android</span><span class="tag">iOS</span></div>
+              <a class="product-link" href="suog-rd.html">Conocer SUOG RD →</a>
             </div>
           </article>
 
@@ -464,7 +470,10 @@
               <h3>SUOG CELL</h3>
               <p>Plataforma orientada a tiendas de celulares con catálogo, clientes, promociones, compras, niveles, referidos y administración digital.</p>
             </div>
-            <div class="tags"><span class="tag">Comercio</span><span class="tag">Clientes</span><span class="tag">Catálogo</span></div>
+            <div>
+              <div class="tags"><span class="tag">Comercio</span><span class="tag">Clientes</span><span class="tag">Catálogo</span></div>
+              <a class="product-link" href="suog-cell.html">Conocer SUOG CELL →</a>
+            </div>
           </article>
 
           <article class="product-card reveal">
@@ -473,7 +482,10 @@
               <h3>SUOG FN</h3>
               <p>Sistema para administrar financiamientos de dispositivos: clientes, contratos, cuotas, mora, pagos, alertas, reportes y control operativo.</p>
             </div>
-            <div class="tags"><span class="tag">Financiamiento</span><span class="tag">Administración</span><span class="tag">Reportes</span></div>
+            <div>
+              <div class="tags"><span class="tag">Financiamiento</span><span class="tag">Administración</span><span class="tag">Reportes</span></div>
+              <a class="product-link" href="suog-fn.html">Conocer SUOG FN →</a>
+            </div>
           </article>
 
           <article class="product-card reveal">
@@ -482,7 +494,10 @@
               <h3>SUOG FN Agente</h3>
               <p>Aplicación agente vinculada al ecosistema SUOG FN para integrar dispositivos financiados con las operaciones del sistema.</p>
             </div>
-            <div class="tags"><span class="tag">Android</span><span class="tag">Firebase</span><span class="tag">Dispositivos</span></div>
+            <div>
+              <div class="tags"><span class="tag">Android</span><span class="tag">Firebase</span><span class="tag">Dispositivos</span></div>
+              <a class="product-link" href="suog-fn-agente.html">Conocer SUOG FN Agente →</a>
+            </div>
           </article>
 
           <article class="product-card reveal">
@@ -491,7 +506,10 @@
               <h3>Credi Maven RD</h3>
               <p>Proyecto digital dentro del portafolio tecnológico de SUOG RD, desarrollado con enfoque en crecimiento, control y evolución operativa.</p>
             </div>
-            <div class="tags"><span class="tag">Proyecto digital</span><span class="tag">Gestión</span><span class="tag">Evolución</span></div>
+            <div>
+              <div class="tags"><span class="tag">Proyecto digital</span><span class="tag">Gestión</span><span class="tag">Evolución</span></div>
+              <a class="product-link" href="credi-maven-rd.html">Conocer Credi Maven RD →</a>
+            </div>
           </article>
         </div>
       </div>
@@ -578,7 +596,7 @@
               <h3>Construcción multiplataforma</h3>
               <p>Un proyecto pensado para evolucionar sobre infraestructura moderna y servicios conectados.</p>
               <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Google Maps</span></div>
-              <a class="btn btn-primary" style="margin-top:22px" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20una%20aplicación%20para%20mi%20negocio." target="_blank" rel="noopener">Quiero construir algo así</a>
+              <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"><a class="btn btn-primary" href="suog-rd.html">Ver SUOG RD completo</a><a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20una%20aplicación%20para%20mi%20negocio." target="_blank" rel="noopener">Quiero construir algo así</a></div>
             </article>
           </div>
 
@@ -720,7 +738,7 @@
             <a class="contact-card reveal" href="https://wa.me/18094191166" target="_blank" rel="noopener"><small>WhatsApp</small><strong>809-419-1166</strong></a>
             <a class="contact-card reveal" href="mailto:contacto@suogrd.com"><small>Correo</small><strong>contacto@suogrd.com</strong></a>
             <a class="contact-card reveal" href="mailto:soporte@suogrd.com"><small>Soporte</small><strong>soporte@suogrd.com</strong></a>
-            <div class="contact-card reveal"><small>Ubicación</small><strong>Santo Domingo Este, República Dominicana</strong></div>
+            <a class="contact-card reveal" href="ubicaciones.html"><small>Presencia internacional</small><strong>República Dominicana · Colombia · Estados Unidos · Canadá</strong></a>
           </div>
         </div>
 
@@ -738,7 +756,11 @@
     <div class="container footer-row">
       <div><b>SUOG RD</b><br><small>© <span id="year"></span> Todos los derechos reservados.</small></div>
       <div><small>Apps · Software · Sistemas · Web · Automatización</small></div>
-      <div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="LinkedIn">IN</a></div>
+      <div class="socials">
+        <a href="productos.html" aria-label="Productos">PR</a>
+        <a href="inversionistas.html" aria-label="Inversionistas">IN</a>
+        <a href="ubicaciones.html" aria-label="Ubicaciones">UB</a>
+      </div>
     </div>
   </footer>
 
