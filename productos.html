@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Productos Tecnológicos | SUOG RD</title>
+  <meta name="description" content="Conoce los productos tecnológicos de SUOG RD: SUOG RD, SUOG CELL, SUOG FN, SUOG FN Agente y Credi Maven RD. Soluciones digitales creadas desde República Dominicana." />
+  <meta name="keywords" content="productos SUOG RD, SUOG CELL, SUOG FN, SUOG FN Agente, Credi Maven RD, software República Dominicana, apps empresariales RD" />
+  <meta name="author" content="SUOG RD" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#04101e" />
+  <link rel="canonical" href="https://suogrd.com/productos.html" />
+
+  <meta property="og:title" content="Productos Tecnológicos | SUOG RD" />
+  <meta property="og:description" content="Cinco productos y proyectos dentro de un mismo ecosistema tecnológico." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://suogrd.com/productos.html" />
+  <meta property="og:locale" content="es_DO" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Productos tecnológicos de SUOG RD",
+    "url":"https://suogrd.com/productos.html",
+    "description":"Portafolio de productos tecnológicos y proyectos desarrollados dentro del ecosistema SUOG RD.",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"SUOG RD",
+      "url":"https://suogrd.com/"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#030b16;
+      --bg2:#061426;
+      --card:rgba(10,31,56,.78);
+      --text:#f7fbff;
+      --muted:#a7bfd8;
+      --blue:#138cff;
+      --cyan:#00c8ff;
+      --green:#25d366;
+      --gold:#ffd54a;
+      --line:rgba(92,169,255,.22);
+      --radius:24px;
+      --container:1180px;
+      --shadow:0 24px 80px rgba(0,112,255,.16);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%,rgba(19,140,255,.18),transparent 27%),
+        radial-gradient(circle at 90% 13%,rgba(0,200,255,.10),transparent 25%),
+        linear-gradient(180deg,#030b16 0%,#061426 48%,#030b16 100%);
+      color:var(--text);line-height:1.6;overflow-x:hidden;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.27;
+      background-image:
+        linear-gradient(rgba(70,155,255,.055) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(70,155,255,.055) 1px,transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(to bottom,#000,transparent 90%);
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(92%,var(--container));margin-inline:auto}
+    .section{padding:92px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(19,140,255,.08);color:#93d7ff;font-size:.82rem;
+      font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px;
+    }
+    .section-title{max-width:820px;margin-bottom:42px}
+    .section-title h2{font-size:clamp(2rem,5vw,3.7rem);line-height:1.05;letter-spacing:-.035em;margin-bottom:16px}
+    .section-title p{color:var(--muted);font-size:1.04rem}
+    .gradient-text{
+      background:linear-gradient(90deg,#fff,#76d5ff 52%,#00c8ff);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;
+      padding:14px 21px;font-weight:900;cursor:pointer;transition:.22s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{color:#fff;background:linear-gradient(135deg,#1594ff,#0066df);box-shadow:0 14px 36px rgba(0,114,255,.3)}
+    .btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.045);color:white}
+    .btn-green{background:var(--green);color:white}
+
+    header{
+      position:sticky;top:0;z-index:100;background:rgba(3,11,22,.88);backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+    }
+    .navbar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:950}
+    .brand-mark{
+      width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+      background:linear-gradient(145deg,#23a0ff,#005bd7);box-shadow:0 10px 28px rgba(0,127,255,.28);
+    }
+    .brand strong{color:var(--cyan)}
+    nav ul{display:flex;align-items:center;gap:22px;list-style:none}
+    nav a{font-size:.9rem;color:#d8e8fa}
+    nav a:hover{color:#fff}
+    .menu-btn{
+      display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:#fff;cursor:pointer;
+    }
+
+    .hero{min-height:calc(100vh - 74px);display:grid;align-items:center;padding:78px 0 100px}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
+    .hero h1{font-size:clamp(3rem,7vw,5.9rem);line-height:.96;letter-spacing:-.055em;margin-bottom:24px}
+    .hero p{max-width:710px;color:var(--muted);font-size:clamp(1.05rem,2vw,1.22rem);margin-bottom:28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{
+      border:1px solid var(--line);border-radius:32px;padding:30px;box-shadow:var(--shadow);
+      background:
+        radial-gradient(circle at 85% 12%,rgba(0,200,255,.15),transparent 32%),
+        linear-gradient(145deg,rgba(13,35,62,.9),rgba(5,18,34,.97));
+    }
+    .hero-card h3{font-size:1.7rem;margin-bottom:12px}
+    .hero-card p{font-size:.94rem;margin-bottom:18px}
+    .hero-points{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .hero-point{padding:18px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.035)}
+    .hero-point strong{display:block;font-size:1.08rem;margin-bottom:4px}
+    .hero-point span{color:var(--muted);font-size:.84rem}
+
+    .product-list{display:grid;gap:24px}
+    .product-card{
+      display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:center;padding:30px;
+      border:1px solid var(--line);border-radius:30px;background:
+        radial-gradient(circle at 92% 8%,rgba(0,200,255,.12),transparent 30%),
+        linear-gradient(145deg,rgba(13,35,62,.76),rgba(7,22,40,.86));
+      transition:.24s ease;
+    }
+    .product-card:hover{transform:translateY(-5px);border-color:rgba(73,179,255,.58);box-shadow:0 22px 55px rgba(0,112,255,.1)}
+    .product-visual{
+      min-height:250px;border:1px solid rgba(255,255,255,.08);border-radius:24px;
+      display:grid;place-items:center;background:
+        radial-gradient(circle at 50% 30%,rgba(19,140,255,.24),transparent 35%),
+        linear-gradient(180deg,rgba(13,35,62,.7),rgba(4,15,29,.9));
+      position:relative;overflow:hidden;
+    }
+    .product-visual::after{
+      content:"";position:absolute;width:160px;height:160px;border-radius:50%;
+      background:rgba(0,200,255,.07);filter:blur(10px);right:-50px;bottom:-50px;
+    }
+    .logo-fallback{
+      width:110px;height:110px;border-radius:30px;display:grid;place-items:center;
+      background:linear-gradient(145deg,#1594ff,#0066df);font-size:2rem;font-weight:950;
+      box-shadow:0 20px 50px rgba(0,112,255,.25);
+    }
+    .product-content h3{font-size:clamp(2rem,4vw,3rem);line-height:1.04;margin-bottom:12px}
+    .product-content p{color:var(--muted);margin-bottom:16px}
+    .status{
+      display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(37,211,102,.26);
+      background:rgba(37,211,102,.08);color:#a8f3c4;font-size:.78rem;font-weight:850;margin-bottom:14px;
+    }
+    .features{list-style:none;display:grid;gap:9px;margin:16px 0 20px}
+    .features li{color:#dcecff}
+    .features li::before{content:"✓";color:var(--cyan);font-weight:950;margin-right:9px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(19,140,255,.07);color:#bfe5ff;font-size:.8rem}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .why-card{
+      padding:26px;border:1px solid var(--line);border-radius:22px;
+      background:linear-gradient(145deg,rgba(13,35,62,.7),rgba(7,22,40,.8));
+    }
+    .why-card h3{margin:12px 0 8px}
+    .why-card p{color:var(--muted);font-size:.93rem}
+    .icon{font-size:1.7rem}
+
+    .cta{
+      text-align:center;padding:62px 28px;border:1px solid var(--line);border-radius:30px;background:
+      radial-gradient(circle at 50% 0%,rgba(0,200,255,.16),transparent 42%),
+      linear-gradient(145deg,rgba(11,34,61,.84),rgba(6,20,38,.9));
+    }
+    .cta h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;margin-bottom:16px}
+    .cta p{color:var(--muted);max-width:720px;margin:0 auto 25px}
+
+    footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .whatsapp{
+      position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;
+      display:grid;place-items:center;background:var(--green);box-shadow:0 16px 38px rgba(37,211,102,.34);font-size:1.5rem;
+    }
+    .reveal{opacity:0;transform:translateY(20px);transition:.65s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:980px){
+      nav{position:absolute;top:74px;left:4%;right:4%;display:none;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(3,11,22,.97)}
+      nav.open{display:block}
+      nav ul{flex-direction:column;align-items:stretch;gap:4px}
+      nav a{display:block;padding:9px}
+      .menu-btn{display:grid;place-items:center}
+      .hero-grid,.product-card{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){
+      .section{padding:70px 0}
+      .hero{min-height:auto;padding-top:50px}
+      .hero h1{font-size:clamp(2.7rem,15vw,4.1rem)}
+      .hero-actions .btn,.actions .btn{width:100%}
+      .hero-points,.why-grid{grid-template-columns:1fr}
+      .product-card{padding:22px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span>
+        <span>SUOG <strong>RD</strong></span>
+      </a>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="ubicaciones.html">Ubicaciones</a></li>
+          <li><a href="inversionistas.html">Inversionistas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Productos tecnológicos</span>
+          <h1>Cinco productos. <span class="gradient-text">Una misma visión.</span></h1>
+          <p>
+            SUOG RD construye soluciones propias para distintas necesidades: servicios,
+            comercios, financiamiento, administración de dispositivos y proyectos financieros.
+            Cada producto amplía nuestra experiencia y fortalece el ecosistema tecnológico.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#productos">Explorar productos</a>
+            <a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20conocer%20sus%20productos%20tecnológicos." target="_blank" rel="noopener">Hablar con SUOG RD</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <span class="eyebrow">Ecosistema SUOG</span>
+          <h3>Más que servicios de desarrollo.</h3>
+          <p>Construimos productos propios que nos obligan a resolver problemas reales de operación, experiencia de usuario y escalabilidad.</p>
+          <div class="hero-points">
+            <div class="hero-point"><strong>SUOG RD</strong><span>Servicios</span></div>
+            <div class="hero-point"><strong>SUOG CELL</strong><span>Comercio móvil</span></div>
+            <div class="hero-point"><strong>SUOG FN</strong><span>Financiamiento</span></div>
+            <div class="hero-point"><strong>FN Agente</strong><span>Dispositivos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="productos">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Nuestro portafolio</span>
+          <h2>Productos creados para resolver <span class="gradient-text">necesidades reales.</span></h2>
+          <p>
+            En esta primera etapa mostramos el alcance general de cada producto.
+            Luego cada uno tendrá su propia página con logotipo, capturas, funciones, tecnologías y caso de uso completo.
+          </p>
+        </div>
+
+        <div class="product-list">
+          <article class="product-card reveal">
+            <div class="product-visual">
+              <div class="logo-fallback">SR</div>
+            </div>
+            <div class="product-content">
+              <span class="status">Producto propio</span>
+              <h3>SUOG RD</h3>
+              <p>
+                Marketplace de servicios que conecta clientes con profesionales y organiza solicitudes,
+                ubicación, comunicación y seguimiento dentro de una misma plataforma.
+              </p>
+              <ul class="features">
+                <li>Perfiles de clientes y socios profesionales.</li>
+                <li>Solicitudes de servicios en tiempo real.</li>
+                <li>Ubicación y mapas.</li>
+                <li>Chat y seguimiento del servicio.</li>
+                <li>Paneles separados para cada tipo de usuario.</li>
+              </ul>
+              <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Google Maps</span><span class="tag">Android</span><span class="tag">iOS</span></div>
+              <div class="actions">
+                <a class="btn btn-primary" href="index.html#portafolio">Ver caso destacado</a>
+                <a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información%20sobre%20SUOG%20RD." target="_blank" rel="noopener">Solicitar información</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual">
+              <div class="logo-fallback">SC</div>
+            </div>
+            <div class="product-content">
+              <span class="status">En desarrollo</span>
+              <h3>SUOG CELL</h3>
+              <p>
+                Solución digital para tiendas de celulares y comercios tecnológicos,
+                pensada para mantener clientes, productos, promociones y comunidad en un solo lugar.
+              </p>
+              <ul class="features">
+                <li>Registro e inicio de sesión de clientes.</li>
+                <li>Catálogo de celulares, accesorios y productos.</li>
+                <li>Promociones, mercancía nueva y anuncios.</li>
+                <li>Niveles de clientes y sistema de referidos.</li>
+                <li>Pagos, historial, pedidos y soporte.</li>
+              </ul>
+              <div class="tags"><span class="tag">Retail</span><span class="tag">Clientes</span><span class="tag">Catálogo</span><span class="tag">Firebase</span></div>
+              <div class="actions">
+                <a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información%20sobre%20SUOG%20CELL." target="_blank" rel="noopener">Solicitar información</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual">
+              <div class="logo-fallback">FN</div>
+            </div>
+            <div class="product-content">
+              <span class="status">Producto propio</span>
+              <h3>SUOG FN</h3>
+              <p>
+                Sistema de administración de financiamientos de dispositivos móviles,
+                diseñado para organizar clientes, contratos, cuotas, mora, pagos y reportes.
+              </p>
+              <ul class="features">
+                <li>Gestión de clientes y dispositivos.</li>
+                <li>Financiamientos y contratos.</li>
+                <li>Cuotas, mora y alertas.</li>
+                <li>Pagos, recibos y reportes.</li>
+                <li>Panel administrativo y usuarios.</li>
+              </ul>
+              <div class="tags"><span class="tag">Financiamiento</span><span class="tag">Administración</span><span class="tag">Reportes</span><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+              <div class="actions">
+                <a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información%20sobre%20SUOG%20FN." target="_blank" rel="noopener">Solicitar información</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual">
+              <div class="logo-fallback">FA</div>
+            </div>
+            <div class="product-content">
+              <span class="status">Tecnología móvil</span>
+              <h3>SUOG FN Agente</h3>
+              <p>
+                Aplicación agente vinculada a SUOG FN para conectar dispositivos financiados con la operación del sistema.
+              </p>
+              <ul class="features">
+                <li>Vinculación con dispositivos.</li>
+                <li>Identificación de equipo.</li>
+                <li>Integración con Firebase.</li>
+                <li>Comunicación con el ecosistema SUOG FN.</li>
+                <li>Base para políticas y control de dispositivos.</li>
+              </ul>
+              <div class="tags"><span class="tag">Android</span><span class="tag">Firebase</span><span class="tag">Dispositivos</span><span class="tag">Agente</span></div>
+              <div class="actions">
+                <a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información%20sobre%20SUOG%20FN%20Agente." target="_blank" rel="noopener">Solicitar información</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual">
+              <div class="logo-fallback">CM</div>
+            </div>
+            <div class="product-content">
+              <span class="status">Portafolio SUOG</span>
+              <h3>Credi Maven RD</h3>
+              <p>
+                Proyecto tecnológico y financiero dentro del portafolio empresarial,
+                orientado a crecer mediante herramientas digitales, control y evolución operativa.
+              </p>
+              <ul class="features">
+                <li>Enfoque financiero y comercial.</li>
+                <li>Gestión digital y control operativo.</li>
+                <li>Base preparada para crecimiento.</li>
+                <li>Integración futura con nuevas funciones.</li>
+                <li>Parte del ecosistema empresarial SUOG.</li>
+              </ul>
+              <div class="tags"><span class="tag">Finanzas</span><span class="tag">Gestión</span><span class="tag">Digital</span><span class="tag">Crecimiento</span></div>
+              <div class="actions">
+                <a class="btn btn-secondary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información%20sobre%20Credi%20Maven%20RD." target="_blank" rel="noopener">Solicitar información</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Qué demuestra este portafolio</span>
+          <h2>No hablamos solamente de lo que podemos hacer.</h2>
+          <p>Construir productos propios nos permite aplicar experiencia práctica a los proyectos de nuestros clientes.</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal"><div class="icon">🧠</div><h3>Experiencia real</h3><p>Resolver necesidades propias mejora nuestra capacidad para entender problemas de negocio de terceros.</p></article>
+          <article class="why-card reveal"><div class="icon">🧩</div><h3>Diversidad de soluciones</h3><p>Servicios, retail, financiamiento, dispositivos y gestión forman parte del ecosistema.</p></article>
+          <article class="why-card reveal"><div class="icon">📈</div><h3>Evolución continua</h3><p>Cada producto puede añadir módulos, integraciones y nuevas capacidades a medida que crece.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="eyebrow">Tu proyecto puede ser el próximo</span>
+          <h2>¿Tienes una idea que necesita convertirse en tecnología?</h2>
+          <p>
+            Cuéntanos el problema, el tipo de usuario y lo que quieres lograr.
+            SUOG RD puede ayudarte a transformar esa visión en un producto digital real.
+          </p>
+          <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20tengo%20una%20idea%20para%20un%20producto%20digital." target="_blank" rel="noopener">Hablar sobre mi proyecto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div><b>SUOG RD</b><br><small>© <span id="year"></span> Todos los derechos reservados.</small></div>
+      <div><small>SUOG RD · SUOG CELL · SUOG FN · SUOG FN Agente · Credi Maven RD</small></div>
+      <a href="index.html">Página principal</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
+
+  <script>
+    const nav = document.getElementById("nav");
+    const menuBtn = document.getElementById("menuBtn");
+
+    menuBtn.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      menuBtn.textContent = open ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, {threshold:.1});
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
