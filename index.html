@@ -3,2056 +3,371 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SUOG RD crea aplicaciones móviles, páginas web y soluciones digitales funcionales, modernas e interactivas." />
-  <meta name="keywords" content="desarrollo de aplicaciones, páginas web, Flutter, Firebase, Android, iOS, República Dominicana" />
+
+  <title>SUOG RD | Apps, Software, Sistemas y Desarrollo Web en República Dominicana</title>
+  <meta name="description" content="SUOG RD desarrolla aplicaciones móviles, software empresarial, sistemas personalizados, páginas web, automatización y soluciones digitales desde República Dominicana para empresas y emprendedores." />
+  <meta name="keywords" content="SUOG RD, desarrollo de apps República Dominicana, software empresarial RD, sistemas personalizados, páginas web Santo Domingo, Flutter, Firebase, Android, iOS, automatización, inteligencia artificial" />
   <meta name="author" content="SUOG RD" />
-  <meta name="theme-color" content="#061426" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#04101e" />
+  <link rel="canonical" href="https://suogrd.com/" />
 
-  <meta property="og:title" content="SUOG RD | Desarrollo de aplicaciones" />
-  <meta property="og:description" content="Convertimos tus ideas en aplicaciones funcionales, modernas e interactivas." />
+  <meta property="og:title" content="SUOG RD | Una visión, nosotros la hacemos realidad" />
+  <meta property="og:description" content="Apps, software, sistemas, web, automatización e inteligencia artificial. Tecnología creada desde República Dominicana para negocios con visión de crecimiento." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://suogrd.com" />
+  <meta property="og:url" content="https://suogrd.com/" />
+  <meta property="og:locale" content="es_DO" />
 
-  <title>SUOG RD | Desarrollo de aplicaciones</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SUOG RD | Desarrollo tecnológico" />
+  <meta name="twitter:description" content="Convertimos ideas en productos digitales reales: apps, software, sistemas y páginas web." />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://suogrd.com/#organization",
+        "name":"SUOG RD",
+        "url":"https://suogrd.com/",
+        "email":"contacto@suogrd.com",
+        "telephone":"+1-809-419-1166",
+        "description":"Empresa tecnológica de República Dominicana especializada en aplicaciones móviles, software, sistemas personalizados, páginas web, automatización y soluciones digitales.",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Santo Domingo Este",
+          "addressCountry":"DO"
+        },
+        "areaServed":["DO","CO","US","CA"]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://suogrd.com/#website",
+        "url":"https://suogrd.com/",
+        "name":"SUOG RD",
+        "publisher":{"@id":"https://suogrd.com/#organization"},
+        "inLanguage":"es"
+      },
+      {
+        "@type":"Service",
+        "name":"Desarrollo de software y aplicaciones",
+        "provider":{"@id":"https://suogrd.com/#organization"},
+        "areaServed":"República Dominicana",
+        "serviceType":[
+          "Desarrollo de aplicaciones móviles",
+          "Software empresarial",
+          "Sistemas personalizados",
+          "Desarrollo web",
+          "Automatización",
+          "Integraciones digitales"
+        ]
+      }
+    ]
+  }
+  </script>
 
   <style>
-    :root {
-      --primary: #138cff;
-      --primary-2: #00c2ff;
-      --dark: #061426;
-      --dark-2: #091b32;
-      --card: rgba(13, 35, 62, 0.72);
-      --text: #f6f9ff;
-      --muted: #aac0da;
-      --border: rgba(92, 169, 255, 0.24);
-      --success: #25d366;
-      --shadow: 0 18px 60px rgba(0, 112, 255, 0.16);
-      --radius: 22px;
-      --container: 1180px;
+    :root{
+      --bg:#030b16;
+      --bg2:#061426;
+      --card:rgba(9,29,53,.78);
+      --card2:rgba(11,38,68,.88);
+      --text:#f7fbff;
+      --muted:#a7bfd8;
+      --blue:#138cff;
+      --cyan:#00c8ff;
+      --line:rgba(92,169,255,.22);
+      --gold:#ffd54a;
+      --green:#25d366;
+      --radius:24px;
+      --shadow:0 24px 80px rgba(0,112,255,.16);
+      --container:1200px;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:
-        radial-gradient(circle at 10% 15%, rgba(19, 140, 255, 0.18), transparent 32%),
-        radial-gradient(circle at 88% 18%, rgba(0, 194, 255, 0.12), transparent 28%),
-        linear-gradient(180deg, #04101e 0%, #07172a 48%, #04101e 100%);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+        radial-gradient(circle at 12% 8%,rgba(19,140,255,.17),transparent 26%),
+        radial-gradient(circle at 90% 14%,rgba(0,200,255,.11),transparent 26%),
+        linear-gradient(180deg,#030b16 0%,#061426 42%,#030b16 100%);
+      color:var(--text); line-height:1.6; overflow-x:hidden;
+    }
+    body::before{
+      content:""; position:fixed; inset:0; pointer-events:none; z-index:-2; opacity:.28;
+      background-image:linear-gradient(rgba(70,155,255,.055) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(70,155,255,.055) 1px,transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(to bottom,#000,transparent 88%);
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(92%,var(--container));margin-inline:auto}
+    .section{padding:92px 0;position:relative}
+    .eyebrow{
+      display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(19,140,255,.08);color:#93d7ff;font-size:.82rem;
+      font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px
+    }
+    .section-title{max-width:790px;margin-bottom:42px}
+    .section-title h2{font-size:clamp(2rem,5vw,3.7rem);line-height:1.05;letter-spacing:-.035em;margin-bottom:16px}
+    .section-title p{color:var(--muted);font-size:1.04rem}
+    .gradient-text{
+      background:linear-gradient(90deg,#fff,#72d5ff 52%,#00c8ff);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;
+      padding:14px 21px;font-weight:900;cursor:pointer;transition:.22s ease
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{color:#fff;background:linear-gradient(135deg,#1594ff,#0066df);box-shadow:0 14px 36px rgba(0,114,255,.3)}
+    .btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.045)}
+    .btn-gold{color:#0b1220;background:linear-gradient(135deg,#ffe36f,#ffbd1a);box-shadow:0 14px 36px rgba(255,193,7,.2)}
+    header{
+      position:sticky;top:0;z-index:100;border-bottom:1px solid transparent;transition:.22s ease
+    }
+    header.scrolled{background:rgba(3,11,22,.9);backdrop-filter:blur(18px);border-bottom-color:var(--line)}
+    .navbar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:.02em}
+    .brand-mark{
+      width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+      background:linear-gradient(145deg,#23a0ff,#005bd7);box-shadow:0 10px 28px rgba(0,127,255,.28)
+    }
+    .brand-mark b{font-size:1.25rem}
+    .brand strong{color:var(--cyan)}
+    nav ul{list-style:none;display:flex;align-items:center;gap:20px}
+    nav a{color:#d7e8fa;font-size:.9rem}
+    nav a:hover{color:white}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .nav-actions .btn{padding:11px 15px;font-size:.88rem}
+    .menu-btn{
+      display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:#fff;cursor:pointer
+    }
+
+    .hero{min-height:calc(100vh - 74px);display:grid;align-items:center;padding:72px 0 92px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+    .hero h1{font-size:clamp(3rem,7.5vw,6.4rem);line-height:.94;letter-spacing:-.055em;margin-bottom:24px}
+    .hero-copy>p{max-width:690px;color:var(--muted);font-size:clamp(1.05rem,2vw,1.24rem);margin-bottom:28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+    .trust-row{display:flex;flex-wrap:wrap;gap:16px;color:#c0d4e8;font-size:.9rem}
+    .trust-row span{display:inline-flex;align-items:center;gap:8px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 16px rgba(0,200,255,.8)}
+    .hero-stage{position:relative;min-height:540px;display:grid;place-items:center}
+    .hero-card{
+      width:min(100%,570px);border:1px solid var(--line);border-radius:30px;padding:22px;
+      background:linear-gradient(145deg,rgba(13,35,62,.94),rgba(4,15,29,.98));box-shadow:var(--shadow);
+      transform:perspective(1200px) rotateY(-5deg) rotateX(2deg);overflow:hidden
+    }
+    .hero-card::before{
+      content:"";position:absolute;inset:auto auto -90px -80px;width:240px;height:240px;border-radius:50%;
+      background:rgba(19,140,255,.16);filter:blur(30px)
+    }
+    .hero-screen{display:grid;grid-template-columns:.7fr 1.3fr;gap:14px;margin-top:18px}
+    .mini-panel,.main-panel{border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:16px;background:rgba(255,255,255,.025)}
+    .mini-line,.code-line{height:9px;border-radius:10px;background:rgba(255,255,255,.09);margin:12px 0}
+    .mini-line.active,.code-line:nth-child(2n){background:linear-gradient(90deg,rgba(19,140,255,.9),rgba(0,200,255,.35))}
+    .code-line:nth-child(3n){width:62%;background:rgba(0,200,255,.26)}
+    .phone{
+      position:absolute;right:-10px;bottom:-22px;width:188px;padding:10px;border-radius:34px;background:#02070d;
+      border:1px solid rgba(255,255,255,.13);box-shadow:0 24px 60px rgba(0,0,0,.55);transform:rotate(6deg)
+    }
+    .phone-screen{
+      min-height:355px;border-radius:26px;padding:20px 15px;background:
+      radial-gradient(circle at 80% 10%,rgba(0,200,255,.2),transparent 34%),linear-gradient(180deg,#0b2341,#071321)
+    }
+    .notch{width:66px;height:16px;border-radius:99px;background:#01050a;margin:-12px auto 22px}
+    .phone-screen h3{font-size:1.25rem;line-height:1.12;margin:24px 0 14px}
+    .phone-app{padding:13px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.045);margin-top:10px}
+    .float{
+      position:absolute;padding:10px 13px;border:1px solid var(--line);border-radius:14px;background:rgba(6,25,46,.9);
+      backdrop-filter:blur(10px);box-shadow:var(--shadow);font-size:.82rem;animation:float 4s ease-in-out infinite
+    }
+    .float.one{left:-10px;top:80px}.float.two{right:10px;top:20px;animation-delay:-1.4s}
+    @keyframes float{50%{transform:translateY(-10px)}}
+
+    .power-strip{
+      padding:22px 0;border-block:1px solid rgba(92,169,255,.1);background:rgba(255,255,255,.012)
+    }
+    .power-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .power-item{padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);text-align:center}
+    .power-item strong{display:block;color:#73d3ff;font-size:1.25rem;margin-bottom:3px}
+    .power-item span{color:var(--muted);font-size:.88rem}
+
+    .services-grid,.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      position:relative;padding:27px;border:1px solid var(--line);border-radius:var(--radius);
+      background:linear-gradient(145deg,rgba(13,35,62,.72),rgba(7,22,40,.82));
+      transition:.24s ease;overflow:hidden
+    }
+    .card:hover{transform:translateY(-6px);border-color:rgba(73,179,255,.58);box-shadow:0 22px 55px rgba(0,112,255,.1)}
+    .icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;font-size:1.45rem;margin-bottom:20px;background:rgba(19,140,255,.13);border:1px solid rgba(77,177,255,.22)}
+    .card h3{font-size:1.18rem;margin-bottom:9px}.card p{color:var(--muted);font-size:.94rem}
+
+    .ecosystem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .product-card{
+      min-height:280px;display:flex;flex-direction:column;justify-content:space-between;padding:30px;border-radius:28px;
+      border:1px solid var(--line);background:
+      radial-gradient(circle at 90% 10%,rgba(0,200,255,.13),transparent 30%),
+      linear-gradient(145deg,rgba(13,35,62,.78),rgba(5,18,34,.9));transition:.25s ease
+    }
+    .product-card:hover{transform:translateY(-6px);border-color:rgba(73,179,255,.58)}
+    .product-card.featured{grid-column:span 2;min-height:330px}
+    .product-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+    .product-mark{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#1594ff,#0066df);font-weight:950}
+    .status-pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(37,211,102,.28);background:rgba(37,211,102,.08);color:#a8f3c4;font-size:.78rem;font-weight:850}
+    .product-card h3{font-size:clamp(1.7rem,3vw,2.5rem);margin:22px 0 10px}
+    .product-card p{color:var(--muted);max-width:770px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+    .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#bfe5ff;background:rgba(19,140,255,.07);font-size:.8rem}
+
+    .project-showcase{
+      border:1px solid var(--line);border-radius:30px;padding:34px;background:linear-gradient(145deg,rgba(14,39,69,.76),rgba(5,18,34,.88))
+    }
+    .project-hero-image{width:100%;border-radius:22px;border:1px solid rgba(255,255,255,.12);box-shadow:0 28px 75px rgba(0,0,0,.36);margin:26px 0}
+    .project-details{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .feature-list{list-style:none;display:grid;gap:10px;margin-top:16px;color:var(--muted)}
+    .feature-list li::before{content:"✓";color:var(--cyan);font-weight:950;margin-right:9px}
+    .app-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+    .gallery-item{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);cursor:zoom-in}
+    .gallery-item img{width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top}
+    .gallery-caption{padding:10px 12px;color:#d9eaff;font-size:.82rem}
+    .video-wrap{margin-top:34px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#020812}
+    .video-wrap video{width:100%;max-height:620px;display:block;background:#000}
+    .video-caption{padding:14px 18px;color:var(--muted)}
+
+    .process-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px}
+    .process-list{display:grid;gap:14px}
+    .process-item{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:18px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}
+    .step{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:rgba(19,140,255,.14);border:1px solid rgba(19,140,255,.26);font-weight:950;color:#bfe9ff}
+    .process-item p{color:var(--muted);font-size:.92rem}
+
+    .sales-box{
+      position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;
+      padding:38px;border:1px solid rgba(255,213,74,.3);border-radius:30px;background:
+      radial-gradient(circle at 88% 12%,rgba(255,193,7,.17),transparent 34%),
+      linear-gradient(135deg,rgba(15,43,77,.96),rgba(5,18,34,.97))
+    }
+    .sales-box h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.03;margin-bottom:14px}
+    .sales-box .money{font-size:clamp(2rem,5vw,4.4rem);font-weight:950;color:var(--gold);line-height:1}
+    .sales-box p{color:var(--muted);margin:14px 0 20px}
+    .sales-card{padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:rgba(255,255,255,.035)}
+    .sales-card ul{list-style:none;display:grid;gap:10px;color:#dcecff}
+    .sales-card li::before{content:"✓";color:var(--gold);font-weight:950;margin-right:8px}
+
+    .reviews-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px}
+    .review-panel,form{
+      border:1px solid var(--line);border-radius:24px;padding:26px;background:linear-gradient(145deg,rgba(13,35,62,.67),rgba(7,22,40,.78))
+    }
+    .review-panel p{color:var(--muted)}
+    .review-status{
+      margin-top:18px;padding:13px;border-radius:13px;border:1px solid rgba(0,200,255,.2);background:rgba(0,200,255,.06);color:#c8edff;font-size:.88rem
+    }
+    .field{margin-bottom:15px}
+    .field label{display:block;margin-bottom:7px;font-weight:800;font-size:.88rem}
+    .field input,.field textarea,.field select{
+      width:100%;border:1px solid rgba(109,181,255,.22);border-radius:13px;background:rgba(4,16,30,.76);color:white;padding:13px 14px;outline:none
+    }
+    .field textarea{min-height:125px;resize:vertical}
+    .field input:focus,.field textarea:focus,.field select:focus{border-color:rgba(0,200,255,.7);box-shadow:0 0 0 3px rgba(0,200,255,.08)}
+    .rating{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px}
+    .rating input{position:absolute;opacity:0;pointer-events:none}
+    .rating label{font-size:2rem;color:rgba(255,255,255,.2);cursor:pointer}
+    .rating label:hover,.rating label:hover~label,.rating input:checked~label{color:var(--gold)}
+
+    .faq-list{display:grid;gap:12px;max-width:950px}
+    .faq-item{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);overflow:hidden}
+    .faq-question{width:100%;border:0;background:transparent;color:#fff;padding:19px 21px;display:flex;justify-content:space-between;gap:20px;text-align:left;font-weight:900;cursor:pointer}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}
+    .faq-answer p{color:var(--muted);padding:0 21px 18px}
+    .faq-item.open .faq-answer{max-height:260px}
+
+    .quote-panel,.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:start}
+    .contact-info{display:grid;gap:12px}
+    .contact-card{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+    .contact-card small{display:block;color:var(--muted);margin-bottom:3px}
+    .cta{
+      text-align:center;padding:58px 28px;border:1px solid var(--line);border-radius:30px;background:
+      radial-gradient(circle at 50% 0%,rgba(0,200,255,.16),transparent 42%),linear-gradient(145deg,rgba(11,34,61,.84),rgba(6,20,38,.9))
+    }
+    .cta h2{font-size:clamp(2.2rem,5vw,4.2rem);line-height:1.03;margin-bottom:15px}
+    .cta p{color:var(--muted);max-width:700px;margin:0 auto 25px}
+
+    footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .socials{display:flex;gap:8px}.socials a{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.03)}
+    .whatsapp{
+      position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;
+      background:var(--green);box-shadow:0 16px 38px rgba(37,211,102,.34);font-size:1.5rem
+    }
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    .lightbox{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:24px;background:rgba(0,5,12,.94);backdrop-filter:blur(10px)}
+    .lightbox.open{display:grid}.lightbox img{max-width:min(94vw,620px);max-height:88vh;border-radius:20px}
+    .lightbox-close{position:fixed;top:18px;right:22px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}
+
+    @media(max-width:980px){
+      nav{position:absolute;top:74px;left:4%;right:4%;display:none;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(3,11,22,.97);backdrop-filter:blur(18px)}
+      nav.open{display:block}nav ul{flex-direction:column;align-items:stretch;gap:4px}nav a{display:block;padding:9px}
+      .menu-btn{display:grid;place-items:center}.nav-actions .btn{display:none}
+      .hero-grid,.process-grid,.sales-box,.reviews-layout,.quote-panel,.contact-grid,.project-details{grid-template-columns:1fr}
+      .hero-copy{text-align:center}.hero-copy>p{margin-inline:auto}.hero-actions,.trust-row{justify-content:center}
+      .services-grid,.industry-grid{grid-template-columns:repeat(2,1fr)}
+      .ecosystem-grid{grid-template-columns:1fr}.product-card.featured{grid-column:auto}
+      .power-grid{grid-template-columns:repeat(2,1fr)}
+      .app-gallery{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:640px){
+      .section{padding:70px 0}.hero{min-height:auto;padding-top:50px}
+      .hero h1{font-size:clamp(2.7rem,15vw,4.2rem)}
+      .hero-actions .btn{width:100%}.hero-stage{min-height:410px}.hero-card{transform:none}
+      .phone{width:148px;right:-6px}.phone-screen{min-height:280px;padding:16px 11px}.float{display:none}
+      .services-grid,.industry-grid,.power-grid{grid-template-columns:1fr}
+      .app-gallery{grid-template-columns:repeat(2,1fr)}
+      .sales-box,.project-showcase{padding:24px}
+      .whatsapp{right:16px;bottom:16px}
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
-    .container {
-      width: min(92%, var(--container));
-      margin-inline: auto;
-    }
-
-    .section {
-      padding: 96px 0;
-      position: relative;
-    }
-
-    .section-title {
-      max-width: 720px;
-      margin-bottom: 44px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(19, 140, 255, 0.08);
-      color: #8fd4ff;
-      font-size: 0.86rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.08;
-      margin-bottom: 16px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      font-size: 1.06rem;
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg, #ffffff, #67c6ff 55%, #00c2ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .grid-bg {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.28;
-      background-image:
-        linear-gradient(rgba(70, 155, 255, 0.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(70, 155, 255, 0.055) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 85%);
-      z-index: -2;
-    }
-
-    .glow {
-      position: absolute;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.16;
-      background: var(--primary);
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .glow.one {
-      top: 4%;
-      left: -140px;
-    }
-
-    .glow.two {
-      top: 33%;
-      right: -160px;
-      background: var(--primary-2);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      border-bottom: 1px solid transparent;
-      transition: 0.25s ease;
-    }
-
-    header.scrolled {
-      background: rgba(4, 16, 30, 0.84);
-      backdrop-filter: blur(18px);
-      border-bottom-color: var(--border);
-    }
-
-    .navbar {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      font-weight: 900;
-      letter-spacing: 0.02em;
-      font-size: 1.08rem;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(145deg, #23a0ff, #005bd7);
-      box-shadow: 0 10px 28px rgba(0, 127, 255, 0.28);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      inset: -40% 45% 35% -30%;
-      background: rgba(255, 255, 255, 0.35);
-      transform: rotate(25deg);
-    }
-
-    .brand-mark svg {
-      width: 26px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .brand strong {
-      color: var(--primary-2);
-    }
-
-    nav ul {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-
-    nav a {
-      color: #d8e9fb;
-      font-size: 0.94rem;
-      transition: 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .menu-btn {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
-      color: white;
-      cursor: pointer;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border: 0;
-      border-radius: 14px;
-      padding: 14px 21px;
-      cursor: pointer;
-      font-weight: 800;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      color: white;
-      background: linear-gradient(135deg, #1594ff, #0066df);
-      box-shadow: 0 12px 30px rgba(0, 114, 255, 0.28);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 16px 38px rgba(0, 132, 255, 0.38);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.045);
-      color: white;
-    }
-
-    .btn-small {
-      padding: 11px 16px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-    }
-
-    .hero {
-      min-height: calc(100vh - 76px);
-      display: grid;
-      align-items: center;
-      padding: 72px 0 100px;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .hero-copy h1 {
-      font-size: clamp(2.8rem, 7vw, 5.9rem);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
-      margin-bottom: 24px;
-    }
-
-    .hero-copy p {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: clamp(1.04rem, 2vw, 1.22rem);
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 34px;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      color: #bdd2e8;
-      font-size: 0.92rem;
-    }
-
-    .trust-row span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .trust-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--primary-2);
-      border-radius: 50%;
-      box-shadow: 0 0 14px rgba(0, 194, 255, 0.8);
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 530px;
-      display: grid;
-      place-items: center;
-    }
-
-    .dashboard {
-      width: min(100%, 560px);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 18px;
-      background: linear-gradient(145deg, rgba(12, 35, 63, 0.92), rgba(5, 18, 34, 0.95));
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      transform: perspective(1200px) rotateY(-7deg) rotateX(3deg);
-    }
-
-    .dashboard::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(67, 174, 255, 0.1), transparent 42%);
-      pointer-events: none;
-    }
-
-    .dash-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 18px;
-    }
-
-    .window-dots {
-      display: flex;
-      gap: 7px;
-    }
-
-    .window-dots i {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.24);
-    }
-
-    .status {
-      font-size: 0.76rem;
-      color: #95e9ff;
-      border: 1px solid rgba(0,194,255,0.22);
-      background: rgba(0,194,255,0.08);
-      padding: 6px 9px;
-      border-radius: 999px;
-    }
-
-    .dash-main {
-      display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 14px;
-    }
-
-    .sidebar,
-    .workspace {
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 18px;
-      background: rgba(255,255,255,0.025);
-    }
-
-    .sidebar {
-      padding: 14px;
-    }
-
-    .side-line {
-      height: 9px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.09);
-      margin: 13px 0;
-    }
-
-    .side-line.active {
-      background: linear-gradient(90deg, rgba(19,140,255,0.9), rgba(0,194,255,0.4));
-    }
-
-    .workspace {
-      padding: 15px;
-    }
-
-    .code-line {
-      height: 8px;
-      border-radius: 10px;
-      margin: 12px 0;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .code-line:nth-child(2n) {
-      width: 78%;
-      background: rgba(19,140,255,0.34);
-    }
-
-    .code-line:nth-child(3n) {
-      width: 58%;
-      background: rgba(0,194,255,0.28);
-    }
-
-    .phone {
-      position: absolute;
-      width: 192px;
-      right: -16px;
-      bottom: -30px;
-      padding: 10px;
-      border-radius: 34px;
-      background: #030912;
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
-      transform: rotate(7deg);
-    }
-
-    .phone-screen {
-      min-height: 360px;
-      border-radius: 26px;
-      background:
-        radial-gradient(circle at 80% 10%, rgba(0,194,255,0.24), transparent 34%),
-        linear-gradient(180deg, #0b2341, #071321);
-      padding: 20px 16px;
-      overflow: hidden;
-    }
-
-    .notch {
-      width: 70px;
-      height: 17px;
-      border-radius: 99px;
-      background: #02060b;
-      margin: -13px auto 22px;
-    }
-
-    .phone-logo {
-      font-size: 0.84rem;
-      font-weight: 900;
-      margin-bottom: 30px;
-    }
-
-    .phone-logo strong {
-      color: var(--primary-2);
-    }
-
-    .phone-title {
-      font-size: 1.35rem;
-      line-height: 1.12;
-      margin-bottom: 12px;
-    }
-
-    .phone-card {
-      margin-top: 15px;
-      padding: 14px;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.045);
-    }
-
-    .phone-card span {
-      display: block;
-      height: 7px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px;
-      margin: 8px 0;
-    }
-
-    .phone-card span:nth-child(2) {
-      width: 68%;
-      background: rgba(19,140,255,0.38);
-    }
-
-    .floating-chip {
-      position: absolute;
-      border: 1px solid var(--border);
-      background: rgba(8, 26, 48, 0.88);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-      border-radius: 15px;
-      padding: 12px 15px;
-      font-size: 0.86rem;
-      color: #d6eaff;
-      animation: float 4s ease-in-out infinite;
-    }
-
-    .chip-one {
-      left: -15px;
-      top: 80px;
-    }
-
-    .chip-two {
-      right: 10px;
-      top: 20px;
-      animation-delay: -1.5s;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      background: linear-gradient(145deg, rgba(13,35,62,0.7), rgba(7,22,40,0.75));
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(73, 179, 255, 0.58);
-    }
-
-    .icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(145deg, rgba(19,140,255,0.24), rgba(0,194,255,0.08));
-      border: 1px solid rgba(77,177,255,0.22);
-      margin-bottom: 22px;
-      font-size: 1.5rem;
-    }
-
-    .service-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .process-wrap {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 52px;
-      align-items: start;
-    }
-
-    .process-list {
-      display: grid;
-      gap: 16px;
-    }
-
-    .process-item {
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 16px;
-      padding: 20px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.025);
-    }
-
-    .step-number {
-      width: 44px;
-      height: 44px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      color: #bfe9ff;
-      background: rgba(19,140,255,0.14);
-      border: 1px solid rgba(19,140,255,0.26);
-    }
-
-    .process-item h3 {
-      margin-bottom: 5px;
-    }
-
-    .process-item p {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 50px;
-    }
-
-    .stat {
-      padding: 22px;
-      text-align: center;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.025);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 2rem;
-      color: #6dccff;
-      margin-bottom: 3px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .portfolio {
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 34px;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(0,194,255,0.16), transparent 30%),
-        linear-gradient(145deg, rgba(14,39,69,0.76), rgba(5,18,34,0.86));
-      display: grid;
-      grid-template-columns: 1fr 0.95fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .portfolio-copy h3 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.05;
-      margin-bottom: 15px;
-    }
-
-    .portfolio-copy p {
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 26px;
-    }
-
-    .tag {
-      padding: 7px 11px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: #bfe5ff;
-      background: rgba(19,140,255,0.07);
-      font-size: 0.83rem;
-    }
-
-    .app-mockup {
-      border: 1px solid rgba(255,255,255,0.11);
-      border-radius: 28px;
-      padding: 18px;
-      background: #081527;
-      box-shadow: 0 28px 70px rgba(0,0,0,0.35);
-    }
-
-    .app-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #1797ff, #004fa8);
-    }
-
-    .app-banner {
-      padding: 24px;
-      border-radius: 19px;
-      background: linear-gradient(135deg, #0f7fe3, #0db8df);
-      margin-bottom: 15px;
-    }
-
-    .app-banner h4 {
-      font-size: 1.35rem;
-      margin-bottom: 6px;
-    }
-
-    .app-banner p {
-      opacity: 0.86;
-      font-size: 0.9rem;
-    }
-
-    .app-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .app-card {
-      min-height: 92px;
-      border-radius: 16px;
-      padding: 15px;
-      border: 1px solid rgba(255,255,255,0.07);
-      background: rgba(255,255,255,0.035);
-    }
-
-    .app-card i {
-      display: block;
-      width: 28px;
-      height: 28px;
-      border-radius: 9px;
-      margin-bottom: 10px;
-      background: rgba(19,140,255,0.32);
-    }
-
-    .cta {
-      text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      padding: 64px 30px;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(0,194,255,0.18), transparent 42%),
-        linear-gradient(145deg, rgba(11,34,61,0.84), rgba(6,20,38,0.9));
-    }
-
-    .cta h2 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.05;
-      margin-bottom: 16px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      max-width: 680px;
-      margin: 0 auto 28px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 38px;
-      align-items: start;
-    }
-
-    .contact-info {
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-card {
-      padding: 19px;
-      border-radius: 17px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.025);
-    }
-
-    .contact-card small {
-      display: block;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .contact-card strong {
-      font-size: 1rem;
-    }
-
-    form {
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 26px;
-      background: rgba(255,255,255,0.025);
-    }
-
-    .field {
-      margin-bottom: 16px;
-    }
-
-    .field label {
-      display: block;
-      margin-bottom: 7px;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .field input,
-    .field textarea {
-      width: 100%;
-      border: 1px solid rgba(109,181,255,0.22);
-      border-radius: 13px;
-      background: rgba(4,16,30,0.74);
-      color: white;
-      padding: 13px 14px;
-      outline: none;
-    }
-
-    .field textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .field input:focus,
-    .field textarea:focus {
-      border-color: rgba(0,194,255,0.74);
-      box-shadow: 0 0 0 3px rgba(0,194,255,0.08);
-    }
-
-    footer {
-      padding: 34px 0;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    .footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .socials {
-      display: flex;
-      gap: 10px;
-    }
-
-    .socials a {
-      width: 38px;
-      height: 38px;
-      border-radius: 11px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 80;
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--success);
-      box-shadow: 0 16px 38px rgba(37,211,102,0.34);
-      transition: transform 0.2s ease;
-    }
-
-    .whatsapp:hover {
-      transform: translateY(-4px) scale(1.03);
-    }
-
-    .whatsapp svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 980px) {
-      nav {
-        position: absolute;
-        top: 76px;
-        left: 4%;
-        right: 4%;
-        display: none;
-        padding: 18px;
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        background: rgba(4,16,30,0.96);
-        backdrop-filter: blur(18px);
-      }
-
-      nav.open {
-        display: block;
-      }
-
-      nav ul {
-        align-items: stretch;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      nav a {
-        display: block;
-        padding: 11px 8px;
-      }
-
-      .menu-btn {
-        display: grid;
-        place-items: center;
-      }
-
-      .nav-actions .btn-small {
-        display: none;
-      }
-
-      .hero-grid,
-      .process-wrap,
-      .portfolio,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-copy {
-        text-align: center;
-      }
-
-      .hero-copy p {
-        margin-inline: auto;
-      }
-
-      .hero-actions,
-      .trust-row {
-        justify-content: center;
-      }
-
-      .hero-visual {
-        min-height: 500px;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .section {
-        padding: 72px 0;
-      }
-
-      .navbar {
-        min-height: 68px;
-      }
-
-      nav {
-        top: 68px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 52px;
-      }
-
-      .hero-copy h1 {
-        font-size: clamp(2.6rem, 15vw, 4rem);
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-      }
-
-      .hero-visual {
-        min-height: 410px;
-      }
-
-      .dashboard {
-        transform: none;
-      }
-
-      .phone {
-        width: 150px;
-        right: -8px;
-        bottom: -20px;
-      }
-
-      .phone-screen {
-        min-height: 285px;
-        padding: 17px 12px;
-      }
-
-      .phone-title {
-        font-size: 1rem;
-      }
-
-      .floating-chip {
-        display: none;
-      }
-
-      .services-grid,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio,
-      .cta {
-        padding: 25px;
-      }
-
-      .app-cards {
-        grid-template-columns: 1fr;
-      }
-
-      .whatsapp {
-        right: 16px;
-        bottom: 16px;
-      }
-    }
-  
-    /* Secciones nuevas */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .about-card,
-    .value-card,
-    .tech-card,
-    .faq-item {
-      border: 1px solid var(--border);
-      background: linear-gradient(145deg, rgba(13,35,62,0.68), rgba(7,22,40,0.76));
-      border-radius: var(--radius);
-    }
-
-    .about-card {
-      padding: 32px;
-    }
-
-    .about-card h3 {
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-    }
-
-    .about-card p {
-      color: var(--muted);
-    }
-
-    .mission-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .value-card {
-      padding: 24px;
-    }
-
-    .value-card strong {
-      display: block;
-      font-size: 1.08rem;
-      margin: 10px 0 7px;
-    }
-
-    .value-card p {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .technologies-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .tech-card {
-      min-height: 132px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 22px 14px;
-      transition: transform .22s ease, border-color .22s ease;
-    }
-
-    .tech-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(73,179,255,.58);
-    }
-
-    .tech-card span {
-      display: block;
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .tech-card strong {
-      font-size: .96rem;
-    }
-
-    .quote-panel {
-      display: grid;
-      grid-template-columns: 1fr .9fr;
-      gap: 28px;
-      align-items: center;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 36px;
-      background:
-        radial-gradient(circle at 85% 10%, rgba(0,194,255,.15), transparent 30%),
-        linear-gradient(145deg, rgba(13,35,62,.74), rgba(5,18,34,.9));
-    }
-
-    .quote-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .quote-list li {
-      list-style: none;
-      color: var(--muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .quote-list li::before {
-      content: "✓";
-      color: var(--primary-2);
-      font-weight: 900;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 14px;
-      max-width: 920px;
-    }
-
-    .faq-item {
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      border: 0;
-      color: var(--text);
-      background: transparent;
-      text-align: left;
-      padding: 20px 22px;
-      font-weight: 800;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .faq-question span:last-child {
-      color: var(--primary-2);
-      font-size: 1.3rem;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease;
-    }
-
-    .faq-answer p {
-      color: var(--muted);
-      padding: 0 22px 20px;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 240px;
-    }
-
-    .project-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: rgba(37,211,102,.10);
-      border: 1px solid rgba(37,211,102,.28);
-      color: #a8f3c4;
-      font-size: .82rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: 980px) {
-      .about-grid,
-      .quote-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .mission-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .technologies-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .technologies-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .quote-panel {
-        padding: 24px;
-      }
-    }
-
-    /* SUOG Labs renovado */
-    .labs-section {
-      background: linear-gradient(180deg, rgba(19,140,255,.035), rgba(0,194,255,.015));
-      border-block: 1px solid rgba(92,169,255,.08);
-    }
-
-    .labs-heading {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: end;
-      gap: 32px;
-      margin-bottom: 42px;
-    }
-
-    .labs-heading .section-title { margin-bottom: 0; }
-
-    .labs-badge {
-      width: 170px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      display: grid;
-      place-content: center;
-      text-align: center;
-      border: 1px solid rgba(0,194,255,.3);
-      background: radial-gradient(circle, rgba(19,140,255,.18), rgba(4,16,30,.75));
-      box-shadow: 0 0 60px rgba(0,194,255,.12);
-    }
-
-    .labs-badge span { font-size: 2.2rem; font-weight: 950; color: #67c6ff; line-height: 1; }
-    .labs-badge strong { margin-top: 8px; font-size: .86rem; }
-    .labs-badge small { color: var(--muted); }
-
-    .labs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .lab-card {
-      position: relative;
-      min-height: 245px;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: linear-gradient(145deg, rgba(13,35,62,.72), rgba(7,22,40,.82));
-      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-    }
-
-    .lab-card::after {
-      content: "";
-      position: absolute;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      right: -55px;
-      bottom: -65px;
-      background: rgba(0,194,255,.08);
-      filter: blur(4px);
-    }
-
-    .lab-card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(73,179,255,.58);
-      box-shadow: 0 22px 55px rgba(0,112,255,.12);
-    }
-
-    .lab-icon {
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      font-size: 1.55rem;
-      margin-bottom: 25px;
-      background: rgba(19,140,255,.12);
-      border: 1px solid rgba(77,177,255,.22);
-    }
-
-    .lab-number {
-      position: absolute;
-      right: 22px;
-      top: 22px;
-      font-size: .78rem;
-      color: #70cbff;
-      font-weight: 900;
-      letter-spacing: .1em;
-    }
-
-    .lab-card h3 { margin-bottom: 10px; font-size: 1.25rem; }
-    .lab-card p { color: var(--muted); font-size: .94rem; }
-
-    .stats-section { padding-top: 44px; }
-    .stats-modern { margin-top: 0; }
-    .stats-modern .stat {
-      min-height: 190px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(145deg, rgba(13,35,62,.68), rgba(7,22,40,.78));
-      transition: transform .25s ease, border-color .25s ease;
-    }
-    .stats-modern .stat:hover { transform: translateY(-6px); border-color: rgba(73,179,255,.58); }
-    .stat-icon { font-size: 1.5rem; margin-bottom: 10px; }
-    .stats-modern .stat strong { font-size: clamp(2.2rem, 5vw, 3.25rem); line-height: 1; }
-    .stats-modern .infinity { font-size: 3.5rem; }
-
-    @media (max-width: 980px) {
-      .labs-heading { grid-template-columns: 1fr; align-items: start; }
-      .labs-badge { width: 145px; }
-      .labs-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 640px) {
-      .labs-grid { grid-template-columns: 1fr; }
-      .lab-card { min-height: auto; }
-      .labs-badge { width: 132px; }
-    }
-
-
-    /* Promoción de agosto */
-    .promo-august {
-      padding: 28px 0;
-    }
-
-    .promo-box {
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 28px;
-      padding: 34px;
-      border: 1px solid rgba(255, 205, 64, .34);
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at 85% 10%, rgba(255, 193, 7, .19), transparent 34%),
-        linear-gradient(135deg, rgba(15, 43, 77, .96), rgba(5, 18, 34, .96));
-      box-shadow: 0 22px 70px rgba(0, 0, 0, .24);
-    }
-
-    .promo-box::after {
-      content: "50%";
-      position: absolute;
-      right: 24px;
-      bottom: -42px;
-      font-size: clamp(6rem, 16vw, 12rem);
-      line-height: 1;
-      font-weight: 950;
-      color: rgba(255, 209, 71, .06);
-      pointer-events: none;
-    }
-
-    .promo-copy {
-      position: relative;
-      z-index: 1;
-    }
-
-    .promo-label {
-      display: inline-flex;
-      padding: 7px 12px;
-      margin-bottom: 13px;
-      border-radius: 999px;
-      color: #ffeaa0;
-      background: rgba(255, 193, 7, .1);
-      border: 1px solid rgba(255, 205, 64, .26);
-      font-weight: 850;
-      font-size: .84rem;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-
-    .promo-box h2 {
-      max-width: 760px;
-      font-size: clamp(2rem, 5vw, 3.7rem);
-      line-height: 1.02;
-      margin-bottom: 12px;
-    }
-
-    .promo-box h2 strong {
-      color: #ffd54a;
-    }
-
-    .promo-box p {
-      max-width: 760px;
-      color: var(--muted);
-    }
-
-    .promo-services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 18px;
-    }
-
-    .promo-services span {
-      padding: 7px 11px;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 999px;
-      background: rgba(255,255,255,.035);
-      color: #e9f4ff;
-      font-size: .85rem;
-    }
-
-    .promo-action {
-      position: relative;
-      z-index: 2;
-      min-width: 220px;
-      text-align: center;
-    }
-
-    .promo-action small {
-      display: block;
-      margin-top: 10px;
-      color: #d6e6f7;
-    }
-
-    /* Portafolio visual de SUOG RD */
-    .project-hero-image {
-      width: 100%;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: 0 28px 75px rgba(0,0,0,.36);
-      margin-bottom: 32px;
-    }
-
-    .project-details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-top: 30px;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 11px;
-      margin-top: 18px;
-      color: var(--muted);
-    }
-
-    .feature-list li {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-    }
-
-    .feature-list li::before {
-      content: "✓";
-      color: var(--primary-2);
-      font-weight: 900;
-    }
-
-    .store-status {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .store-status span {
-      padding: 9px 13px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.035);
-      color: #dcecff;
-      font-size: .86rem;
-    }
-
-    .gallery-title {
-      margin: 50px 0 20px;
-      font-size: 1.55rem;
-    }
-
-    .app-gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: rgba(255,255,255,.025);
-      cursor: zoom-in;
-      transition: transform .22s ease, border-color .22s ease;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      border-color: rgba(73,179,255,.62);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      aspect-ratio: 9 / 19;
-      object-fit: cover;
-      object-position: top;
-    }
-
-    .gallery-caption {
-      padding: 12px 13px;
-      color: #d9eaff;
-      font-size: .86rem;
-    }
-
-    .demo-video-wrap {
-      margin-top: 48px;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      overflow: hidden;
-      background: #020812;
-      box-shadow: var(--shadow);
-    }
-
-    .demo-video-wrap video {
-      width: 100%;
-      max-height: 650px;
-      display: block;
-      background: #000;
-    }
-
-    .demo-video-caption {
-      padding: 17px 20px;
-      color: var(--muted);
-    }
-
-    /* Reseñas */
-    .reviews-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .review-intro {
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 30px;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(0,194,255,.12), transparent 32%),
-        rgba(255,255,255,.025);
-    }
-
-    .review-intro h3 {
-      font-size: 1.65rem;
-      margin-bottom: 10px;
-    }
-
-    .review-intro p {
-      color: var(--muted);
-    }
-
-    .review-note {
-      margin-top: 18px;
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 205, 64, .22);
-      background: rgba(255, 193, 7, .06);
-      color: #f3e7bb;
-      font-size: .9rem;
-    }
-
-    .review-form select {
-      width: 100%;
-      border: 1px solid rgba(109,181,255,.22);
-      border-radius: 13px;
-      background: rgba(4,16,30,.74);
-      color: white;
-      padding: 13px 14px;
-      outline: none;
-    }
-
-    .rating-picker {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      gap: 5px;
-    }
-
-    .rating-picker input {
-      position: absolute;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .rating-picker label {
-      font-size: 2rem;
-      line-height: 1;
-      color: rgba(255,255,255,.22);
-      cursor: pointer;
-      transition: color .15s ease, transform .15s ease;
-    }
-
-    .rating-picker label:hover,
-    .rating-picker label:hover ~ label,
-    .rating-picker input:checked ~ label {
-      color: #ffd54a;
-    }
-
-    .rating-picker label:hover {
-      transform: scale(1.08);
-    }
-
-    .sample-reviews {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .sample-review {
-      padding: 18px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: rgba(255,255,255,.025);
-    }
-
-    .sample-review strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .sample-review .stars {
-      color: #ffd54a;
-      letter-spacing: .08em;
-    }
-
-    .sample-review p {
-      color: var(--muted);
-      margin-top: 8px;
-      font-size: .92rem;
-    }
-
-    /* Visor de imágenes */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      display: none;
-      place-items: center;
-      padding: 24px;
-      background: rgba(0, 5, 12, .93);
-      backdrop-filter: blur(10px);
-    }
-
-    .lightbox.open {
-      display: grid;
-    }
-
-    .lightbox img {
-      max-width: min(94vw, 620px);
-      max-height: 88vh;
-      border-radius: 20px;
-      box-shadow: 0 30px 90px rgba(0,0,0,.7);
-    }
-
-    .lightbox-close {
-      position: fixed;
-      top: 18px;
-      right: 22px;
-      width: 46px;
-      height: 46px;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 50%;
-      background: rgba(255,255,255,.08);
-      color: white;
-      font-size: 1.35rem;
-      cursor: pointer;
-    }
-
-    @media (max-width: 980px) {
-      .promo-box,
-      .project-details,
-      .reviews-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .promo-action {
-        text-align: left;
-      }
-
-      .app-gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .promo-box {
-        padding: 25px;
-      }
-
-      .promo-action .btn {
-        width: 100%;
-      }
-
-      .app-gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-caption {
-        font-size: .78rem;
-      }
-    }
-
-
-    /* Trabaja con nosotros */
-    .careers-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .career-card,
-    .career-form {
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(0,194,255,.10), transparent 34%),
-        linear-gradient(145deg, rgba(13,35,62,.72), rgba(7,22,40,.82));
-    }
-
-    .career-card {
-      padding: 30px;
-    }
-
-    .career-card h3 {
-      font-size: 1.65rem;
-      margin-bottom: 10px;
-    }
-
-    .career-card p,
-    .career-note {
-      color: var(--muted);
-    }
-
-    .career-areas {
-      display: grid;
-      gap: 11px;
-      margin: 22px 0;
-    }
-
-    .career-areas li {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      color: #dcecff;
-    }
-
-    .career-areas li::before {
-      content: "✓";
-      color: var(--primary-2);
-      font-weight: 900;
-    }
-
-    .career-note {
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,205,64,.22);
-      background: rgba(255,193,7,.06);
-      font-size: .9rem;
-    }
-
-    .career-form select {
-      width: 100%;
-      border: 1px solid rgba(109,181,255,.22);
-      border-radius: 13px;
-      background: rgba(4,16,30,.74);
-      color: white;
-      padding: 13px 14px;
-      outline: none;
-    }
-
-    /* Asistente virtual */
-    .assistant-launcher {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 95;
-      width: 62px;
-      height: 62px;
-      border: 0;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      color: white;
-      font-size: 1.55rem;
-      background: linear-gradient(145deg, #1594ff, #0057c8);
-      box-shadow: 0 18px 44px rgba(0,112,255,.38);
-    }
-
-    .assistant-panel {
-      position: fixed;
-      right: 22px;
-      bottom: 96px;
-      z-index: 94;
-      width: min(390px, calc(100vw - 32px));
-      max-height: min(620px, calc(100vh - 125px));
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      background: rgba(4,16,30,.98);
-      backdrop-filter: blur(18px);
-      box-shadow: 0 26px 80px rgba(0,0,0,.48);
-    }
-
-    .assistant-panel.open {
-      display: flex;
-    }
-
-    .assistant-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 17px 18px;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(19,140,255,.18), rgba(0,194,255,.06));
-    }
-
-    .assistant-header strong {
-      display: block;
-    }
-
-    .assistant-header small {
-      color: var(--muted);
-    }
-
-    .assistant-close {
-      width: 36px;
-      height: 36px;
-      border-radius: 11px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color: white;
-      cursor: pointer;
-    }
-
-    .assistant-messages {
-      display: grid;
-      gap: 11px;
-      padding: 18px;
-      overflow-y: auto;
-      min-height: 240px;
-    }
-
-    .assistant-message {
-      max-width: 88%;
-      padding: 11px 13px;
-      border-radius: 15px;
-      font-size: .92rem;
-      white-space: pre-line;
-    }
-
-    .assistant-message.bot {
-      justify-self: start;
-      color: #e8f4ff;
-      background: rgba(19,140,255,.13);
-      border: 1px solid rgba(77,177,255,.18);
-      border-bottom-left-radius: 5px;
-    }
-
-    .assistant-message.user {
-      justify-self: end;
-      color: white;
-      background: linear-gradient(135deg, #1594ff, #0066df);
-      border-bottom-right-radius: 5px;
-    }
-
-    .assistant-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 0 18px 14px;
-    }
-
-    .assistant-option {
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 8px 11px;
-      background: rgba(255,255,255,.035);
-      color: #dcecff;
-      cursor: pointer;
-      font-size: .82rem;
-    }
-
-    .assistant-input-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 9px;
-      padding: 14px;
-      border-top: 1px solid var(--border);
-    }
-
-    .assistant-input-row input {
-      min-width: 0;
-      border: 1px solid rgba(109,181,255,.22);
-      border-radius: 13px;
-      background: rgba(255,255,255,.04);
-      color: white;
-      padding: 11px 12px;
-      outline: none;
-    }
-
-    .assistant-send {
-      border: 0;
-      border-radius: 12px;
-      padding: 0 15px;
-      color: white;
-      font-weight: 800;
-      cursor: pointer;
-      background: linear-gradient(135deg, #1594ff, #0066df);
-    }
-
-    .whatsapp {
-      right: 94px;
-    }
-
-    @media (max-width: 980px) {
-      .careers-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .assistant-launcher {
-        right: 16px;
-        bottom: 16px;
-      }
-
-      .assistant-panel {
-        right: 16px;
-        bottom: 88px;
-      }
-
-      .whatsapp {
-        right: 86px;
-        bottom: 16px;
-      }
-    }
-
   </style>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N1Q0LHGSK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4N1Q0LHGSK');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N1Q0LHGSK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4N1Q0LHGSK');
+  </script>
 </head>
 
 <body>
-  <div class="grid-bg"></div>
-  <div class="glow one"></div>
-  <div class="glow two"></div>
-
   <header id="header">
     <div class="container navbar">
-      <a href="#inicio" class="brand" aria-label="SUOG RD, página principal">
-        <span class="brand-mark">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <path fill="#fff" d="M46.5 10H25.8c-7.1 0-12.8 5.7-12.8 12.8 0 6.2 4.5 11.5 10.6 12.6l15.6 2.8c2.4.4 4.1 2.5 4.1 4.9 0 2.7-2.2 4.9-4.9 4.9H16v6h22.4c6 0 10.9-4.9 10.9-10.9 0-5.3-3.8-9.8-9-10.7l-15.6-2.8c-3.3-.6-5.7-3.4-5.7-6.8 0-3.8 3.1-6.8 6.8-6.8h20.7z"/>
-          </svg>
-        </span>
+      <a href="#inicio" class="brand" aria-label="SUOG RD">
+        <span class="brand-mark"><b>S</b></span>
         <span>SUOG <strong>RD</strong></span>
       </a>
 
       <nav id="nav">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#labs">SUOG Labs</a></li>
+          <li><a href="#ecosistema">Ecosistema</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proceso">Proceso</a></li>
-          <li><a href="#promocion">Oferta agosto</a></li>
+          <li><a href="#soluciones">Soluciones</a></li>
           <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#ventas">Ventas</a></li>
           <li><a href="#resenas">Reseñas</a></li>
-          <li><a href="#tecnologias">Tecnologías</a></li>
-          <li><a href="#empleos">Empleos</a></li>
           <li><a href="#faq">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-primary btn-small" href="#cotizacion">
-          Cotizar proyecto
-        </a>
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <a class="btn btn-primary" href="#contacto">Cotizar proyecto</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú">☰</button>
       </div>
     </div>
   </header>
@@ -2061,60 +376,40 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">Desarrollo digital a tu medida</span>
-          <h1>
-            Tu idea puede convertirse en una
-            <span class="gradient-text">aplicación real.</span>
-          </h1>
+          <span class="eyebrow">Tecnología creada desde República Dominicana 🇩🇴</span>
+          <h1>Una visión.<br><span class="gradient-text">Nosotros la hacemos realidad.</span></h1>
           <p>
-            Creamos aplicaciones funcionales, modernas e interactivas. Cada diseño y cada línea de código es un paso para hacer realidad tu proyecto.
+            Diseñamos y desarrollamos aplicaciones móviles, software, sistemas empresariales,
+            páginas web, automatizaciones y productos digitales preparados para crecer.
           </p>
-
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20tengo%20una%20idea%20para%20una%20aplicación." target="_blank" rel="noopener">
-              Cuéntanos tu idea
-            </a>
-            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+            <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20desarrollar%20un%20proyecto." target="_blank" rel="noopener">Quiero desarrollar mi proyecto</a>
+            <a class="btn btn-secondary" href="#ecosistema">Ver nuestro ecosistema</a>
           </div>
-
           <div class="trust-row">
-            <span><i class="trust-dot"></i>Código personalizado</span>
-            <span><i class="trust-dot"></i>Diseño moderno</span>
-            <span><i class="trust-dot"></i>Soporte continuo</span>
+            <span><i class="dot"></i>Desarrollo personalizado</span>
+            <span><i class="dot"></i>Android · iOS · Web · Windows</span>
+            <span><i class="dot"></i>Soporte y evolución</span>
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Representación visual de una aplicación en desarrollo">
-          <span class="floating-chip chip-one">⚡ Desarrollo ágil</span>
-          <span class="floating-chip chip-two">☁️ Tecnología en la nube</span>
-
-          <div class="dashboard">
-            <div class="dash-top">
-              <div class="window-dots"><i></i><i></i><i></i></div>
-              <span class="status">Proyecto en desarrollo</span>
+        <div class="hero-stage reveal" aria-label="Representación de soluciones tecnológicas SUOG RD">
+          <span class="float one">⚡ Productos digitales reales</span>
+          <span class="float two">☁️ Tecnología conectada</span>
+          <div class="hero-card">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>SUOG TECHNOLOGY</strong>
+              <span class="status-pill">Ecosistema activo</span>
             </div>
-
-            <div class="dash-main">
-              <div class="sidebar">
-                <div class="side-line active"></div>
-                <div class="side-line"></div>
-                <div class="side-line"></div>
-                <div class="side-line"></div>
-                <div class="side-line"></div>
+            <div class="hero-screen">
+              <div class="mini-panel">
+                <div class="mini-line active"></div><div class="mini-line"></div><div class="mini-line"></div>
+                <div class="mini-line active"></div><div class="mini-line"></div><div class="mini-line"></div>
               </div>
-
-              <div class="workspace">
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
-                <div class="code-line"></div>
+              <div class="main-panel">
+                <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
+                <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
+                <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
               </div>
             </div>
           </div>
@@ -2122,449 +417,212 @@
           <div class="phone">
             <div class="phone-screen">
               <div class="notch"></div>
-              <div class="phone-logo">SUOG <strong>RD</strong></div>
-              <div class="phone-title">Soluciones digitales que impulsan tu negocio.</div>
-              <div class="phone-card">
-                <b>Desarrollo de apps</b>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="phone-card">
-                <b>Diseño UI/UX</b>
-                <span></span>
-                <span></span>
-              </div>
+              <strong>SUOG <span style="color:var(--cyan)">RD</span></strong>
+              <h3>Tu negocio puede convertirse en tecnología.</h3>
+              <div class="phone-app">📱 Aplicaciones</div>
+              <div class="phone-app">💻 Software</div>
+              <div class="phone-app">🌐 Plataformas web</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-
-    <section class="promo-august" id="promocion">
-      <div class="container">
-        <div class="promo-box reveal">
-          <div class="promo-copy">
-            <span class="promo-label">Promoción especial de agosto</span>
-            <h2><strong>50% de descuento</strong> durante todo el mes.</h2>
-            <p>
-              Aprovecha esta promoción en creación de páginas web, desarrollo de aplicaciones,
-              mantenimiento, actualización y mejora de apps. Oferta válida durante agosto de 2026.
-            </p>
-            <div class="promo-services">
-              <span>Páginas web</span>
-              <span>Aplicaciones móviles</span>
-              <span>Mantenimiento</span>
-              <span>Actualizaciones</span>
-              <span>Mejoras de aplicaciones</span>
-            </div>
-          </div>
-          <div class="promo-action">
-            <a class="btn btn-primary"
-               href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20aprovechar%20el%2050%25%20de%20descuento%20de%20agosto."
-               target="_blank" rel="noopener">
-              Obtener mi 50% de descuento
-            </a>
-            <small>Cupos limitados durante agosto.</small>
-          </div>
-        </div>
+    <section class="power-strip">
+      <div class="container power-grid">
+        <div class="power-item reveal"><strong>5</strong><span>productos dentro del ecosistema</span></div>
+        <div class="power-item reveal"><strong>4</strong><span>plataformas: Android, iOS, Web y Windows</span></div>
+        <div class="power-item reveal"><strong>100%</strong><span>desarrollo adaptado al proyecto</span></div>
+        <div class="power-item reveal"><strong>RD → Mundo</strong><span>visión de alcance internacional</span></div>
       </div>
     </section>
 
-    <section class="section" id="nosotros">
-  <div class="container">
-
-    <div class="section-title reveal">
-      <span class="eyebrow">Quiénes somos</span>
-
-      <h2>Construimos el futuro digital, una solución a la vez.</h2>
-
-      <p>
-        En <strong>SUOG RD</strong> transformamos ideas en aplicaciones móviles,
-        plataformas web y soluciones digitales que ayudan a personas, empresas y
-        emprendedores a crecer mediante la innovación tecnológica.
-      </p>
-    </div>
-
-    <div class="about-grid">
-
-      <article class="about-card reveal">
-        <div class="icon-box">💡</div>
-
-        <h3>Nuestra historia</h3>
-
-        <p>
-          SUOG RD nació con la visión de crear tecnología útil, moderna y accesible.
-          Nuestro primer gran proyecto fue nuestra propia plataforma digital, una
-          experiencia que nos permitió comprender cada etapa del desarrollo de software
-          y convertir ese conocimiento en soluciones para nuestros clientes.
-        </p>
-
-      </article>
-
-      <article class="about-card reveal">
-        <div class="icon-box">🤝</div>
-
-        <h3>Nuestro compromiso</h3>
-
-        <p>
-          Cada proyecto recibe la misma dedicación que si fuera propio.
-          Escuchamos las necesidades de nuestros clientes, diseñamos la mejor
-          estrategia y desarrollamos productos seguros, escalables y preparados
-          para crecer junto con sus negocios.
-        </p>
-
-      </article>
-
-    </div>
-
-    <div class="mission-grid">
-
-      <article class="value-card reveal">
-        <div class="icon-box">🚀</div>
-
-        <strong>Misión</strong>
-
-        <p>
-          Desarrollar aplicaciones, plataformas web y soluciones digitales
-          innovadoras que impulsen el crecimiento de empresas y emprendedores.
-        </p>
-
-      </article>
-
-      <article class="value-card reveal">
-        <div class="icon-box">🌎</div>
-
-        <strong>Visión</strong>
-
-        <p>
-          Convertirnos en una empresa tecnológica referente en República Dominicana
-          y expandir nuestros productos y servicios hacia mercados internacionales.
-        </p>
-
-      </article>
-
-      <article class="value-card reveal">
-        <div class="icon-box">💙</div>
-
-        <strong>Nuestros valores</strong>
-
-        <p>
-          Innovación • Calidad • Transparencia • Seguridad • Compromiso • Mejora continua.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
-</section>
-<section class="section labs-section" id="labs">
-      <div class="container">
-        <div class="labs-heading reveal">
-          <div class="section-title">
-            <span class="eyebrow">🧪 SUOG Labs</span>
-            <h2>El espacio donde convertimos tecnología emergente en soluciones útiles.</h2>
-            <p>
-              Investigamos, creamos prototipos y validamos nuevas ideas antes de convertirlas
-              en productos digitales seguros, modernos y preparados para crecer.
-            </p>
-          </div>
-          <div class="labs-badge" aria-label="Innovación desarrollada en República Dominicana">
-            <span>RD</span>
-            <strong>Innovación local</strong>
-            <small>Visión global</small>
-          </div>
-        </div>
-
-        <div class="labs-grid">
-          <article class="lab-card reveal">
-            <div class="lab-icon">🤖</div>
-            <span class="lab-number">01</span>
-            <h3>Inteligencia Artificial</h3>
-            <p>Asistentes inteligentes, automatización de tareas y herramientas que mejoran la productividad.</p>
-          </article>
-
-          <article class="lab-card reveal">
-            <div class="lab-icon">📱</div>
-            <span class="lab-number">02</span>
-            <h3>Experiencias móviles</h3>
-            <p>Aplicaciones para Android y iPhone creadas con Flutter y experiencias pensadas para el usuario.</p>
-          </article>
-
-          <article class="lab-card reveal">
-            <div class="lab-icon">🌐</div>
-            <span class="lab-number">03</span>
-            <h3>Plataformas web</h3>
-            <p>Sitios, sistemas administrativos y plataformas digitales rápidas, adaptables y profesionales.</p>
-          </article>
-
-          <article class="lab-card reveal">
-            <div class="lab-icon">☁️</div>
-            <span class="lab-number">04</span>
-            <h3>Nube y datos</h3>
-            <p>Firebase, bases de datos en tiempo real, almacenamiento y servicios conectados de forma segura.</p>
-          </article>
-
-          <article class="lab-card reveal">
-            <div class="lab-icon">🔐</div>
-            <span class="lab-number">05</span>
-            <h3>Seguridad digital</h3>
-            <p>Autenticación, protección de información y buenas prácticas integradas desde el inicio del proyecto.</p>
-          </article>
-
-          <article class="lab-card reveal">
-            <div class="lab-icon">🚀</div>
-            <span class="lab-number">06</span>
-            <h3>Productos propios</h3>
-            <p>Investigación, prototipos y soluciones creadas por SUOG RD para resolver necesidades reales.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="servicios">
+    <section class="section" id="ecosistema">
       <div class="container">
         <div class="section-title reveal">
-          <span class="eyebrow">Nuestros servicios</span>
-          <h2>Todo lo necesario para lanzar tu proyecto digital.</h2>
+          <span class="eyebrow">Ecosistema tecnológico</span>
+          <h2>Construimos para nuestros clientes porque también <span class="gradient-text">construimos para nosotros.</span></h2>
           <p>
-            Diseñamos y desarrollamos soluciones enfocadas en funcionamiento, seguridad, crecimiento y una experiencia de usuario profesional.
+            SUOG RD no es solamente una empresa que ofrece desarrollo. Nuestro portafolio incluye
+            productos propios y soluciones que nos permiten aplicar experiencia real en cada nuevo proyecto.
           </p>
         </div>
 
+        <div class="ecosystem-grid">
+          <article class="product-card featured reveal">
+            <div>
+              <div class="product-top"><span class="product-mark">SR</span><span class="status-pill">Producto propio</span></div>
+              <h3>SUOG RD</h3>
+              <p>Marketplace de servicios que conecta clientes con profesionales y gestiona solicitudes, ubicación, comunicación y seguimiento del servicio.</p>
+              <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Google Maps</span><span class="tag">Android</span><span class="tag">iOS</span></div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div>
+              <div class="product-top"><span class="product-mark">SC</span><span class="status-pill">En desarrollo</span></div>
+              <h3>SUOG CELL</h3>
+              <p>Plataforma orientada a tiendas de celulares con catálogo, clientes, promociones, compras, niveles, referidos y administración digital.</p>
+            </div>
+            <div class="tags"><span class="tag">Comercio</span><span class="tag">Clientes</span><span class="tag">Catálogo</span></div>
+          </article>
+
+          <article class="product-card reveal">
+            <div>
+              <div class="product-top"><span class="product-mark">FN</span><span class="status-pill">Producto propio</span></div>
+              <h3>SUOG FN</h3>
+              <p>Sistema para administrar financiamientos de dispositivos: clientes, contratos, cuotas, mora, pagos, alertas, reportes y control operativo.</p>
+            </div>
+            <div class="tags"><span class="tag">Financiamiento</span><span class="tag">Administración</span><span class="tag">Reportes</span></div>
+          </article>
+
+          <article class="product-card reveal">
+            <div>
+              <div class="product-top"><span class="product-mark">FA</span><span class="status-pill">Tecnología móvil</span></div>
+              <h3>SUOG FN Agente</h3>
+              <p>Aplicación agente vinculada al ecosistema SUOG FN para integrar dispositivos financiados con las operaciones del sistema.</p>
+            </div>
+            <div class="tags"><span class="tag">Android</span><span class="tag">Firebase</span><span class="tag">Dispositivos</span></div>
+          </article>
+
+          <article class="product-card reveal">
+            <div>
+              <div class="product-top"><span class="product-mark">CM</span><span class="status-pill">Portafolio SUOG</span></div>
+              <h3>Credi Maven RD</h3>
+              <p>Proyecto digital dentro del portafolio tecnológico de SUOG RD, desarrollado con enfoque en crecimiento, control y evolución operativa.</p>
+            </div>
+            <div class="tags"><span class="tag">Proyecto digital</span><span class="tag">Gestión</span><span class="tag">Evolución</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Qué construimos</span>
+          <h2>De una necesidad de negocio a una <span class="gradient-text">solución tecnológica completa.</span></h2>
+          <p>No tienes que conocer términos técnicos. Cuéntanos qué necesitas lograr y nosotros diseñamos la ruta.</p>
+        </div>
         <div class="services-grid">
-          <article class="service-card reveal">
-            <div class="icon-box">📱</div>
-            <h3>Aplicaciones móviles</h3>
-            <p>Apps para Android y iPhone con diseños modernos, navegación intuitiva y funciones adaptadas a tu negocio.</p>
-          </article>
+          <article class="card reveal"><div class="icon">📱</div><h3>Aplicaciones móviles</h3><p>Apps para Android y iPhone con experiencia moderna, datos en tiempo real e integraciones según tu negocio.</p></article>
+          <article class="card reveal"><div class="icon">💻</div><h3>Software empresarial</h3><p>Sistemas para organizar clientes, operaciones, pagos, inventario, reportes y procesos internos.</p></article>
+          <article class="card reveal"><div class="icon">🌐</div><h3>Páginas y plataformas web</h3><p>Sitios corporativos, catálogos, portales, dashboards y experiencias web pensadas para convertir visitantes en clientes.</p></article>
+          <article class="card reveal"><div class="icon">⚙️</div><h3>Automatización</h3><p>Reducimos tareas manuales conectando formularios, datos, notificaciones, procesos y servicios digitales.</p></article>
+          <article class="card reveal"><div class="icon">🤖</div><h3>Inteligencia artificial</h3><p>Asistentes, flujos inteligentes y herramientas de apoyo integradas según las necesidades reales del proyecto.</p></article>
+          <article class="card reveal"><div class="icon">🛠️</div><h3>Soporte y evolución</h3><p>Correcciones, nuevas funciones, actualizaciones, escalabilidad y acompañamiento después del lanzamiento.</p></article>
+        </div>
+      </div>
+    </section>
 
-          <article class="service-card reveal">
-            <div class="icon-box">🌐</div>
-            <h3>Páginas web</h3>
-            <p>Sitios rápidos, responsivos y preparados para mostrar tus servicios, recibir clientes y fortalecer tu marca.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="icon-box">🎨</div>
-            <h3>Diseño UI/UX</h3>
-            <p>Interfaces atractivas y fáciles de usar, pensadas para generar confianza y mejorar la experiencia del usuario.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="icon-box">☁️</div>
-            <h3>Firebase y nube</h3>
-            <p>Autenticación, bases de datos, notificaciones, almacenamiento y servicios conectados en tiempo real.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="icon-box">🚀</div>
-            <h3>Publicación</h3>
-            <p>Preparamos tu proyecto para publicarlo en Google Play, App Store y plataformas web profesionales.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="icon-box">🛠️</div>
-            <h3>Soporte y mejoras</h3>
-            <p>Mantenimiento, correcciones, nuevas funciones y acompañamiento para que tu solución continúe creciendo.</p>
-          </article>
+    <section class="section" id="soluciones">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Soluciones por industria</span>
+          <h2>La tecnología debe resolver el problema de tu negocio, no complicarlo.</h2>
+          <p>Diseñamos soluciones alrededor de la operación real de cada empresa.</p>
+        </div>
+        <div class="industry-grid">
+          <article class="card reveal"><div class="icon">📲</div><h3>Tiendas de celulares</h3><p>Catálogo, clientes, promociones, fidelización, pagos, pedidos, mensajería y administración.</p></article>
+          <article class="card reveal"><div class="icon">💳</div><h3>Financieras</h3><p>Clientes, contratos, cuotas, mora, pagos, alertas, recibos, reportes y paneles de control.</p></article>
+          <article class="card reveal"><div class="icon">💎</div><h3>Joyerías y comercios</h3><p>Vitrina digital, catálogo, clientes premium, compras, facturación, promociones y entregas.</p></article>
+          <article class="card reveal"><div class="icon">🚚</div><h3>Servicios y delivery</h3><p>Solicitudes, asignación, mapas, seguimiento, perfiles, estados y comunicación en tiempo real.</p></article>
+          <article class="card reveal"><div class="icon">🏢</div><h3>Empresas</h3><p>CRM, paneles administrativos, flujos internos, automatización y centralización de información.</p></article>
+          <article class="card reveal"><div class="icon">🚀</div><h3>Startups y emprendedores</h3><p>Desde la idea y el MVP hasta una plataforma preparada para crecer y añadir nuevas funciones.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section" id="proceso">
-      <div class="container process-wrap">
+      <div class="container process-grid">
         <div class="section-title reveal">
-          <span class="eyebrow">Cómo trabajamos</span>
-          <h2>De una idea a un producto funcional.</h2>
-          <p>
-            Te acompañamos desde la planificación hasta la publicación y el soporte posterior.
-          </p>
+          <span class="eyebrow">Nuestro proceso</span>
+          <h2>De la idea al lanzamiento, con una ruta clara.</h2>
+          <p>Un proyecto serio necesita estructura. Dividimos el trabajo en etapas para que cada decisión tenga propósito.</p>
         </div>
-
         <div class="process-list">
-          <article class="process-item reveal">
-            <div class="step-number">01</div>
-            <div>
-              <h3>Escuchamos tu idea</h3>
-              <p>Conocemos tu objetivo, público, funciones necesarias y presupuesto disponible.</p>
-            </div>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="step-number">02</div>
-            <div>
-              <h3>Diseñamos la experiencia</h3>
-              <p>Organizamos pantallas, colores, botones y recorridos para lograr una solución clara y atractiva.</p>
-            </div>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="step-number">03</div>
-            <div>
-              <h3>Desarrollamos el proyecto</h3>
-              <p>Programamos cada función y conectamos los servicios necesarios para que todo trabaje correctamente.</p>
-            </div>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="step-number">04</div>
-            <div>
-              <h3>Probamos y publicamos</h3>
-              <p>Corregimos detalles, verificamos el funcionamiento y preparamos la publicación oficial.</p>
-            </div>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="step-number">05</div>
-            <div>
-              <h3>Soporte y crecimiento</h3>
-              <p>Seguimos contigo para implementar mejoras, actualizaciones y nuevas oportunidades.</p>
-            </div>
-          </article>
+          <article class="process-item reveal"><span class="step">01</span><div><h3>Entendemos tu negocio</h3><p>Objetivo, usuario, problema, funciones, presupuesto y crecimiento esperado.</p></div></article>
+          <article class="process-item reveal"><span class="step">02</span><div><h3>Diseñamos la experiencia</h3><p>Organizamos pantallas, navegación, identidad visual y flujo del usuario.</p></div></article>
+          <article class="process-item reveal"><span class="step">03</span><div><h3>Desarrollamos</h3><p>Programamos funciones, base de datos, integraciones y lógica de negocio.</p></div></article>
+          <article class="process-item reveal"><span class="step">04</span><div><h3>Probamos y publicamos</h3><p>Corregimos detalles y preparamos el producto para sus plataformas de lanzamiento.</p></div></article>
+          <article class="process-item reveal"><span class="step">05</span><div><h3>Seguimos creciendo</h3><p>Soporte, mejoras, actualizaciones, nuevas funciones y evolución del producto.</p></div></article>
         </div>
       </div>
     </section>
-
-    <section class="section stats-section" id="estadisticas">
-      <div class="container">
-        <div class="section-title reveal">
-          <span class="eyebrow">Nuestro avance</span>
-          <h2>Resultados que representan cómo construimos.</h2>
-          <p>No inventamos cifras de clientes. Mostramos datos reales de nuestra forma de trabajar y los actualizaremos a medida que crezcamos.</p>
-        </div>
-
-        <div class="stats stats-modern">
-          <article class="stat reveal">
-            <span class="stat-icon">🚀</span>
-            <strong class="counter" data-target="1">0</strong>
-            <span>Producto propio desarrollado</span>
-          </article>
-          <article class="stat reveal">
-            <span class="stat-icon">💻</span>
-            <strong><span class="counter" data-target="100">0</span>%</strong>
-            <span>Código personalizado</span>
-          </article>
-          <article class="stat reveal">
-            <span class="stat-icon">🤝</span>
-            <strong><span class="counter" data-target="24">0</span>/7</strong>
-            <span>Canal digital disponible</span>
-          </article>
-          <article class="stat reveal">
-            <span class="stat-icon">🌍</span>
-            <strong class="infinity">∞</strong>
-            <span>Posibilidades de crecimiento</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
 
     <section class="section" id="portafolio">
       <div class="container">
         <div class="section-title reveal">
-          <span class="eyebrow">Portafolio • Proyecto destacado</span>
-          <h2>SUOG RD: una aplicación creada para resolver necesidades reales.</h2>
-          <p>
-            Nuestro primer producto propio conecta clientes con profesionales de limpieza,
-            plomería, electricidad y cerrajería en República Dominicana.
-          </p>
+          <span class="eyebrow">Caso destacado</span>
+          <h2>SUOG RD: tecnología diseñada para operar un servicio real.</h2>
+          <p>Una muestra del tipo de arquitectura, experiencia móvil e integración que podemos construir.</p>
         </div>
 
-        <img
-          class="project-hero-image reveal"
-          src="assets/suog-app/portada-suog-rd.png"
-          alt="Presentación de la aplicación SUOG RD y sus servicios"
-          loading="lazy"
-        />
+        <div class="project-showcase reveal">
+          <img class="project-hero-image" src="assets/suog-app/portada-suog-rd.png" alt="Presentación de la aplicación SUOG RD" loading="lazy" />
+          <div class="project-details">
+            <article class="card">
+              <div class="icon">📲</div>
+              <h3>Cliente y socio dentro del mismo ecosistema</h3>
+              <p>La plataforma integra perfiles diferenciados, solicitudes, ubicación, seguimiento y comunicación.</p>
+              <ul class="feature-list">
+                <li>Servicios de limpieza, plomería, electricidad y cerrajería.</li>
+                <li>Ubicación y selección mediante mapa.</li>
+                <li>Panel para clientes y profesionales.</li>
+                <li>Solicitudes y estados en tiempo real.</li>
+                <li>Chat y flujo operativo.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="icon">🧩</div>
+              <h3>Construcción multiplataforma</h3>
+              <p>Un proyecto pensado para evolucionar sobre infraestructura moderna y servicios conectados.</p>
+              <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Google Maps</span></div>
+              <a class="btn btn-primary" style="margin-top:22px" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20una%20aplicación%20para%20mi%20negocio." target="_blank" rel="noopener">Quiero construir algo así</a>
+            </article>
+          </div>
 
-        <div class="project-details">
-          <article class="about-card reveal">
-            <span class="project-status">● Aplicación en preparación para lanzamiento</span>
-            <h3>Una plataforma completa para clientes y socios.</h3>
-            <p>
-              SUOG RD integra registro e inicio de sesión, solicitudes de servicios,
-              selección de ubicación mediante Google Maps, panel del socio, finanzas,
-              chat y seguimiento del estado de cada servicio.
-            </p>
-            <ul class="feature-list">
-              <li>Servicios de limpieza, plomería, electricidad y cerrajería.</li>
-              <li>Ubicación del cliente y selección del punto en el mapa.</li>
-              <li>Panel independiente para clientes y profesionales.</li>
-              <li>Control de pagos, balance, ganancias y deuda.</li>
-              <li>Solicitudes en tiempo real y chat entre las partes.</li>
-              <li>Desarrollada con Flutter, Firebase y Google Maps.</li>
+          <h3 style="margin-top:34px">Pantallas reales del proyecto</h3>
+          <div class="app-gallery">
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/01-ubicacion.jpg" alt="Selección de ubicación en SUOG RD" loading="lazy"><figcaption class="gallery-caption">Ubicación del servicio</figcaption></figure>
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/02-limpieza.jpg" alt="Opciones de limpieza en SUOG RD" loading="lazy"><figcaption class="gallery-caption">Opciones de limpieza</figcaption></figure>
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/03-servicios.jpg" alt="Servicios disponibles en SUOG RD" loading="lazy"><figcaption class="gallery-caption">Servicios disponibles</figcaption></figure>
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/04-finanzas.jpg" alt="Panel de finanzas del socio en SUOG RD" loading="lazy"><figcaption class="gallery-caption">Control de finanzas</figcaption></figure>
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/05-panel-socio.jpg" alt="Panel principal del socio SUOG RD" loading="lazy"><figcaption class="gallery-caption">Panel del socio</figcaption></figure>
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/06-servicio-activo.jpg" alt="Seguimiento de servicio activo en SUOG RD" loading="lazy"><figcaption class="gallery-caption">Servicio activo</figcaption></figure>
+            <figure class="gallery-item" tabindex="0"><img src="assets/suog-app/07-inicio-sesion.jpg" alt="Inicio de sesión de SUOG RD" loading="lazy"><figcaption class="gallery-caption">Inicio de sesión</figcaption></figure>
+          </div>
+
+          <div class="video-wrap">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/presentacion-suog-rd.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+            <div class="video-caption">Presentación del trabajo y las soluciones digitales desarrolladas por SUOG RD.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ventas">
+      <div class="container">
+        <div class="sales-box reveal">
+          <div>
+            <span class="eyebrow" style="border-color:rgba(255,213,74,.3);color:#ffeaa0;background:rgba(255,193,7,.08)">Oportunidad comercial</span>
+            <h2>Gana vendiendo <span style="color:var(--gold)">tecnología.</span></h2>
+            <div class="money">RD$15,000 – RD$35,000</div>
+            <p>de comisión por cada venta, según el proyecto y las condiciones comerciales.</p>
+            <a class="btn btn-gold" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información%20para%20formar%20parte%20del%20equipo%20comercial." target="_blank" rel="noopener">Quiero vender con SUOG</a>
+          </div>
+          <div class="sales-card">
+            <h3 style="margin-bottom:14px">Tú conectas la oportunidad. Nosotros construimos.</h3>
+            <ul>
+              <li>Aplicaciones móviles</li>
+              <li>Software y sistemas</li>
+              <li>Páginas y plataformas web</li>
+              <li>Automatizaciones e integraciones</li>
+              <li>Soluciones digitales personalizadas</li>
             </ul>
-          </article>
-
-          <article class="about-card reveal">
-            <div class="icon-box">📲</div>
-            <h3>Próximo lanzamiento</h3>
-            <p>
-              La aplicación se encuentra en el proceso de preparación y revisión para su
-              publicación oficial. Los enlaces de descarga se activarán cuando las tiendas
-              confirmen su disponibilidad.
-            </p>
-            <div class="store-status">
-              <span>Google Play • Próximamente</span>
-              <span>App Store • Próximamente</span>
-            </div>
-            <div class="tag-row" style="margin-top:22px;">
-              <span class="tag">Flutter</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">Android</span>
-              <span class="tag">iOS</span>
-              <span class="tag">Google Maps</span>
-              <span class="tag">Chat</span>
-            </div>
-            <a class="btn btn-primary"
-               href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20crear%20una%20aplicación%20para%20mi%20negocio."
-               target="_blank" rel="noopener">
-              Quiero una aplicación
-            </a>
-          </article>
-        </div>
-
-        <h3 class="gallery-title reveal">Pantallas reales de la aplicación</h3>
-        <div class="app-gallery">
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/01-ubicacion.jpg" alt="Selección de ubicación en Google Maps" loading="lazy" />
-            <figcaption class="gallery-caption">Ubicación del servicio</figcaption>
-          </figure>
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/02-limpieza.jpg" alt="Opciones y precios de limpieza" loading="lazy" />
-            <figcaption class="gallery-caption">Opciones de limpieza</figcaption>
-          </figure>
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/03-servicios.jpg" alt="Servicios disponibles en SUOG RD" loading="lazy" />
-            <figcaption class="gallery-caption">Servicios disponibles</figcaption>
-          </figure>
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/04-finanzas.jpg" alt="Panel de finanzas del socio" loading="lazy" />
-            <figcaption class="gallery-caption">Control de finanzas</figcaption>
-          </figure>
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/05-panel-socio.jpg" alt="Panel principal del socio" loading="lazy" />
-            <figcaption class="gallery-caption">Panel del socio</figcaption>
-          </figure>
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/06-servicio-activo.jpg" alt="Seguimiento de un servicio activo" loading="lazy" />
-            <figcaption class="gallery-caption">Seguimiento del servicio</figcaption>
-          </figure>
-          <figure class="gallery-item reveal" tabindex="0">
-            <img src="assets/suog-app/07-inicio-sesion.jpg" alt="Pantalla de inicio de sesión de SUOG RD" loading="lazy" />
-            <figcaption class="gallery-caption">Inicio de sesión</figcaption>
-          </figure>
-        </div>
-
-        <div class="demo-video-wrap reveal">
-          <video controls preload="metadata" playsinline>
-            <source src="assets/videos/presentacion-suog-rd.mp4" type="video/mp4" />
-            Tu navegador no puede reproducir este video.
-          </video>
-          <div class="demo-video-caption">
-            Video de presentación del trabajo y las soluciones digitales desarrolladas por SUOG RD.
           </div>
         </div>
       </div>
@@ -2574,225 +632,48 @@
       <div class="container">
         <div class="section-title reveal">
           <span class="eyebrow">Reseñas</span>
-          <h2>Tu experiencia nos ayuda a seguir mejorando.</h2>
-          <p>
-            Clientes y colaboradores pueden enviar su opinión. Revisamos cada comentario antes
-            de publicarlo para evitar contenido falso, ofensivo o información privada.
-          </p>
+          <h2>La confianza se construye con experiencias reales.</h2>
+          <p>Las reseñas serán registradas en el sistema, revisadas y publicadas desde la propia web.</p>
         </div>
 
         <div class="reviews-layout">
-          <div class="review-intro reveal">
-            <div class="icon-box">⭐</div>
-            <h3>Comparte tu experiencia con SUOG RD</h3>
-            <p>
-              Completa el formulario. Al enviarlo, se abrirá WhatsApp con tu reseña preparada
-              para que nuestro equipo la reciba y la apruebe.
-            </p>
-            <div class="review-note">
-              Esta primera versión envía las reseñas a WhatsApp. Para mostrarlas automáticamente
-              a todos los visitantes, conectaremos después el formulario con Firebase.
-            </div>
-
-            <div class="sample-reviews">
-              <article class="sample-review">
-                <strong>Reseñas verificadas</strong>
-                <div class="stars">★★★★★</div>
-                <p>Las opiniones aprobadas aparecerán aquí cuando comiencen a llegar.</p>
-              </article>
+          <div class="review-panel reveal">
+            <div class="icon">⭐</div>
+            <h3 style="font-size:1.55rem;margin-bottom:10px">Opiniones verificadas</h3>
+            <p>No mostraremos reseñas inventadas. Cuando una opinión sea aprobada aparecerá aquí para todos los visitantes.</p>
+            <div class="review-status">
+              🔒 El formulario ya está preparado para la integración con Firebase. La conexión final de la base de datos se realizará en el siguiente paso para que las reseñas queden almacenadas y no dependan de WhatsApp.
             </div>
           </div>
 
-          <form id="reviewForm" class="review-form reveal">
+          <form id="reviewForm" class="reveal">
+            <div class="field"><label for="reviewName">Nombre</label><input id="reviewName" type="text" placeholder="Tu nombre" required></div>
             <div class="field">
-              <label for="reviewName">Nombre</label>
-              <input id="reviewName" name="reviewName" type="text" placeholder="Tu nombre" required />
-            </div>
-
-            <div class="field">
-              <label for="reviewService">Servicio o relación con SUOG RD</label>
-              <select id="reviewService" name="reviewService" required>
+              <label for="reviewService">Servicio o proyecto</label>
+              <select id="reviewService" required>
                 <option value="">Selecciona una opción</option>
                 <option>Desarrollo de aplicación</option>
-                <option>Creación de página web</option>
+                <option>Software o sistema</option>
+                <option>Página web</option>
                 <option>Mantenimiento o mejora</option>
                 <option>Cliente de SUOG RD</option>
                 <option>Socio profesional</option>
                 <option>Otro</option>
               </select>
             </div>
-
             <div class="field">
               <label>Calificación</label>
-              <div class="rating-picker" aria-label="Selecciona una calificación de una a cinco estrellas">
-                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 estrellas">★</label>
-                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 estrellas">★</label>
-                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 estrellas">★</label>
-                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 estrellas">★</label>
-                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 estrella">★</label>
+              <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
               </div>
             </div>
-
-            <div class="field">
-              <label for="reviewText">Escribe tu reseña</label>
-              <textarea id="reviewText" name="reviewText" maxlength="700"
-                        placeholder="Cuéntanos cómo fue tu experiencia..." required></textarea>
-            </div>
-
-            <button class="btn btn-primary" type="submit">Enviar reseña por WhatsApp</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section">
-      <div class="container">
-        <div class="cta reveal">
-          <span class="eyebrow">Comienza hoy</span>
-          <h2>Tu proyecto puede ser el próximo.</h2>
-          <p>
-            No dejes tu idea solamente en la imaginación. Hablemos, organicemos el proyecto y construyamos una solución digital preparada para crecer.
-          </p>
-          <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20hacer%20realidad%20mi%20idea." target="_blank" rel="noopener">
-            Convertir mi idea en realidad
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="tecnologias">
-      <div class="container">
-        <div class="section-title reveal">
-          <span class="eyebrow">Tecnologías</span>
-          <h2>Herramientas modernas para proyectos sólidos y escalables.</h2>
-          <p>
-            Elegimos la tecnología según las necesidades del proyecto, su presupuesto, seguridad,
-            rendimiento y crecimiento futuro.
-          </p>
-        </div>
-
-        <div class="technologies-grid">
-          <article class="tech-card reveal"><div><span>💙</span><strong>Flutter</strong></div></article>
-          <article class="tech-card reveal"><div><span>🔥</span><strong>Firebase</strong></div></article>
-          <article class="tech-card reveal"><div><span>🤖</span><strong>Android</strong></div></article>
-          <article class="tech-card reveal"><div><span>🍎</span><strong>iOS</strong></div></article>
-          <article class="tech-card reveal"><div><span>🌐</span><strong>HTML5</strong></div></article>
-          <article class="tech-card reveal"><div><span>🎨</span><strong>CSS3</strong></div></article>
-          <article class="tech-card reveal"><div><span>⚙️</span><strong>JavaScript</strong></div></article>
-          <article class="tech-card reveal"><div><span>☁️</span><strong>Servicios en la nube</strong></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="cotizacion">
-      <div class="container">
-        <div class="quote-panel reveal">
-          <div>
-            <span class="eyebrow">Cotización personalizada</span>
-            <h2>Cuéntanos tu proyecto y organizamos el camino para desarrollarlo.</h2>
-            <p style="color:var(--muted); margin-top:14px;">
-              No necesitas conocer términos técnicos. Explícanos tu idea con tus propias palabras
-              y te ayudaremos a definir las pantallas, funciones, etapas y alcance.
-            </p>
-
-            <ul class="quote-list">
-              <li>Aplicaciones móviles para Android y iPhone.</li>
-              <li>Páginas web corporativas, catálogos y tiendas virtuales.</li>
-              <li>Sistemas administrativos, automatizaciones e integraciones.</li>
-              <li>Mantenimiento, mejoras y soporte de proyectos existentes.</li>
-            </ul>
-          </div>
-
-          <div class="cta" style="padding:34px 24px;">
-            <h3 style="font-size:1.7rem; margin-bottom:10px;">Da el primer paso</h3>
-            <p style="margin-bottom:22px;">Escríbenos por WhatsApp y recibe orientación inicial para tu proyecto.</p>
-            <a class="btn btn-primary"
-               href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto."
-               target="_blank" rel="noopener">
-              Solicitar cotización
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="empleos">
-      <div class="container">
-        <div class="section-title reveal">
-          <span class="eyebrow">Trabaja con nosotros</span>
-          <h2>Crece profesionalmente junto a SUOG RD.</h2>
-          <p>
-            Esta sección corresponde a oportunidades de empleo dentro de la empresa SUOG RD.
-            Buscamos personas responsables, con deseos de aprender y aportar al crecimiento de nuestro equipo.
-          </p>
-        </div>
-
-        <div class="careers-layout">
-          <article class="career-card reveal">
-            <div class="icon-box">💼</div>
-            <h3>Áreas de oportunidad</h3>
-            <p>Recibimos solicitudes para posiciones actuales y futuras en áreas como:</p>
-
-            <ul class="career-areas">
-              <li>Atención al cliente y soporte.</li>
-              <li>Ventas, promoción y relaciones comerciales.</li>
-              <li>Desarrollo web y aplicaciones.</li>
-              <li>Diseño gráfico y contenido digital.</li>
-              <li>Administración y operaciones.</li>
-              <li>Prácticas y formación interna.</li>
-            </ul>
-
-            <div class="career-note">
-              ¿Buscas ofrecer limpieza, plomería, electricidad o cerrajería?
-              Eso corresponde al registro de socios de la plataforma de servicios SUOG RD,
-              no a las vacantes internas de la empresa.
-            </div>
-          </article>
-
-          <form id="careerForm" class="career-form reveal">
-            <div class="field">
-              <label for="careerName">Nombre completo</label>
-              <input id="careerName" type="text" placeholder="Tu nombre y apellido" required />
-            </div>
-
-            <div class="field">
-              <label for="careerPhone">Teléfono o WhatsApp</label>
-              <input id="careerPhone" type="tel" placeholder="Ejemplo: 809-000-0000" required />
-            </div>
-
-            <div class="field">
-              <label for="careerLocation">Provincia o municipio</label>
-              <input id="careerLocation" type="text" placeholder="Dónde resides" required />
-            </div>
-
-            <div class="field">
-              <label for="careerArea">Área de interés</label>
-              <select id="careerArea" required>
-                <option value="">Selecciona una opción</option>
-                <option>Atención al cliente</option>
-                <option>Ventas y promoción</option>
-                <option>Desarrollo web o aplicaciones</option>
-                <option>Diseño y contenido digital</option>
-                <option>Administración y operaciones</option>
-                <option>Formación o práctica</option>
-                <option>Otra área</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="careerAvailability">Disponibilidad</label>
-              <input id="careerAvailability" type="text" placeholder="Tiempo completo, medio tiempo, horarios..." required />
-            </div>
-
-            <div class="field">
-              <label for="careerMessage">Cuéntanos sobre ti</label>
-              <textarea id="careerMessage" placeholder="Experiencia, habilidades o por qué deseas trabajar con nosotros" required></textarea>
-            </div>
-
-            <button class="btn btn-primary" type="submit">Enviar solicitud por WhatsApp</button>
+            <div class="field"><label for="reviewText">Tu experiencia</label><textarea id="reviewText" maxlength="700" placeholder="Cuéntanos cómo fue tu experiencia..." required></textarea></div>
+            <button class="btn btn-primary" type="submit">Registrar reseña</button>
+            <small id="reviewMessage" style="display:block;color:var(--muted);margin-top:10px"></small>
           </form>
         </div>
       </div>
@@ -2802,45 +683,27 @@
       <div class="container">
         <div class="section-title reveal">
           <span class="eyebrow">Preguntas frecuentes</span>
-          <h2>Respuestas claras antes de comenzar.</h2>
-          <p>Estas son algunas de las preguntas más comunes sobre nuestros servicios de desarrollo.</p>
+          <h2>Respuestas claras antes de empezar.</h2>
+          <p>Información útil para empresas y emprendedores que buscan desarrollar tecnología.</p>
         </div>
-
         <div class="faq-list">
-          <article class="faq-item reveal">
-            <button class="faq-question" type="button">
-              <span>¿Cuánto cuesta desarrollar una aplicación?</span><span>+</span>
-            </button>
-            <div class="faq-answer"><p>El precio depende de las funciones, cantidad de pantallas, integraciones y complejidad. Primero revisamos la idea y preparamos una cotización según el alcance real.</p></div>
-          </article>
+          <article class="faq-item reveal"><button class="faq-question"><span>¿Qué tipo de proyectos desarrolla SUOG RD?</span><span>+</span></button><div class="faq-answer"><p>Aplicaciones móviles, software empresarial, sistemas personalizados, páginas web, plataformas digitales, automatizaciones e integraciones.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question"><span>¿Cuánto cuesta desarrollar una aplicación o sistema?</span><span>+</span></button><div class="faq-answer"><p>El precio depende del alcance, funciones, plataformas, integraciones y complejidad. Primero revisamos la idea y luego definimos una cotización acorde al proyecto.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question"><span>¿Puedo comenzar con una versión sencilla?</span><span>+</span></button><div class="faq-answer"><p>Sí. Podemos comenzar con un MVP o primera versión con funciones principales y evolucionarlo por etapas.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question"><span>¿Trabajan con clientes fuera de República Dominicana?</span><span>+</span></button><div class="faq-answer"><p>Sí. La naturaleza digital de nuestros servicios nos permite trabajar de forma remota con emprendedores y empresas de otros mercados.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question"><span>¿Publican aplicaciones en Google Play y App Store?</span><span>+</span></button><div class="faq-answer"><p>Podemos preparar el proyecto, archivos, configuraciones y acompañar el proceso de publicación en las tiendas correspondientes.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question"><span>¿Ofrecen soporte después de entregar?</span><span>+</span></button><div class="faq-answer"><p>Sí. Podemos continuar con mantenimiento, correcciones, actualizaciones y nuevas funciones según las necesidades del producto.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-          <article class="faq-item reveal">
-            <button class="faq-question" type="button">
-              <span>¿Puedo comenzar con una versión sencilla?</span><span>+</span>
-            </button>
-            <div class="faq-answer"><p>Sí. Podemos desarrollar una primera versión con las funciones principales y agregar mejoras en futuras actualizaciones.</p></div>
-          </article>
-
-          <article class="faq-item reveal">
-            <button class="faq-question" type="button">
-              <span>¿Publican las aplicaciones en Google Play y App Store?</span><span>+</span>
-            </button>
-            <div class="faq-answer"><p>Sí. Podemos preparar los archivos, configuraciones, fichas y acompañar el proceso de publicación en ambas plataformas.</p></div>
-          </article>
-
-          <article class="faq-item reveal">
-            <button class="faq-question" type="button">
-              <span>¿También desarrollan páginas web y sistemas empresariales?</span><span>+</span>
-            </button>
-            <div class="faq-answer"><p>Sí. Creamos páginas corporativas, tiendas virtuales, sistemas internos, paneles administrativos, automatizaciones e integraciones con servicios externos.</p></div>
-          </article>
-
-          <article class="faq-item reveal">
-            <button class="faq-question" type="button">
-              <span>¿Ofrecen mantenimiento después de entregar el proyecto?</span><span>+</span>
-            </button>
-            <div class="faq-answer"><p>Sí. Ofrecemos soporte, correcciones, actualizaciones y desarrollo de nuevas funciones según las necesidades del proyecto.</p></div>
-          </article>
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="eyebrow">Tu proyecto puede ser el próximo</span>
+          <h2>No necesitas saber programar.<br><span class="gradient-text">Necesitas una visión.</span></h2>
+          <p>Cuéntanos qué quieres crear. Nosotros te ayudamos a convertir la idea en pantallas, funciones, tecnología y un producto real.</p>
+          <a class="btn btn-primary" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20tengo%20una%20idea%20y%20quiero%20hacerla%20realidad." target="_blank" rel="noopener">Hablar sobre mi proyecto</a>
         </div>
       </div>
     </section>
@@ -2850,50 +713,22 @@
         <div>
           <div class="section-title reveal">
             <span class="eyebrow">Contacto</span>
-            <h2>Cuéntanos qué deseas crear.</h2>
-            <p>Escríbenos y te ayudaremos a organizar la idea, las funciones y el próximo paso.</p>
+            <h2>Construyamos algo que represente el futuro de tu negocio.</h2>
+            <p>Atendemos proyectos desde Santo Domingo Este y de forma remota para otros mercados.</p>
           </div>
-
           <div class="contact-info">
-            <a class="contact-card reveal" href="https://wa.me/18094191166" target="_blank" rel="noopener">
-              <small>WhatsApp</small>
-              <strong>809-419-1166</strong>
-            </a>
-
-            <a class="contact-card reveal" href="mailto:contacto@suogrd.com">
-              <small>Correo</small>
-              <strong>contacto@suogrd.com</strong>
-            </a>
-
-            <a class="contact-card reveal" href="mailto:soporte@suogrd.com">
-              <small>Soporte técnico</small>
-              <strong>soporte@suogrd.com</strong>
-            </a>
-
-            <div class="contact-card reveal">
-              <small>Ubicación</small>
-              <strong>Santo Domingo Este, República Dominicana</strong>
-            </div>
+            <a class="contact-card reveal" href="https://wa.me/18094191166" target="_blank" rel="noopener"><small>WhatsApp</small><strong>809-419-1166</strong></a>
+            <a class="contact-card reveal" href="mailto:contacto@suogrd.com"><small>Correo</small><strong>contacto@suogrd.com</strong></a>
+            <a class="contact-card reveal" href="mailto:soporte@suogrd.com"><small>Soporte</small><strong>soporte@suogrd.com</strong></a>
+            <div class="contact-card reveal"><small>Ubicación</small><strong>Santo Domingo Este, República Dominicana</strong></div>
           </div>
         </div>
 
         <form id="contactForm" class="reveal">
-          <div class="field">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
-          </div>
-
-          <div class="field">
-            <label for="telefono">Teléfono</label>
-            <input id="telefono" name="telefono" type="tel" placeholder="Tu número de contacto" required />
-          </div>
-
-          <div class="field">
-            <label for="idea">Describe tu idea</label>
-            <textarea id="idea" name="idea" placeholder="Ejemplo: necesito una aplicación para..." required></textarea>
-          </div>
-
-          <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+          <div class="field"><label for="nombre">Nombre</label><input id="nombre" type="text" placeholder="Tu nombre" required></div>
+          <div class="field"><label for="telefono">Teléfono</label><input id="telefono" type="tel" placeholder="Tu número de contacto" required></div>
+          <div class="field"><label for="idea">¿Qué deseas crear?</label><textarea id="idea" placeholder="Ejemplo: necesito una app para..." required></textarea></div>
+          <button class="btn btn-primary" type="submit">Hablar con SUOG RD</button>
         </form>
       </div>
     </section>
@@ -2901,66 +736,18 @@
 
   <footer>
     <div class="container footer-row">
-      <div>
-        <b>SUOG RD</b><br />
-        <small>© <span id="year"></span> Todos los derechos reservados.</small>
-      </div>
-
-      <div class="socials" aria-label="Redes sociales">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="Facebook">FB</a>
-        <a href="#" aria-label="LinkedIn">IN</a>
-      </div>
+      <div><b>SUOG RD</b><br><small>© <span id="year"></span> Todos los derechos reservados.</small></div>
+      <div><small>Apps · Software · Sistemas · Web · Automatización</small></div>
+      <div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="LinkedIn">IN</a></div>
     </div>
   </footer>
 
-
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Vista ampliada">
-    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar">✕</button>
-    <img id="lightboxImage" src="" alt="" />
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button">✕</button>
+    <img id="lightboxImage" src="" alt="">
   </div>
 
-
-  <section class="assistant-panel" id="assistantPanel" aria-hidden="true" aria-label="Asistente virtual de SUOG RD">
-    <div class="assistant-header">
-      <div>
-        <strong>Asistente virtual SUOG RD</strong>
-        <small>Orientación automática disponible 24/7</small>
-      </div>
-      <button class="assistant-close" id="assistantClose" type="button" aria-label="Cerrar asistente">✕</button>
-    </div>
-
-    <div class="assistant-messages" id="assistantMessages" aria-live="polite">
-      <div class="assistant-message bot">Hola 👋 Soy el asistente virtual de SUOG RD. Puedo orientarte sobre servicios tecnológicos, empleos, cotizaciones y la plataforma de servicios.</div>
-    </div>
-
-    <div class="assistant-options">
-      <button class="assistant-option" type="button" data-question="Quiero cotizar un proyecto">Cotizar proyecto</button>
-      <button class="assistant-option" type="button" data-question="Quiero trabajar en la empresa">Trabajar con nosotros</button>
-      <button class="assistant-option" type="button" data-question="Información sobre la plataforma">Plataforma SUOG RD</button>
-      <button class="assistant-option" type="button" data-question="Hablar con una persona">Hablar con una persona</button>
-    </div>
-
-    <form class="assistant-input-row" id="assistantForm">
-      <input id="assistantInput" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" aria-label="Escribe tu pregunta" />
-      <button class="assistant-send" type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <button class="assistant-launcher" id="assistantLauncher" type="button" aria-label="Abrir asistente virtual" aria-expanded="false">💬</button>
-
-  <a
-    class="whatsapp"
-    href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información."
-    target="_blank"
-    rel="noopener"
-    aria-label="Contactar por WhatsApp"
-  >
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.62-1.52-1.89-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.6-.66 1.83-1.29.23-.64.23-1.19.16-1.3-.07-.12-.25-.18-.52-.32z"/>
-      <path d="M16.03 3.2c-7.03 0-12.75 5.72-12.75 12.75 0 2.25.59 4.45 1.7 6.38L3.17 28.8l6.62-1.74a12.7 12.7 0 0 0 6.24 1.59h.01c7.03 0 12.75-5.72 12.75-12.75S23.06 3.2 16.03 3.2zm0 23.3h-.01a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.03 1.05-3.83-.25-.39a10.54 10.54 0 1 1 8.91 4.89z"/>
-    </svg>
-  </a>
+  <a class="whatsapp" href="https://wa.me/18094191166?text=Hola%20SUOG%20RD,%20quiero%20información." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
 
   <script>
     const header = document.getElementById("header");
@@ -2968,278 +755,76 @@
     const nav = document.getElementById("nav");
     const contactForm = document.getElementById("contactForm");
     const reviewForm = document.getElementById("reviewForm");
+    const reviewMessage = document.getElementById("reviewMessage");
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
     const lightboxClose = document.getElementById("lightboxClose");
-    const careerForm = document.getElementById("careerForm");
-    const assistantPanel = document.getElementById("assistantPanel");
-    const assistantLauncher = document.getElementById("assistantLauncher");
-    const assistantClose = document.getElementById("assistantClose");
-    const assistantMessages = document.getElementById("assistantMessages");
-    const assistantForm = document.getElementById("assistantForm");
-    const assistantInput = document.getElementById("assistantInput");
 
-    window.addEventListener("scroll", () => {
-      header.classList.toggle("scrolled", window.scrollY > 20);
+    window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.scrollY>20));
+
+    menuBtn.addEventListener("click",()=>{
+      const isOpen=nav.classList.toggle("open");
+      menuBtn.textContent=isOpen?"✕":"☰";
     });
 
-    menuBtn.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-      menuBtn.textContent = isOpen ? "✕" : "☰";
-    });
+    document.querySelectorAll("nav a").forEach(link=>link.addEventListener("click",()=>{
+      nav.classList.remove("open"); menuBtn.textContent="☰";
+    }));
 
-    document.querySelectorAll("nav a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
-        menuBtn.textContent = "☰";
-      });
-    });
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")});
+    },{threshold:.11});
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit",(event)=>{
       event.preventDefault();
-
-      const nombre = document.getElementById("nombre").value.trim();
-      const telefono = document.getElementById("telefono").value.trim();
-      const idea = document.getElementById("idea").value.trim();
-
-      const mensaje =
-        `Hola SUOG RD, mi nombre es ${nombre}.%0A` +
-        `Mi teléfono es: ${telefono}.%0A%0A` +
-        `Mi idea de proyecto:%0A${idea}`;
-
-      window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
+      const nombre=document.getElementById("nombre").value.trim();
+      const telefono=document.getElementById("telefono").value.trim();
+      const idea=document.getElementById("idea").value.trim();
+      const mensaje=encodeURIComponent(`Hola SUOG RD, mi nombre es ${nombre}.\nMi teléfono es: ${telefono}.\n\nMi proyecto:\n${idea}`);
+      window.open(`https://wa.me/18094191166?text=${mensaje}`,"_blank","noopener");
     });
 
-
-
-    reviewForm.addEventListener("submit", (event) => {
+    reviewForm.addEventListener("submit",(event)=>{
       event.preventDefault();
-
-      const nombre = document.getElementById("reviewName").value.trim();
-      const servicio = document.getElementById("reviewService").value;
-      const comentario = document.getElementById("reviewText").value.trim();
-      const rating = reviewForm.querySelector('input[name="rating"]:checked')?.value;
-
-      if (!rating) {
-        alert("Selecciona una calificación.");
-        return;
-      }
-
-      const estrellas = "★".repeat(Number(rating)) + "☆".repeat(5 - Number(rating));
-      const mensaje = encodeURIComponent(
-        `Hola SUOG RD, quiero enviar una reseña para aprobación.\n\n` +
-        `Nombre: ${nombre}\n` +
-        `Servicio: ${servicio}\n` +
-        `Calificación: ${estrellas} (${rating}/5)\n\n` +
-        `Reseña:\n${comentario}`
-      );
-
-      window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
+      const rating=reviewForm.querySelector('input[name="rating"]:checked')?.value;
+      if(!rating){reviewMessage.textContent="Selecciona una calificación.";return;}
+      reviewMessage.textContent="El formulario está listo. Falta conectar Firebase para guardar la reseña de forma permanente; ese será el próximo paso.";
     });
 
-
-    careerForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const nombre = document.getElementById("careerName").value.trim();
-      const telefono = document.getElementById("careerPhone").value.trim();
-      const ubicacion = document.getElementById("careerLocation").value.trim();
-      const area = document.getElementById("careerArea").value;
-      const disponibilidad = document.getElementById("careerAvailability").value.trim();
-      const descripcion = document.getElementById("careerMessage").value.trim();
-
-      const mensaje = encodeURIComponent(
-        `Hola SUOG RD, deseo enviar una solicitud de empleo.\n\n` +
-        `Nombre: ${nombre}\n` +
-        `Teléfono: ${telefono}\n` +
-        `Ubicación: ${ubicacion}\n` +
-        `Área de interés: ${area}\n` +
-        `Disponibilidad: ${disponibilidad}\n\n` +
-        `Información adicional:\n${descripcion}`
-      );
-
-      window.open(`https://wa.me/18094191166?text=${mensaje}`, "_blank", "noopener");
-    });
-
-    const assistantAnswers = [
-      {
-        keywords: ["cotizar", "cotizacion", "precio", "costo", "proyecto", "aplicacion", "pagina web", "sistema"],
-        answer: "Para cotizar un proyecto necesitamos conocer tu idea, las funciones principales y el plazo aproximado. Puedes completar el formulario de cotización o hablar directamente con nuestro equipo por WhatsApp."
-      },
-      {
-        keywords: ["empleo", "trabajo", "vacante", "trabajar", "curriculum", "currículum"],
-        answer: "Las oportunidades de empleo de la empresa SUOG RD están en la sección “Trabaja con nosotros”. Completa el formulario y tu solicitud se enviará por WhatsApp para evaluación."
-      },
-      {
-        keywords: ["limpieza", "plomeria", "plomería", "electricidad", "cerrajeria", "cerrajería", "socio", "plataforma"],
-        answer: "La plataforma de servicios SUOG RD es un proyecto de la empresa y conecta clientes con profesionales de limpieza, plomería, electricidad y cerrajería. El registro como socio de la plataforma es distinto a solicitar un empleo interno."
-      },
-      {
-        keywords: ["contacto", "persona", "humano", "asesor", "whatsapp", "llamar"],
-        answer: "Puedes hablar con una persona de nuestro equipo por WhatsApp al 809-419-1166. Al pulsar el botón verde se abrirá la conversación."
-      },
-      {
-        keywords: ["servicios", "ofrecen", "empresa"],
-        answer: "La empresa SUOG RD desarrolla aplicaciones móviles, páginas web, sistemas empresariales, automatizaciones, diseño digital, soporte y mantenimiento."
-      }
-    ];
-
-    const addAssistantMessage = (text, type) => {
-      const message = document.createElement("div");
-      message.className = `assistant-message ${type}`;
-      message.textContent = text;
-      assistantMessages.appendChild(message);
-      assistantMessages.scrollTop = assistantMessages.scrollHeight;
-    };
-
-    const getAssistantAnswer = (question) => {
-      const normalized = question.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      const match = assistantAnswers.find((item) =>
-        item.keywords.some((keyword) =>
-          normalized.includes(keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
-        )
-      );
-
-      return match?.answer ||
-        "Puedo ayudarte con cotizaciones, servicios tecnológicos, empleos, contacto y la plataforma SUOG RD. Para una consulta específica, habla con nuestro equipo por WhatsApp.";
-    };
-
-    const openAssistant = () => {
-      assistantPanel.classList.add("open");
-      assistantPanel.setAttribute("aria-hidden", "false");
-      assistantLauncher.setAttribute("aria-expanded", "true");
-      assistantInput.focus();
-    };
-
-    const closeAssistant = () => {
-      assistantPanel.classList.remove("open");
-      assistantPanel.setAttribute("aria-hidden", "true");
-      assistantLauncher.setAttribute("aria-expanded", "false");
-    };
-
-    assistantLauncher.addEventListener("click", () => {
-      assistantPanel.classList.contains("open") ? closeAssistant() : openAssistant();
-    });
-
-    assistantClose.addEventListener("click", closeAssistant);
-
-    assistantForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const question = assistantInput.value.trim();
-      if (!question) return;
-
-      addAssistantMessage(question, "user");
-      assistantInput.value = "";
-
-      window.setTimeout(() => {
-        addAssistantMessage(getAssistantAnswer(question), "bot");
-      }, 350);
-    });
-
-    document.querySelectorAll(".assistant-option").forEach((button) => {
-      button.addEventListener("click", () => {
-        const question = button.dataset.question || button.textContent.trim();
-        addAssistantMessage(question, "user");
-        window.setTimeout(() => addAssistantMessage(getAssistantAnswer(question), "bot"), 300);
-      });
-    });
-
-    const openLightbox = (image) => {
-      lightboxImage.src = image.src;
-      lightboxImage.alt = image.alt;
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    };
-
-    const closeLightbox = () => {
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden", "true");
-      lightboxImage.src = "";
-      document.body.style.overflow = "";
-    };
-
-    document.querySelectorAll(".gallery-item img").forEach((image) => {
-      image.addEventListener("click", () => openLightbox(image));
-      image.closest(".gallery-item").addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openLightbox(image);
-        }
-      });
-    });
-
-    lightboxClose.addEventListener("click", closeLightbox);
-    lightbox.addEventListener("click", (event) => {
-      if (event.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && lightbox.classList.contains("open")) {
-        closeLightbox();
-      }
-    });
-
-    document.querySelectorAll(".faq-question").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = button.closest(".faq-item");
-        const symbol = button.querySelector("span:last-child");
-        const wasOpen = item.classList.contains("open");
-
-        document.querySelectorAll(".faq-item").forEach((faq) => {
+    document.querySelectorAll(".faq-question").forEach(button=>{
+      button.addEventListener("click",()=>{
+        const item=button.closest(".faq-item");
+        const wasOpen=item.classList.contains("open");
+        document.querySelectorAll(".faq-item").forEach(faq=>{
           faq.classList.remove("open");
-          const faqSymbol = faq.querySelector(".faq-question span:last-child");
-          if (faqSymbol) faqSymbol.textContent = "+";
+          const s=faq.querySelector(".faq-question span:last-child");
+          if(s)s.textContent="+";
         });
-
-        if (!wasOpen) {
-          item.classList.add("open");
-          symbol.textContent = "−";
-        }
+        if(!wasOpen){item.classList.add("open");button.querySelector("span:last-child").textContent="−";}
       });
     });
 
-
-    const counters = document.querySelectorAll(".counter");
-    const counterObserver = new IntersectionObserver((entries, observerInstance) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        const counter = entry.target;
-        const target = Number(counter.dataset.target || 0);
-        const duration = 1200;
-        const startTime = performance.now();
-
-        const updateCounter = (currentTime) => {
-          const progress = Math.min((currentTime - startTime) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          counter.textContent = Math.round(target * eased);
-          if (progress < 1) requestAnimationFrame(updateCounter);
-        };
-
-        requestAnimationFrame(updateCounter);
-        observerInstance.unobserve(counter);
+    const openLightbox=(img)=>{
+      lightboxImage.src=img.src;lightboxImage.alt=img.alt;
+      lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");
+      document.body.style.overflow="hidden";
+    };
+    const closeLightbox=()=>{
+      lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");
+      lightboxImage.src="";document.body.style.overflow="";
+    };
+    document.querySelectorAll(".gallery-item img").forEach(img=>{
+      img.addEventListener("click",()=>openLightbox(img));
+      img.closest(".gallery-item").addEventListener("keydown",(e)=>{
+        if(e.key==="Enter"||e.key===" "){e.preventDefault();openLightbox(img);}
       });
-    }, { threshold: 0.55 });
+    });
+    lightboxClose.addEventListener("click",closeLightbox);
+    lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox()});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
 
-    counters.forEach((counter) => counterObserver.observe(counter));
-
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
